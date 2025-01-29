@@ -1,0 +1,46 @@
+@import url("./header.css");
+@import url("./sidebar.css");
+@import url("./main-card.css");
+@import url("./main-content.css"); 
+@import url("./home-sec.css");
+@import url("./about-us-sec.css");
+@import url("./portfolio-card.css");
+@import url("./contact-form.css");
+
+*{
+    margin: 0;
+    padding: 0;
+    box-sizing: border-box;
+    text-decoration: none;
+    list-style: none;
+    font-family: 'Figtree', sans-serif;
+    scroll-behavior: smooth;
+}
+
+body{
+    background-color: black;
+    color: #fff;
+    p{
+        opacity: .7;
+    }
+    #root{
+        height: 100vh;
+        /* overflow: hidden; */
+    }
+}
+
+video{
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    position: absolute;
+    z-index: -1;
+}
+
+.overlay{
+    width: 100%;
+    height: 100%;
+    position: absolute;
+    background-color: rgba(14, 10, 31, 0.5);
+    z-index: -1;
+}
