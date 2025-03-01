@@ -1,4 +1,4 @@
-import { send } from "emailjs-com"; // import EmailJS library
+import { send } from '@emailjs/browser'; // import EmailJS library
 import React, { useState } from "react";
 import { FaEnvelope } from "react-icons/fa";
 import Swal from "sweetalert2";
