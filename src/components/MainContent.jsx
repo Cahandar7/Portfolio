@@ -19,43 +19,65 @@ import skill3 from "../assets/images/skill3.svg";
 import skill4 from "../assets/images/skill4.svg";
 import skill5 from "../assets/images/skill5.svg";
 import skill6 from "../assets/images/skill6.svg";
-import portfolio1 from "../assets/images/portfolio-img1.png";
-import portfolio2 from "../assets/images/portfolio-img2.png";
-import portfolio3 from "../assets/images/portfolio-img3.png";
-import portfolio4 from "../assets/images/portfolio-img4.png";
-import blog1 from "../assets/images/blog-img1.png";
-import blog2 from "../assets/images/blog-img2.png";
-import blog3 from "../assets/images/blog-img3.png";
-import blog4 from "../assets/images/blog-img4.png";
+import sublogo from "../assets/images/sublogo1.svg";
+import portfolio1 from "../assets/images/portfolio_img1.png";
+import portfolio2 from "../assets/images/portfolio_img2.png";
+import portfolio3 from "../assets/images/portfolio_img3.png";
+import portfolio4 from "../assets/images/portfolio_img4.png";
+import blog1 from "../assets/images/blog_img1.png";
+import blog2 from "../assets/images/blog_img2.png";
+import blog3 from "../assets/images/blog_img3.png";
+import blog4 from "../assets/images/blog_img4.png";
 import tes1 from "../assets/images/tesi-img1.png";
 import tes2 from "../assets/images/tesi-img2.png";
 import tes3 from "../assets/images/tesi-img3.png";
-import footer_logo from "../assets/images/header_logo.png";
-import elements_img from "../assets/images/elements.png";
+import rotated_circle from "../assets/images/rotated_circle.png";
+import ContactForm from "./ContactForm";
+import { Cursor, useTypewriter } from "react-simple-typewriter";
 
 const MainContent = () => {
+  const [text] = useTypewriter({
+    words: [
+      "Frontend Developer💻",
+      "Frontend Engineer🛠️",
+      "Frontend Designer🎨",
+      "Just a Chill Guy😎",
+      "Game Developer🎮",
+    ],
+    loop: {},
+    typeSpeed: 60,
+    deleteSpeed: 15,
+  });
+
   return (
     <div className="main-content">
       <section id="home-sec">
-        <IntroHeader
-          h2={"Hi, I'm Alex, UI/UX Designer"}
-          top_h1={"Designing Intuitive"}
-          bottom_h1={"Experiences"}
-          bottom_h1_high={"Inspire"}
-        />
+        <div className="intro-header">
+          <div className="logo">
+            <span>
+              <img src={sublogo} alt="logo" />
+            </span>
+            <h2>
+              Hi, I'm Cahandar, {text}
+              <Cursor />
+            </h2>
+          </div>
+          <div className="text">
+            <h1 className="top-h1">Developing Intuitive</h1>
+            <h1 className="bottom-h1">
+              Experiences <span>Inspire</span>
+            </h1>
+          </div>
+        </div>
         <p className="top-p">
-          Your gateway to innovative design, seamless user experiences, and
-          impactful solutions. Turning complex ideas into user-friendly designs.
+          Your gateway to innovative frontend design, seamless web experiences,
+          and impactful solutions. Turning complex ideas into intuitive,
+          user-friendly interfaces.
         </p>
         <div className="rotate-circle">
           <div className="circle-wrapper">
             <div className="circle">
-              {/* {arr.map((el, index) => (
-                <span key={index} style={{ "single-span": index }}>
-                  {el}
-                </span>
-              ))} */}
-              <img src={elements_img} alt="image" />
+              <img src={rotated_circle} alt="image" width="130" height="130" />
             </div>
             <img src={arrow_img} alt="logo" className="rot-arr-logo" />
           </div>
@@ -74,44 +96,45 @@ const MainContent = () => {
 
       <section id="about-us-sec">
         <IntroHeader
-          h2={"About Us"}
+          h2={"About Me"}
           top_h1={"Crafting Seamless"}
-          bottom_h1={"User"}
+          bottom_h1={"Web"}
           bottom_h1_high={"Experiences"}
         />
         <TextCardContent
-          title={"Alex Carry"}
+          title={"Cahandar Masimov"}
           desc={
-            "Hi, I'm Alex Carry, a dedicated UI/UX Designer with 10 years of experience creating meaningful digital experiences. I specialize in crafting user-centered designs that enhance engagement and drive results. By combining research, creativity, and technical skills, I deliver solutions that not only look great but also function seamlessly."
+            "Hi, I'm Cahandar Masimov, a passionate Frontend Developer with over 2 years of experience building intuitive web applications. I specialize in creating responsive, user-friendly web sites that perform seamlessly across devices. By combining my knowledge of modern web technologies with a keen eye for detail, I deliver solutions that not only look great but also provide excellent user experiences."
           }
         />
+
         <div className="icon-cards-container">
           <IconCardContent
             icon={home2}
-            title={"UI/UX Design"}
+            title={"Frontend Development"}
             desc={
-              "Designing intuitive, user-focused interfaces that prioritize functionality & seamless navigation."
+              "Building responsive, user-centric websites and applications that prioritize performance, accessibility, and seamless interactions."
             }
           />
           <IconCardContent
             icon={home3}
-            title={"User Research & Prototyping"}
+            title={"Frontend Prototyping"}
             desc={
-              "Conducting in-depth user research and creating interactive prototypes to validate ideas and refine designs."
+              "Developing interactive, high-performance web applications and creating prototypes to test and refine user interactions and designs."
             }
           />
           <IconCardContent
             icon={home4}
-            title={"Responsive Web Design"}
+            title={"Responsive Design"}
             desc={
-              "Crafting designs adapt seamlessly across all devices ensuring and a consistent user experience."
+              "Building responsive web applications that seamlessly adapt to all devices, ensuring a consistent and engaging user experience."
             }
           />
           <IconCardContent
             icon={home5}
             title={"Wireframing & Visual Design"}
             desc={
-              "Creating detailed wireframes and visually stunning designs to bring ideas into focus."
+              "Designing detailed wireframes and visually appealing layouts to bring frontend concepts to life, ensuring clarity and usability."
             }
           />
         </div>
@@ -122,14 +145,14 @@ const MainContent = () => {
               <h1 className="title">Work Experience</h1>
               <div className="date-card">
                 <div className="part">
-                  <p className="top">2015 - 2020</p>
-                  <h1>UI/UX Designer</h1>
-                  <p className="bottom">Creative Spark Agency</p>
+                  <p className="top">2023 - 2024</p>
+                  <h1>Junior Frontend Developer</h1>
+                  <p className="bottom">Freelance</p>
                 </div>
                 <div className="part">
-                  <p className="top">2020 - Present</p>
-                  <h1>Senior UI/UX Designer</h1>
-                  <p className="bottom">Visionary Tech</p>
+                  <p className="top">2024 - Present</p>
+                  <h1 style={{ width: "400px" }}>Frontend Developer</h1>
+                  <p className="bottom">Self-employeed</p>
                 </div>
               </div>
             </div>
@@ -137,148 +160,161 @@ const MainContent = () => {
               <h1>Stay With Me</h1>
               <div className="icons">
                 <div>
-                  <svg
-                    width="100%"
-                    height="100%"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    id="twitter"
-                  >
-                    <g clip-path="url(#clip0_8679_11857)">
-                      <g clip-path="url(#clip1_8679_11857)">
+                  <a href="#">
+                    <svg
+                      width="100%"
+                      height="100%"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      id="twitter"
+                    >
+                      <g clip-path="url(#clip0_8679_11857)">
+                        <g clip-path="url(#clip1_8679_11857)">
+                          <path
+                            d="M18.901 0.923065H22.581L14.541 10.3083L24 23.0769H16.594L10.794 15.3318L4.156 23.0769H0.474L9.074 13.0381L0 0.924086H7.594L12.837 8.00335L18.901 0.923065ZM17.61 20.8281H19.649L6.486 3.0544H4.298L17.61 20.8281Z"
+                            fill="white"
+                          />
+                        </g>
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_8679_11857">
+                          <rect width="100%" height="100%" fill="white" />
+                        </clipPath>
+                        <clipPath id="clip1_8679_11857">
+                          <rect width="100%" height="100%" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </a>
+                </div>
+                <div>
+                  <a href="https://www.instagram.com/cahandar_x/">
+                    <svg
+                      width="100%"
+                      height="100%"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      id="instagram"
+                    >
+                      <g clip-path="url(#clip0_8679_11863)">
                         <path
-                          d="M18.901 0.923065H22.581L14.541 10.3083L24 23.0769H16.594L10.794 15.3318L4.156 23.0769H0.474L9.074 13.0381L0 0.924086H7.594L12.837 8.00335L18.901 0.923065ZM17.61 20.8281H19.649L6.486 3.0544H4.298L17.61 20.8281Z"
+                          d="M2.18164 11.6364C2.18164 7.17946 2.18164 4.951 3.56622 3.56641C4.95082 2.18182 7.17927 2.18182 11.6362 2.18182C16.0931 2.18182 18.3215 2.18182 19.7062 3.56641C21.0907 4.951 21.0907 7.17946 21.0907 11.6364C21.0907 16.0932 21.0907 18.3217 19.7062 19.7064C18.3215 21.0909 16.0931 21.0909 11.6362 21.0909C7.17927 21.0909 4.95082 21.0909 3.56622 19.7064C2.18164 18.3217 2.18164 16.0932 2.18164 11.6364Z"
+                          stroke="white"
+                          stroke-width="2"
+                          stroke-linejoin="round"
+                        />
+                        <path
+                          opacity="0.4"
+                          d="M15.9997 11.6364C15.9997 14.0464 14.0461 16 11.6361 16C9.22613 16 7.27246 14.0464 7.27246 11.6364C7.27246 9.2264 9.22613 7.27274 11.6361 7.27274C14.0461 7.27274 15.9997 9.2264 15.9997 11.6364Z"
+                          stroke="white"
+                          stroke-width="2"
+                        />
+                        <path
+                          opacity="0.4"
+                          d="M17.4637 6.54544H17.4541"
+                          stroke="white"
+                          stroke-width="2.14118"
+                          stroke-linecap="round"
+                          stroke-linejoin="round"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_8679_11863">
+                          <rect width="100%" height="100%" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </a>
+                </div>
+                <div>
+                  <a href="https://www.facebook.com/profile.php?id=61550269134539&locale=ru_RU">
+                    <svg
+                      width="100%"
+                      height="100%"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      id="facebook"
+                    >
+                      <g clip-path="url(#clip0_8679_11871)">
+                        <path
+                          d="M13.398 20.9972V12.8012H16.163L16.574 9.59217H13.398V7.54817C13.398 6.62217 13.656 5.98817 14.985 5.98817H16.669V3.12717C15.8496 3.03936 15.0261 2.99696 14.202 3.00017C11.758 3.00017 10.08 4.49217 10.08 7.23117V9.58617H7.33301V12.7952H10.086V20.9972H13.398Z"
                           fill="white"
                         />
                       </g>
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_8679_11857">
-                        <rect width="100%" height="100%" fill="white" />
-                      </clipPath>
-                      <clipPath id="clip1_8679_11857">
-                        <rect width="100%" height="100%" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
+                      <defs>
+                        <clipPath id="clip0_8679_11871">
+                          <rect width="100%" height="100%" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </a>
                 </div>
                 <div>
-                  <svg
-                    width="100%"
-                    height="100%"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    id="instagram"
+                  <a href="https://www.linkedin.com/in/cahandar-masimov-3698022b6/">
+                    <svg
+                      width="100%"
+                      height="100%"
+                      viewBox="0 0 24 24"
+                      fill="none"
+                      xmlns="http://www.w3.org/2000/svg"
+                      id="linkedin"
+                    >
+                      <g clip-path="url(#clip0_8679_11877)">
+                        <path
+                          d="M4.60588 9.45456H4.12103C3.20679 9.45456 2.74968 9.45456 2.46566 9.74425C2.18164 10.034 2.18164 10.5002 2.18164 11.4327V19.84C2.18164 20.7725 2.18164 21.2388 2.46566 21.5285C2.74968 21.8182 3.20679 21.8182 4.12103 21.8182H4.60588C5.52012 21.8182 5.97724 21.8182 6.26126 21.5285C6.54528 21.2388 6.54528 20.7725 6.54528 19.84V11.4327C6.54528 10.5002 6.54528 10.034 6.26126 9.74425C5.97724 9.45456 5.52012 9.45456 4.60588 9.45456Z"
+                          stroke="white"
+                          stroke-width="1.5"
+                        />
+                        <path
+                          opacity="0.4"
+                          d="M6.54528 4.36364C6.54528 5.56863 5.56844 6.54546 4.36346 6.54546C3.15847 6.54546 2.18164 5.56863 2.18164 4.36364C2.18164 3.15866 3.15847 2.18182 4.36346 2.18182C5.56844 2.18182 6.54528 3.15866 6.54528 4.36364Z"
+                          stroke="white"
+                          stroke-width="2"
+                        />
+                        <path
+                          d="M12.2493 9.45456H11.4323C10.4998 9.45456 10.0335 9.45456 9.74379 9.74425C9.4541 10.034 9.4541 10.5002 9.4541 11.4327V19.84C9.4541 20.7725 9.4541 21.2388 9.74379 21.5285C10.0335 21.8182 10.4998 21.8182 11.4323 21.8182H11.9268C12.8593 21.8182 13.3256 21.8182 13.6153 21.5285C13.905 21.2388 13.905 20.7725 13.905 19.84L13.9051 16.3783C13.9051 14.7396 14.4273 13.411 15.9701 13.411C16.7414 13.411 17.3668 14.0753 17.3668 14.8947V19.3456C17.3668 20.2781 17.3668 20.7443 17.6565 21.034C17.9461 21.3237 18.4124 21.3237 19.3449 21.3237H19.8382C20.7705 21.3237 21.2367 21.3237 21.5264 21.0341C21.8161 20.7445 21.8162 20.2784 21.8164 19.3461L21.8177 13.9057C21.8177 11.4476 19.4798 9.4548 17.1658 9.4548C15.8484 9.4548 14.6732 10.1005 13.9051 11.1103C13.905 10.4871 13.905 10.1755 13.7697 9.94416C13.6839 9.79764 13.5619 9.67565 13.4154 9.58994C13.184 9.45456 12.8725 9.45456 12.2493 9.45456Z"
+                          stroke="white"
+                          stroke-width="1.5"
+                          stroke-linejoin="round"
+                        />
+                      </g>
+                      <defs>
+                        <clipPath id="clip0_8679_11877">
+                          <rect width="100%" height="100%" fill="white" />
+                        </clipPath>
+                      </defs>
+                    </svg>
+                  </a>
+                </div>
+                <div>
+                  <a
+                    href="https://github.com/Cahandar7"
+                    style={{ color: "inherit", textDecoration: "none" }}
                   >
-                    <g clip-path="url(#clip0_8679_11863)">
-                      <path
-                        d="M2.18164 11.6364C2.18164 7.17946 2.18164 4.951 3.56622 3.56641C4.95082 2.18182 7.17927 2.18182 11.6362 2.18182C16.0931 2.18182 18.3215 2.18182 19.7062 3.56641C21.0907 4.951 21.0907 7.17946 21.0907 11.6364C21.0907 16.0932 21.0907 18.3217 19.7062 19.7064C18.3215 21.0909 16.0931 21.0909 11.6362 21.0909C7.17927 21.0909 4.95082 21.0909 3.56622 19.7064C2.18164 18.3217 2.18164 16.0932 2.18164 11.6364Z"
-                        stroke="white"
-                        stroke-width="2"
-                        stroke-linejoin="round"
-                      />
-                      <path
-                        opacity="0.4"
-                        d="M15.9997 11.6364C15.9997 14.0464 14.0461 16 11.6361 16C9.22613 16 7.27246 14.0464 7.27246 11.6364C7.27246 9.2264 9.22613 7.27274 11.6361 7.27274C14.0461 7.27274 15.9997 9.2264 15.9997 11.6364Z"
-                        stroke="white"
-                        stroke-width="2"
-                      />
-                      <path
-                        opacity="0.4"
-                        d="M17.4637 6.54544H17.4541"
-                        stroke="white"
-                        stroke-width="2.14118"
-                        stroke-linecap="round"
-                        stroke-linejoin="round"
-                      />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_8679_11863">
-                        <rect width="100%" height="100%" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </div>
-                <div>
-                  <svg
-                    width="100%"
-                    height="100%"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    id="facebook"
-                  >
-                    <g clip-path="url(#clip0_8679_11871)">
-                      <path
-                        d="M13.398 20.9972V12.8012H16.163L16.574 9.59217H13.398V7.54817C13.398 6.62217 13.656 5.98817 14.985 5.98817H16.669V3.12717C15.8496 3.03936 15.0261 2.99696 14.202 3.00017C11.758 3.00017 10.08 4.49217 10.08 7.23117V9.58617H7.33301V12.7952H10.086V20.9972H13.398Z"
-                        fill="white"
-                      />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_8679_11871">
-                        <rect width="100%" height="100%" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </div>
-                <div>
-                  <svg
-                    width="100%"
-                    height="100%"
-                    viewBox="0 0 24 24"
-                    fill="none"
-                    xmlns="http://www.w3.org/2000/svg"
-                    id="linkedin"
-                  >
-                    <g clip-path="url(#clip0_8679_11877)">
-                      <path
-                        d="M4.60588 9.45456H4.12103C3.20679 9.45456 2.74968 9.45456 2.46566 9.74425C2.18164 10.034 2.18164 10.5002 2.18164 11.4327V19.84C2.18164 20.7725 2.18164 21.2388 2.46566 21.5285C2.74968 21.8182 3.20679 21.8182 4.12103 21.8182H4.60588C5.52012 21.8182 5.97724 21.8182 6.26126 21.5285C6.54528 21.2388 6.54528 20.7725 6.54528 19.84V11.4327C6.54528 10.5002 6.54528 10.034 6.26126 9.74425C5.97724 9.45456 5.52012 9.45456 4.60588 9.45456Z"
-                        stroke="white"
-                        stroke-width="1.5"
-                      />
-                      <path
-                        opacity="0.4"
-                        d="M6.54528 4.36364C6.54528 5.56863 5.56844 6.54546 4.36346 6.54546C3.15847 6.54546 2.18164 5.56863 2.18164 4.36364C2.18164 3.15866 3.15847 2.18182 4.36346 2.18182C5.56844 2.18182 6.54528 3.15866 6.54528 4.36364Z"
-                        stroke="white"
-                        stroke-width="2"
-                      />
-                      <path
-                        d="M12.2493 9.45456H11.4323C10.4998 9.45456 10.0335 9.45456 9.74379 9.74425C9.4541 10.034 9.4541 10.5002 9.4541 11.4327V19.84C9.4541 20.7725 9.4541 21.2388 9.74379 21.5285C10.0335 21.8182 10.4998 21.8182 11.4323 21.8182H11.9268C12.8593 21.8182 13.3256 21.8182 13.6153 21.5285C13.905 21.2388 13.905 20.7725 13.905 19.84L13.9051 16.3783C13.9051 14.7396 14.4273 13.411 15.9701 13.411C16.7414 13.411 17.3668 14.0753 17.3668 14.8947V19.3456C17.3668 20.2781 17.3668 20.7443 17.6565 21.034C17.9461 21.3237 18.4124 21.3237 19.3449 21.3237H19.8382C20.7705 21.3237 21.2367 21.3237 21.5264 21.0341C21.8161 20.7445 21.8162 20.2784 21.8164 19.3461L21.8177 13.9057C21.8177 11.4476 19.4798 9.4548 17.1658 9.4548C15.8484 9.4548 14.6732 10.1005 13.9051 11.1103C13.905 10.4871 13.905 10.1755 13.7697 9.94416C13.6839 9.79764 13.5619 9.67565 13.4154 9.58994C13.184 9.45456 12.8725 9.45456 12.2493 9.45456Z"
-                        stroke="white"
-                        stroke-width="1.5"
-                        stroke-linejoin="round"
-                      />
-                    </g>
-                    <defs>
-                      <clipPath id="clip0_8679_11877">
-                        <rect width="100%" height="100%" fill="white" />
-                      </clipPath>
-                    </defs>
-                  </svg>
-                </div>
-                <div>
-                  <FaGithub className="social-media-icon" />
+                    <FaGithub className="social-media-icon" />
+                  </a>
                 </div>
               </div>
             </div>
           </div>
-
           <div className="date-card-wrapper">
             <div className="title">Education</div>
             <div className="date-card">
               <div className="part">
-                <p className="top">2010 - 2013</p>
-                <h1>Bachelor's Degree in Graphic Design</h1>
-                <p className="bottom">University of California</p>
+                <p className="top">July 2023 - July 2027</p>
+                <h1>Bachelor's Degree in Information Technology(IT)</h1>
+                <p className="bottom">
+                  Azerbaijan State University of Economics
+                </p>
+                <p style={{ color: "fff", opacity: "1" }}>GPA: 94.8 / 100</p>
               </div>
               <div className="part">
-                <p className="top">2013 - 2015</p>
-                <h1>Master's Degree in User Experience</h1>
-                <p className="bottom">
-                  Design Massachusetts Institute of Technology (MIT)
-                </p>
+                <p className="top">October 2024 - February 2025</p>
+                <h1>Frontend Development</h1>
+                <p className="bottom">Matrix Academy</p>
               </div>
             </div>
           </div>
@@ -288,66 +324,94 @@ const MainContent = () => {
       <section id="our-service-sec">
         <IntroHeader
           h2={"My Services"}
-          top_h1={"Elevating Brands"}
-          bottom_h1={"Intuitive"}
-          bottom_h1_high={"Design"}
+          top_h1={"Elevating Websites"}
+          bottom_h1={"With Intuitive"}
+          bottom_h1_high={"Frontend Development"}
         />
+
         <TextCardContent
-          title={"UI/UX Design"}
+          title={"Frontend Development"}
           desc={
-            "Designing intuitive, user-focused interfaces that prioritize functionality and seamless navigation."
+            "Building responsive and dynamic web applications with a focus on performance, accessibility, and user experience."
           }
         />
         <TextCardContent
-          title={"User Research & Prototyping"}
+          title={"Using External Libraries"}
           desc={
-            "Conducting in-depth user research and creating interactive prototypes to validate ideas and refine designs."
+            "Integrating third-party libraries and packages to enhance functionality, improving project efficiency and scalability."
           }
         />
         <TextCardContent
-          title={"Responsive Web Design"}
+          title={"Responsive Web Development"}
           desc={
-            "Crafting designs that adapt seamlessly across all devices, ensuring a consistent user experience."
+            "Developing adaptive web applications that work seamlessly across all devices for a consistent user experience."
           }
         />
         <TextCardContent
-          title={"Wireframing & Visual Design"}
+          title={"Building Apps with Contemporary Design"}
           desc={
-            "Creating detailed wireframes and visually stunning designs to bring ideas into focus."
+            "Developing visually appealing applications using the latest design trends and tools to ensure a seamless user experience."
           }
         />
       </section>
 
       <section id="my-skill-sec">
         <IntroHeader
-          h2={"My Skill"}
-          top_h1={"The Tools Behind"}
-          bottom_h1={"Exceptional"}
-          bottom_h1_high={"Design"}
+          h2={"My Skills"}
+          top_h1={"Technologies"}
+          bottom_h1={"Powering Modern"}
+          bottom_h1_high={"Frontend Development"}
         />
+
         <div className="skill-cards-container">
-          <SkillCard icon={skill1} h1_text={"96%"} p_text={"Figma"} />
-          <SkillCard icon={skill2} h1_text={"87%"} p_text={"Photoshop"} />
-          <SkillCard icon={skill3} h1_text={"90%"} p_text={"Illustrator"} />
-          <SkillCard icon={skill4} h1_text={"89%"} p_text={"Sketch"} />
-          <SkillCard icon={skill5} h1_text={"92%"} p_text={"Adobe XD"} />
-          <SkillCard icon={skill6} h1_text={"85%"} p_text={"Wordpress"} />
+          <SkillCard
+            icon="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
+            h1_text={"90"}
+            p_text={"React"}
+          />
+          <SkillCard
+            icon="https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg"
+            h1_text={"85"}
+            p_text={"Next.js"}
+          />
+          <SkillCard
+            icon="https://upload.wikimedia.org/wikipedia/commons/4/49/Redux.png"
+            h1_text={"80"}
+            p_text={"Redux"}
+          />
+          <SkillCard
+            icon="https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg"
+            h1_text={"75"}
+            p_text={"TypeScript"}
+          />
+          <SkillCard
+            icon="https://upload.wikimedia.org/wikipedia/commons/3/37/Firebase_Logo.svg"
+            h1_text={"78"}
+            p_text={"Firebase"}
+          />
+          <SkillCard
+            icon="https://upload.wikimedia.org/wikipedia/commons/9/96/Sass_Logo_Color.svg"
+            h1_text={"70"}
+            p_text={"SASS"}
+          />
         </div>
       </section>
 
       <section id="portfolio-sec">
         <IntroHeader
           h2={"My Portfolio"}
-          top_h1={"Innovation Designs"}
+          top_h1={"My projects"}
           bottom_h1={"Real"}
           bottom_h1_high={"Results"}
         />
 
         <div className="big-portfolio-card">
-          <div>
-            <img src={portfolio1} alt="image" />
-          </div>
-          <h1>Reelup - E commercer Video Platform</h1>
+          <a href="#" style={{ color: "inherit", textDecoration: "none" }}>
+            <div>
+              <img src={portfolio1} alt="portfolio1" />
+            </div>
+            <h1>XStore - E-commerce Clothing Web Site</h1>
+          </a>
         </div>
 
         <div
@@ -358,32 +422,47 @@ const MainContent = () => {
           }}
         >
           <div className="small-portfolio-card">
-            <div>
-              <img src={portfolio3} alt="image" />
-            </div>
-            <h1>Academy - Sales Career</h1>
+            <a
+              href="https://github.com/Cahandar7/Github_Finder_App"
+              style={{ color: "inherit", textDecoration: "none" }}
+            >
+              <div>
+                <img src={portfolio4} alt="small-portfolio-card" />
+              </div>
+              <h1>Github Finder App</h1>
+            </a>
           </div>
 
           <div className="small-portfolio-card">
-            <div>
-              <img src={portfolio4} alt="image" />
-            </div>
-            <h1>Leadlogic- Dashboard Design</h1>
+            <a
+              href="https://github.com/Cahandar7/FRESH_VILA_WATER/branches"
+              style={{ color: "inherit", textDecoration: "none" }}
+            >
+              <div>
+                <img src={portfolio3} alt="small-portfolio-card" />
+              </div>
+              <h1>Fresh Vial - E-commerce Web Site</h1>
+            </a>
           </div>
         </div>
 
         <div className="big-portfolio-card">
-          <div>
-            <img src={portfolio2} alt="image" />
-          </div>
-          <h1>Reelup - E commercer Video Platform</h1>
+          <a
+            href="https://github.com/Cahandar7/Grogin_Template"
+            style={{ color: "inherit", textDecoration: "none" }}
+          >
+            <div>
+              <img src={portfolio2} alt="big-portfolio-card" />
+            </div>
+            <h1>Grogin - E-commerce Groceries Web Site</h1>
+          </a>
         </div>
       </section>
 
       <section id="testimonial-sec">
         <IntroHeader
           h2={"Testimonial"}
-          top_h1={"What Client Says"}
+          top_h1={"What Clients Say"}
           bottom_h1={"About"}
           bottom_h1_high={"My Work"}
         />
@@ -391,7 +470,7 @@ const MainContent = () => {
           <ReviewCardBig
             profile_icon={tes1}
             text={
-              '"Working with Alex was a game-changer for our brand. Their attention to detail and focus on creating a seamless user experience truly transformed our website. We have seen an incredible boost in user engagement and satisfaction."'
+              '"Working with Cahandar was a game-changer for our web projects. Their attention to detail and focus on creating a seamless user experience truly transformed our interfaces. We have seen remarkable improvements in user satisfaction and engagement."'
             }
             bot_h4={"David Elson"}
             bot_p={"Ezhe Source"}
@@ -399,7 +478,7 @@ const MainContent = () => {
           <ReviewCardSmall
             profile_icon={tes2}
             text={
-              '"Alex exceeded all expectations with their innovative designs and collaborative approach. Reality that perfectly resonates with our audience."'
+              '"Cahandar exceeded all expectations with their innovative frontend designs and collaborative approach. Their work resonated perfectly with our audience, making a significant impact."'
             }
             bot_h4={"Chris Glasser"}
             bot_p={"Auto Works"}
@@ -407,7 +486,7 @@ const MainContent = () => {
           <ReviewCardSmall
             profile_icon={tes3}
             text={
-              '"The designs delivered by [Your Name] were intuitive and engaging, making a significant difference in how users interacted with our platform."'
+              '"The frontend designs delivered by Cahandar were intuitive and engaging, significantly improving how users interacted with our platform. A pleasure to work with!"'
             }
             bot_h4={"Rodger Struck"}
             bot_p={"Specialty Restaurant Group"}
@@ -415,7 +494,7 @@ const MainContent = () => {
           <ReviewCardBig
             profile_icon={tes3}
             text={
-              '"From wireframes to the final product, Alex brought creativity and functionality together beautifully. The final design not only looks fantastic but also works flawlessly across devices."'
+              '"From wireframes to the final product, Cahandar combined creativity with functionality seamlessly. The final web design not only looks fantastic but also works flawlessly across all devices."'
             }
             bot_h4={"Mary Freund"}
             bot_p={"Rink's"}
@@ -425,27 +504,29 @@ const MainContent = () => {
 
       <section id="our-blog-sec">
         <IntroHeader
-          h2={"Our Blog"}
-          top_h1={"Our Latest Blog Idea"}
-          bottom_h1={"UI/UX"}
-          bottom_h1_high={"Trends"}
+          h2={"My Blog"}
+          top_h1={"My Latest Blog Posts"}
+          bottom_h1={"Frontend Development"}
+          bottom_h1_high={"Trends & Insights"}
         />
         <div className="blog-cards-container">
           <BlogCard
             image={blog1}
-            title={"Behind the Pixels: My Favorite Design Projects"}
+            title={"Behind the Pixels: My Favorite Frontend Projects"}
           />
           <BlogCard
             image={blog2}
-            title={"Crafting Seamless Experiences: My UI/UX Design Philosophy"}
+            title={
+              "Crafting Seamless Experiences: My Frontend Development Philosophy"
+            }
           />
           <BlogCard
             image={blog3}
-            title={"Staying Ahead: Trends Shaping UI/UX in 2024"}
+            title={"Staying Ahead: Trends Shaping Frontend Development in 2025"}
           />
           <BlogCard
             image={blog4}
-            title={"From Concept to Reality: My Design Process"}
+            title={"From Concept to Reality: My Development Process"}
           />
         </div>
       </section>
@@ -457,37 +538,13 @@ const MainContent = () => {
           bottom_h1={"Mind,"}
           bottom_h1_high={"Lets Talk"}
         />
-
-        <div className="form-wrapper">
-          <h1>Let's Work Together!</h1>
-          <form action="">
-            <div className="top-inputs">
-              <input placeholder="Full Name" type="text" />
-              <input placeholder="Email Address" type="email" />
-              <input placeholder="Phone Number" type="tel" />
-              <input placeholder="Subject" type="text" />
-            </div>
-            <input
-              placeholder="Your Budget (optional)"
-              type="text"
-              className="budget-input"
-            />
-            <input
-              placeholder="Message"
-              type="text"
-              className="message-input"
-            />
-            <button type="submit">
-              SEND <FaEnvelope />
-            </button>
-          </form>
-        </div>
+        <ContactForm />
       </section>
 
       <footer>
-        <img src={footer_logo} alt="" />
+        <h1>Thank you</h1>
         <p>
-          <b>© 2024 OVRO. All Rights Reserved.</b>
+          <b>© 2025 Cahandar M. | All Rights Reserved.</b>
         </p>
       </footer>
     </div>

@@ -1,20 +1,46 @@
 import React from "react";
-import logo from "../assets/images/header_logo.png";
 import { FaEnvelope } from "react-icons/fa";
+import SideBar from "./SideBar";
+import { GiHamburgerMenu } from "react-icons/gi";
+import toggle_btn_sound from "../assets/audios/toggle_btn.mp3";
 
 const Header = () => {
   return (
     <header>
       <div className="left">
-        <img src={logo} alt="logo" />
+        <h1>Welcome to My Portfolio</h1>
       </div>
       <div className="right">
-        <button className="translate">translate</button>
-        <button className="dark-light-switcher">dark-light</button>
-        <span className="vertical-line"></span>
-        <a href="#" className="hire-btn">
-          HIRE ME <FaEnvelope />
+        <a href="#contact-us-sec" className="hire-btn">
+          <span>HIRE ME</span> <FaEnvelope />
         </a>
+        <div className="sidebar-toggle-btn">
+          <button
+            className="btn"
+            type="button"
+            data-bs-toggle="offcanvas"
+            data-bs-target="#offcanvasWithBothOptions"
+            aria-controls="offcanvasWithBothOptions"
+            onClick={() => {
+              const toggle_btn_audio = new Audio(toggle_btn_sound);
+              toggle_btn_audio.volume = 0.1;
+              toggle_btn_audio.play();
+            }}
+          >
+            <GiHamburgerMenu />
+          </button>
+          <div
+            className="offcanvas offcanvas-start"
+            data-bs-scroll="true"
+            tabIndex={-1}
+            id="offcanvasWithBothOptions"
+            aria-labelledby="offcanvasWithBothOptionsLabel"
+          >
+            <div className="offcanvas-body">
+              <SideBar />
+            </div>
+          </div>
+        </div>
       </div>
     </header>
   );

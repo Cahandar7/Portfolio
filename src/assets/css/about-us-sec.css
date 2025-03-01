@@ -1,102 +1,108 @@
-.date-cards-container{
-    display: flex;
-    justify-content: space-between;
-    margin: 40px 0;
+.date-cards-container {
+  display: flex;
+  justify-content: space-between;
+  margin: 40px 0;
 }
 
-.date-cards-container .date-card-wrapper{
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
+.date-cards-container .date-card-wrapper {
+  width: 94%;
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
 }
 
-.date-cards-container .date-card-wrapper .title{
-    font-size: 2em;
+.date-cards-container .date-card-wrapper .title {
+  font-size: 2em;
 }
 
-.date-cards-container .date-card-wrapper .date-card{
-    width: 58vh;
-    display: flex;
-    flex-direction: column;
-    gap: 20px;
-    padding: 20px;
-    background-color: rgba(81, 76, 76, .5);
-    border: 1px solid rgba(255, 255, 255, .1);
-    border-radius: 8px;
-    transition: .4s;
-    .part{
-        line-height: 3em;
+.date-cards-container .date-card-wrapper .date-card {
+  display: flex;
+  flex-direction: column;
+  gap: 20px;
+  padding: 20px;
+  background-color: rgba(81, 76, 76, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  transition: 0.4s;
+  .part {
+    line-height: 3em;
+    p {
+      font-size: 1.1em;
     }
+    h1 {
+      font-size: 1.6em;
+    }
+  }
 }
 
-.date-cards-container .date-card-wrapper .date-card:hover{
-    transform: translateY(-5px);
-    border: 1px solid yellowgreen;
+.date-cards-container .date-card-wrapper .date-card:hover {
+  transform: translateY(-5px);
+  border: 1px solid yellowgreen;
 }
 
-.date-cards-container .icons-wrapper{
-    width: 58vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    gap: 20px;
-    padding: 30px;
-    margin-top: 30px;
-    background-color: rgba(81, 76, 76, .5);
-    border: 1px solid rgba(255, 255, 255, .1);
-    border-radius: 8px;
-    transition: .4s;
+.date-cards-container .icons-wrapper {
+  width: 58vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 20px;
+  padding: 30px;
+  margin-top: 30px;
+  background-color: rgba(81, 76, 76, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  transition: 0.4s;
 }
 
-.date-cards-container .icons-wrapper:hover{
-    transform: translateY(-5px);
-    border: 1px solid yellowgreen;
+.date-cards-container .icons-wrapper:hover {
+  transform: translateY(-5px);
+  border: 1px solid yellowgreen;
 }
 
-.date-cards-container .icons-wrapper .icons{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: .5em 0;
-    gap: 1em;
-    div{
-        width: 50px;
-        height: 50px;
-        padding: 10px;
-        border: 1px solid #fff;
-        border-radius: 50%;
-        transition: .7s;
-    .social-media-icon{
-        width: 100%;
-        height: 100%;
-        transition: .7s;
+.date-cards-container .icons-wrapper .icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0.5em 0;
+  gap: 1em;
+  div {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    transition: 0.7s;
+    .social-media-icon {
+      width: 100%;
+      height: 100%;
+      transition: 0.7s;
     }
-    svg{
-        transition: .7s;
-    };
+    svg {
+      transition: 0.7s;
     }
+  }
 }
 
-.date-cards-container .icons-wrapper .icons div:hover{
-    background-color: #ffae00;
-    cursor: pointer;
-    border: 1px solid transparent;
-    .social-media-icon{
-        color: #000;
-    }
-    #twitter path{
-        fill: #000;
-    }
-    #instagram path{
-        fill: transparent;
-        stroke: #000;
-    }
-    #facebook path{
-        fill: #000;
-        stroke: #000;
-    }
-    #linkedin path{
-        stroke: #000;
-    }
+.date-cards-container .icons-wrapper .icons div:hover {
+  background-color: #ffae00;
+  cursor: pointer;
+  border: 1px solid transparent;
+  .social-media-icon {
+    color: #000;
+  }
+  #twitter path {
+    fill: #000;
+  }
+  #instagram path {
+    fill: transparent;
+    stroke: #000;
+  }
+  #facebook path {
+    fill: #000;
+    stroke: #000;
+  }
+  #linkedin path {
+    stroke: #000;
+  }
 }

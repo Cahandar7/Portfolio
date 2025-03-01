@@ -1,104 +1,166 @@
-.card{
-    flex: 5;
-    height: 82vh;
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    justify-content: center;
-    background-color: rgba(81, 76, 76, .5);
-    border: 1px solid rgba(255, 255, 255, .1);
-    border-radius: 8px;
-    margin: 5px 30px 30px 0;
-    padding: 10px 20px;
-    overflow: hidden;
+.main-card {
+  height: clamp(82vh, 1vw, 60vh);
+  width: auto;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: rgba(81, 76, 76, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  padding: 10px 20px;
+  a {
+    color: inherit;
+    text-decoration: none;
+  }
 }
 
-.card .profile{
+.main-card .main-card-picture {
+  width: 100%;
+  height: 40%;
+  img {
     width: 100%;
-    height: 13.5em;
+    height: 100%;
     object-fit: cover;
-    object-position: top;
+    border-radius: 8px;
+    transition: 0.4s;
+  }
 }
 
-.card .card-text{
-    text-align: center;
+.main-card .main-card-picture img:hover {
+  filter: brightness(70%);
+  transform: scale(1.01);
 }
 
-.card .card-text h1{
-    line-height: 2.2em;
+.main-card .main-card-text {
+  text-align: center;
+  margin-top: 10px;
 }
 
-.card .card-text p{
-    line-height: 1.6em;
+.main-card .main-card-text h1 {
+  font-size: clamp(1.1rem, 5vw, 2.1rem);
+  transition: 0.4s;
 }
 
-.card .icons{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    margin: 1.6em 0;
-    gap: 1em;
-    div{
-        width: 50px;
-        height: 50px;
-        padding: 10px;
-        border: 1px solid #fff;
-        border-radius: 50%;
-        transition: .7s;
-    .social-media-icon{
-        width: 100%;
-        height: 100%;
-        transition: .7s;
-    }
-    svg{
-        transition: .7s;
-    };
-    }
+.main-card .main-card-text h1:hover {
+  color: #ffae00;
 }
 
-.card .icons div:hover{
-    background-color: #ffae00;
-    cursor: pointer;
-    border: 1px solid transparent;
-    .social-media-icon{
-        color: #000;
-    }
-    #twitter path{
-        fill: #000;
-    }
-    #instagram path{
-        fill: transparent;
-        stroke: #000;
-    }
-    #facebook path{
-        fill: #000;
-        stroke: #000;
-    }
-    #linkedin path{
-        stroke: #000;
-    }
+.main-card .main-card-text p {
+  line-height: 1.6em;
 }
 
-.card button{
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    gap: 5px;
-    background-color: #ffae00;
-    color: #0e161f;
-    padding: 16px 20px;
-    margin-bottom: 1.2em;
-    border: 1px solid #ffae00;
-    border-radius: 40px;
-    font-size: 1.3rem;
-    text-transform: uppercase;
-    font-weight: 600;
-    transition: all .4s ease;
+.main-card .icons {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 10px;
+  div {
+    width: 50px;
+    height: 50px;
+    padding: 10px;
+    border: 1px solid #fff;
+    border-radius: 50%;
+    transition: 0.7s;
+    .social-media-icon {
+      width: 100%;
+      height: 100%;
+      transition: 0.7s;
+    }
+    svg {
+      transition: 0.7s;
+    }
+  }
 }
 
-.card button:hover{
-    background-color: transparent;
-    border: 1px solid white;
-    color: white;
-    cursor: pointer;
+.main-card .icons div:hover {
+  background-color: #ffae00;
+  cursor: pointer;
+  border: 1px solid transparent;
+  .social-media-icon {
+    color: #000;
+  }
+  #twitter path {
+    fill: #000;
+  }
+  #instagram path {
+    fill: transparent;
+    stroke: #000;
+  }
+  #facebook path {
+    fill: #000;
+    stroke: #000;
+  }
+  #linkedin path {
+    stroke: #000;
+  }
+}
+
+.main-card .download-cv {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  gap: 5px;
+  background-color: #ffae00;
+  color: #0e161f;
+  padding: 16px 20px;
+  margin: 10px 0;
+  border: 1px solid #ffae00;
+  border-radius: 40px;
+  font-size: 1.3rem;
+  text-transform: uppercase;
+  font-weight: 600;
+  transition: all 0.4s ease;
+}
+
+.main-card .download-cv:hover {
+  background-color: transparent;
+  border: 1px solid white;
+  color: white;
+  cursor: pointer;
+}
+
+/* mobile */
+@media (max-width: 768px) {
+  .main-card {
+    margin-bottom: 50px;
+  }
+  .main-card .main-card-text {
+    p {
+      display: none;
+    }
+  }
+  .main-card .icons {
+    div {
+      width: 35px;
+      height: 35px;
+    }
+  }
+}
+/* tablets */
+@media (max-width: 1380px) {
+  .main-card .main-card-text {
+    p {
+      line-height: 1.4em;
+    }
+  }
+  .main-card .icons {
+    div {
+      width: 40px;
+      height: 40px;
+    }
+  }
+}
+@media (max-width: 1176px) {
+  .main-card .main-card-text {
+    p {
+      line-height: 1.5em;
+    }
+  }
+  .main-card .icons {
+    div {
+      width: 45px;
+      height: 45px;
+    }
+  }
 }

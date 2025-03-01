@@ -1,5 +1,5 @@
 import React from "react";
-import profile from "../assets/images/blog-img5.png";
+import profile from "../assets/images/portfolio_img.jpeg";
 import { FaClock, FaCalendarAlt, FaTable } from "react-icons/fa";
 
 const BlogCard = ({ image, title }) => {
@@ -8,7 +8,7 @@ const BlogCard = ({ image, title }) => {
       <img className="banner" src={image} alt="image" />
       <div className="text-group">
         <div className="group-one">
-          <p>UI/UX</p>
+          <p>Frontend Development</p>
           <span className="need-span icon">
             <FaClock />3 min read
           </span>
@@ -17,11 +17,11 @@ const BlogCard = ({ image, title }) => {
         <div className="group-two">
           <span>
             <img src={profile} alt="profile" />
-            <span className="need-span">Alex Carry</span>
+            <span className="need-span">Cahandar M.</span>
           </span>
           <span className="need-span icon">
             <FaCalendarAlt />
-            Oct 26, 2024
+            April 26, 2025
           </span>
         </div>
       </div>
