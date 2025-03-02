@@ -186,8 +186,8 @@ const MainCard = () => {
         </div>
       </div>
       <a
-        href="/Cahandar Masimov CV.pdf"
-        download="Cahandar Masimov CV.pdf"
+        href="/Cahandar_Masimov_CV.pdf"
+        download="Cahandar_Masimov_CV.pdf"
         className="download-cv"
         onClick={() => {
           handleDownloadClick();
