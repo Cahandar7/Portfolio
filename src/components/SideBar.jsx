@@ -33,7 +33,7 @@ const SideBar = () => {
             </svg>
           </a>
         </li>
-        <li style={{ "--after-content": '"About Me"' }}>
+        <li style={{ "--after-content": '"About"' }}>
           <a href="#about-us-sec">
             <svg
               width="50"
@@ -61,8 +61,8 @@ const SideBar = () => {
             </svg>
           </a>
         </li>
-        <li style={{ "--after-content": '"My Service"' }}>
-          <a href="#our-service-sec">
+        <li style={{ "--after-content": '"Certificates"' }}>
+          <a href="#certificates-sec">
             <svg
               width="50"
               height="50"
@@ -88,7 +88,7 @@ const SideBar = () => {
             </svg>
           </a>
         </li>
-        <li style={{ "--after-content": '"My Skill"' }}>
+        <li style={{ "--after-content": '"Skills"' }}>
           <a href="#my-skill-sec">
             <svg
               width="50"
@@ -142,58 +142,7 @@ const SideBar = () => {
             </svg>
           </a>
         </li>
-        <li style={{ "--after-content": '"Testimonial"' }}>
-          <a href="#testimonial-sec">
-            <svg
-              width="50"
-              height="50"
-              viewBox="0 0 50 50"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <g clip-path="url(#clip0_8679_11829)">
-                <path
-                  d="M17.0898 15.625C13.6951 15.625 10.9375 18.0762 10.9375 21.0938C10.9375 24.1113 13.6951 26.5625 17.0898 26.5625C17.3865 26.5625 17.6831 26.5234 17.9688 26.4844V27.3438C17.9688 28.6328 16.7822 29.6875 15.332 29.6875C13.8763 29.6875 12.6953 30.7373 12.6953 32.0312C12.6953 33.3252 13.8818 34.375 15.332 34.375C19.6936 34.375 23.2422 31.2207 23.2422 27.3438V21.0938C23.2422 18.0762 20.4846 15.625 17.0898 15.625ZM32.9102 15.625C29.5121 15.625 26.7578 18.0732 26.7578 21.0938C26.7578 24.1143 29.5121 26.5625 32.9102 26.5625C33.2112 26.5625 33.4996 26.5209 33.7891 26.4837V27.3438C33.7891 28.6357 32.6058 29.6875 31.1523 29.6875C29.7021 29.6875 28.5156 30.7422 28.5156 32.0312C28.5156 33.3203 29.7021 34.375 31.1523 34.375C35.5139 34.375 39.0625 31.2207 39.0625 27.3438V21.0938C39.0625 18.0762 36.3049 15.625 32.9102 15.625Z"
-                  fill="white"
-                />
-                <path
-                  opacity="0.2"
-                  d="M42.8571 3.125H7.14286C3.19754 3.125 0 5.92285 0 9.375V40.625C0 44.0771 3.19754 46.875 7.14286 46.875H42.8571C46.8025 46.875 50 44.0771 50 40.625V9.375C50 5.92285 46.7969 3.125 42.8571 3.125ZM23.2143 27.3437C23.2143 31.2207 19.6094 34.375 15.1786 34.375C13.6998 34.375 12.5 33.3252 12.5 32.0312C12.5 30.7373 13.7054 29.6875 15.1786 29.6875C16.6518 29.6875 17.8571 28.6328 17.8571 27.3437V26.4844C17.567 26.5234 17.2656 26.5625 16.9643 26.5625C13.5156 26.5625 10.7143 24.1113 10.7143 21.0937C10.7143 18.0762 13.5156 15.625 16.9643 15.625C20.4129 15.625 23.2143 18.0762 23.2143 21.0937V27.3437ZM39.2857 27.3437C39.2857 31.2207 35.6808 34.375 31.25 34.375C29.7768 34.375 28.5714 33.3301 28.5714 32.0312C28.5714 30.7324 29.7712 29.6875 31.25 29.6875C32.7266 29.6875 33.9286 28.6357 33.9286 27.3437V26.4844C33.6384 26.5234 33.3371 26.5625 33.0357 26.5625C29.5837 26.5625 26.7857 24.1143 26.7857 21.0937C26.7857 18.0732 29.5871 15.625 33.0357 15.625C36.4844 15.625 39.2857 18.0762 39.2857 21.0937V27.3437Z"
-                  fill="white"
-                />
-              </g>
-              <defs>
-                <clipPath id="clip0_8679_11829">
-                  <rect width="50" height="50" fill="white" />
-                </clipPath>
-              </defs>
-            </svg>
-          </a>
-        </li>
-        <li style={{ "--after-content": '"My Blog"' }}>
-          <a href="#our-blog-sec">
-            <svg
-              width="50"
-              height="50"
-              viewBox="0 0 50 50"
-              fill="none"
-              xmlns="http://www.w3.org/2000/svg"
-            >
-              <path
-                opacity="0.2"
-                fillRule="evenodd"
-                clipRule="evenodd"
-                d="M2.32886 6.96413C1.5625 8.46819 1.5625 10.4371 1.5625 14.375V34.0625C1.5625 38.0005 1.5625 39.9692 2.32886 41.4734C3.00297 42.7965 4.07861 43.872 5.40163 44.5461C6.90569 45.3125 8.87463 45.3125 12.8125 45.3125H37.1875C41.1255 45.3125 43.0942 45.3125 44.5984 44.5461C45.9215 43.872 46.997 42.7965 47.6711 41.4734C48.4375 39.9692 48.4375 38.0005 48.4375 34.0625V14.375C48.4375 10.4371 48.4375 8.46819 47.6711 6.96413C46.997 5.64111 45.9215 4.56547 44.5984 3.89136C43.0942 3.125 41.1255 3.125 37.1875 3.125H12.8125C8.87463 3.125 6.90569 3.125 5.40163 3.89136C4.07861 4.56547 3.00297 5.64111 2.32886 6.96413Z"
-                fill="white"
-              />
-              <path
-                d="M14 14V36H36V14H14ZM32.3333 32.3333H17.6667V31.1111H32.3333V32.3333ZM32.3333 29.8889H17.6667V28.6667H32.3333V29.8889ZM32.3333 25H17.6667V17.6667H32.3333V25Z"
-                fill="white"
-              />
-            </svg>
-          </a>
-        </li>
-        <li style={{ "--after-content": '"Contact Me"' }}>
+        <li style={{ "--after-content": '"Contact' }}>
           <a href="#contact-us-sec">
             <svg
               width="50"
@@ -226,37 +175,6 @@ const SideBar = () => {
           </a>
         </li>
       </ul>
-      {/* <div>
-        <button
-          className="btn btn-primary"
-          type="button"
-          data-bs-toggle="offcanvas"
-          data-bs-target="#offcanvasWithBothOptions"
-          aria-controls="offcanvasWithBothOptions"
-        >
-          Sidebar
-        </button>
-        <div
-          className="offcanvas offcanvas-start"
-          data-bs-scroll="true"
-          tabIndex={-1}
-          id="offcanvasWithBothOptions"
-          aria-labelledby="offcanvasWithBothOptionsLabel"
-        >
-          <div className="offcanvas-header">
-            <h5 className="offcanvas-title" id="offcanvasWithBothOptionsLabel">
-              Backdrop with scrolling
-            </h5>
-            <button
-              type="button"
-              className="btn-close"
-              data-bs-dismiss="offcanvas"
-              aria-label="Close"
-            />
-          </div>
-          <div className="offcanvas-body"></div>
-        </div>
-      </div> */}
     </div>
   );
 };

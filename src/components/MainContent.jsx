@@ -3,15 +3,7 @@ import IntroHeader from "./IntroHeader";
 import TextCardContent from "./TextCardContent";
 import IconCardContent from "./IconCardContent";
 import SkillCard from "./SkillCard";
-import BlogCard from "./BlogCard";
-import ReviewCardBig from "./ReviewCardBig";
-import ReviewCardSmall from "./ReviewCardSmall";
-import logo_views from "../assets/images/others1.png";
 import arrow_img from "../assets/images/arrow1.svg";
-import home2 from "../assets/images/home2.svg";
-import home3 from "../assets/images/home3.svg";
-import home4 from "../assets/images/home4.svg";
-import home5 from "../assets/images/home5.svg";
 import { FaGithub, FaEnvelope, FaArrowRight } from "react-icons/fa";
 import skill1 from "../assets/images/skill1.svg";
 import skill2 from "../assets/images/skill2.svg";
@@ -24,13 +16,6 @@ import portfolio1 from "../assets/images/portfolio_img1.png";
 import portfolio2 from "../assets/images/portfolio_img2.png";
 import portfolio3 from "../assets/images/portfolio_img3.png";
 import portfolio4 from "../assets/images/portfolio_img4.png";
-import blog1 from "../assets/images/blog_img1.png";
-import blog2 from "../assets/images/blog_img2.png";
-import blog3 from "../assets/images/blog_img3.png";
-import blog4 from "../assets/images/blog_img4.png";
-import tes1 from "../assets/images/tesi-img1.png";
-import tes2 from "../assets/images/tesi-img2.png";
-import tes3 from "../assets/images/tesi-img3.png";
 import rotated_circle from "../assets/images/rotated_circle.png";
 import ContactForm from "./ContactForm";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
@@ -69,11 +54,7 @@ const MainContent = () => {
             </h1>
           </div>
         </div>
-        <p className="top-p">
-          Your gateway to innovative frontend design, seamless web experiences,
-          and impactful solutions. Turning complex ideas into intuitive,
-          user-friendly interfaces.
-        </p>
+
         <div className="rotate-circle">
           <div className="circle-wrapper">
             <div className="circle">
@@ -81,63 +62,30 @@ const MainContent = () => {
             </div>
             <img src={arrow_img} alt="logo" className="rot-arr-logo" />
           </div>
-          <div className="logo-views">
-            <img src={logo_views} alt="logo" />
-            <div>
-              <p>2k+ reviews</p>
-              <p>(4.90 of 5)</p>
-            </div>
-          </div>
+          <p className="top-p">
+            Your gateway to innovative frontend design, seamless web
+            experiences, and impactful solutions. Turning complex ideas into
+            intuitive, user-friendly interfaces.
+          </p>
         </div>
         <a href="#home-sec">
-          <span>Lets Work Together</span> <FaArrowRight id="arrow-icon" />
+          <span>Let's Work Together</span> <FaArrowRight id="arrow-icon" />
         </a>
       </section>
 
       <section id="about-us-sec">
         <IntroHeader
           h2={"About Me"}
-          top_h1={"Crafting Seamless"}
-          bottom_h1={"Web"}
-          bottom_h1_high={"Experiences"}
+          top_h1={"Here You Can"}
+          bottom_h1={"Explore My"}
+          bottom_h1_high={"Adventure"}
         />
         <TextCardContent
           title={"Cahandar Masimov"}
           desc={
-            "Hi, I'm Cahandar Masimov, a passionate Frontend Developer with over 2 years of experience building intuitive web applications. I specialize in creating responsive, user-friendly web sites that perform seamlessly across devices. By combining my knowledge of modern web technologies with a keen eye for detail, I deliver solutions that not only look great but also provide excellent user experiences."
+            "Hi, I'm Cahandar Masimov, a passionate Frontend Developer building intuitive web applications. I specialize in creating responsive, user-friendly web sites that perform seamlessly across devices. By combining my knowledge of modern web technologies with a keen eye for detail, I deliver solutions that not only look great but also provide excellent user experiences."
           }
         />
-
-        <div className="icon-cards-container">
-          <IconCardContent
-            icon={home2}
-            title={"Frontend Development"}
-            desc={
-              "Building responsive, user-centric websites and applications that prioritize performance, accessibility, and seamless interactions."
-            }
-          />
-          <IconCardContent
-            icon={home3}
-            title={"Frontend Prototyping"}
-            desc={
-              "Developing interactive, high-performance web applications and creating prototypes to test and refine user interactions and designs."
-            }
-          />
-          <IconCardContent
-            icon={home4}
-            title={"Responsive Design"}
-            desc={
-              "Building responsive web applications that seamlessly adapt to all devices, ensuring a consistent and engaging user experience."
-            }
-          />
-          <IconCardContent
-            icon={home5}
-            title={"Wireframing & Visual Design"}
-            desc={
-              "Designing detailed wireframes and visually appealing layouts to bring frontend concepts to life, ensuring clarity and usability."
-            }
-          />
-        </div>
 
         <div className="date-cards-container">
           <div>
@@ -145,12 +93,12 @@ const MainContent = () => {
               <h1 className="title">Work Experience</h1>
               <div className="date-card">
                 <div className="part">
-                  <p className="top">2023 - 2024</p>
-                  <h1>Junior Frontend Developer</h1>
-                  <p className="bottom">Freelance</p>
+                  <p className="top">March 2025 - April 2025</p>
+                  <h1>Frontend Developer Intern</h1>
+                  <p className="bottom">Intern Intelligence</p>
                 </div>
                 <div className="part">
-                  <p className="top">2024 - Present</p>
+                  <p className="top">August 2024 - October 2024</p>
                   <h1 style={{ width: "400px" }}>Frontend Developer</h1>
                   <p className="bottom">Self-employeed</p>
                 </div>
@@ -160,7 +108,7 @@ const MainContent = () => {
               <h1>Stay With Me</h1>
               <div className="icons">
                 <div>
-                  <a href="#">
+                  <a href="#" target="_blank">
                     <svg
                       width="100%"
                       height="100%"
@@ -189,7 +137,10 @@ const MainContent = () => {
                   </a>
                 </div>
                 <div>
-                  <a href="https://www.instagram.com/cahandar_x/">
+                  <a
+                    href="https://www.instagram.com/cahandar_x/"
+                    target="_blank"
+                  >
                     <svg
                       width="100%"
                       height="100%"
@@ -229,7 +180,10 @@ const MainContent = () => {
                   </a>
                 </div>
                 <div>
-                  <a href="https://www.facebook.com/profile.php?id=61550269134539&locale=ru_RU">
+                  <a
+                    href="https://www.facebook.com/profile.php?id=61550269134539&locale=ru_RU"
+                    target="_blank"
+                  >
                     <svg
                       width="100%"
                       height="100%"
@@ -253,7 +207,10 @@ const MainContent = () => {
                   </a>
                 </div>
                 <div>
-                  <a href="https://www.linkedin.com/in/cahandar-masimov-3698022b6/">
+                  <a
+                    href="https://www.linkedin.com/in/cahandar-masimov-3698022b6/"
+                    target="_blank"
+                  >
                     <svg
                       width="100%"
                       height="100%"
@@ -293,6 +250,7 @@ const MainContent = () => {
                   <a
                     href="https://github.com/Cahandar7"
                     style={{ color: "inherit", textDecoration: "none" }}
+                    target="_blank"
                   >
                     <FaGithub className="social-media-icon" />
                   </a>
@@ -321,46 +279,24 @@ const MainContent = () => {
         </div>
       </section>
 
-      <section id="our-service-sec">
+      <section id="certificates-sec">
         <IntroHeader
-          h2={"My Services"}
-          top_h1={"Elevating Websites"}
-          bottom_h1={"With Intuitive"}
-          bottom_h1_high={"Frontend Development"}
+          h2={"My Certificates"}
+          top_h1={"Certificates I Gain"}
+          bottom_h1={"During"}
+          bottom_h1_high={"My Experience"}
         />
 
-        <TextCardContent
-          title={"Frontend Development"}
-          desc={
-            "Building responsive and dynamic web applications with a focus on performance, accessibility, and user experience."
-          }
-        />
-        <TextCardContent
-          title={"Using External Libraries"}
-          desc={
-            "Integrating third-party libraries and packages to enhance functionality, improving project efficiency and scalability."
-          }
-        />
-        <TextCardContent
-          title={"Responsive Web Development"}
-          desc={
-            "Developing adaptive web applications that work seamlessly across all devices for a consistent user experience."
-          }
-        />
-        <TextCardContent
-          title={"Building Apps with Contemporary Design"}
-          desc={
-            "Developing visually appealing applications using the latest design trends and tools to ensure a seamless user experience."
-          }
-        />
+        <TextCardContent title={"Intern Intelligence"} />
+        <TextCardContent title={"Matrix Academy"} />
       </section>
 
       <section id="my-skill-sec">
         <IntroHeader
           h2={"My Skills"}
           top_h1={"Technologies"}
-          bottom_h1={"Powering Modern"}
-          bottom_h1_high={"Frontend Development"}
+          bottom_h1={"Used In"}
+          bottom_h1_high={"Development"}
         />
 
         <div className="skill-cards-container">
@@ -405,129 +341,72 @@ const MainContent = () => {
           bottom_h1_high={"Results"}
         />
 
-        <div className="big-portfolio-card">
-          <a href="#" style={{ color: "inherit", textDecoration: "none" }}>
-            <div>
-              <img src={portfolio1} alt="portfolio1" />
-            </div>
-            <h1>XStore - E-commerce Clothing Web Site</h1>
+        <div className="portfolio-card">
+          <a href="#">
+            <img src={portfolio1} alt="portfolio1" />
           </a>
+          <h1>
+            XStore - E-commerce Web Site ({" "}
+            <a href="#" target="_blank">
+              Github Repo
+            </a>{" "}
+            )
+          </h1>
         </div>
 
-        <div
-          style={{
-            width: "100%",
-            display: "flex",
-            justifyContent: "space-between",
-          }}
-        >
-          <div className="small-portfolio-card">
+        <div className="portcardbox">
+          <div className="portfolio-card" style={{ width: "49%" }}>
             <a
-              href="https://github.com/Cahandar7/Github_Finder_App"
-              style={{ color: "inherit", textDecoration: "none" }}
+              href="https://login-register-by-cahandar.vercel.app/"
+              target="_blank"
             >
-              <div>
-                <img src={portfolio4} alt="small-portfolio-card" />
-              </div>
-              <h1>Github Finder App</h1>
+              <img src={portfolio4} alt="portfolio4" />
             </a>
+            <h1 style={{ fontSize: "1.5em" }}>
+              Login&Register app({" "}
+              <a
+                href="https://github.com/Cahandar7/-InternIntelligence_LoginRegister"
+                target="_blank"
+              >
+                Github Repo
+              </a>{" "}
+              )
+            </h1>
           </div>
 
-          <div className="small-portfolio-card">
-            <a
-              href="https://github.com/Cahandar7/FRESH_VILA_WATER/branches"
-              style={{ color: "inherit", textDecoration: "none" }}
-            >
-              <div>
-                <img src={portfolio3} alt="small-portfolio-card" />
-              </div>
-              <h1>Fresh Vial - E-commerce Web Site</h1>
+          <div className="portfolio-card" style={{ width: "49%" }}>
+            <a href="#">
+              <img src={portfolio3} alt="portfolio3" />
             </a>
+            <h1 style={{ fontSize: "1.5em" }}>
+              Fresh Vila - E-commerce ({" "}
+              <a
+                href="https://github.com/Cahandar7/FRESH_VILA_WATER"
+                target="_blank"
+              >
+                Github Repo
+              </a>{" "}
+              )
+            </h1>
           </div>
         </div>
 
-        <div className="big-portfolio-card">
-          <a
-            href="https://github.com/Cahandar7/Grogin_Template"
-            style={{ color: "inherit", textDecoration: "none" }}
-          >
-            <div>
-              <img src={portfolio2} alt="big-portfolio-card" />
-            </div>
-            <h1>Grogin - E-commerce Groceries Web Site</h1>
-          </a>
-        </div>
-      </section>
-
-      <section id="testimonial-sec">
-        <IntroHeader
-          h2={"Testimonial"}
-          top_h1={"What Clients Say"}
-          bottom_h1={"About"}
-          bottom_h1_high={"My Work"}
-        />
-        <div className="review-cards-container">
-          <ReviewCardBig
-            profile_icon={tes1}
-            text={
-              '"Working with Cahandar was a game-changer for our web projects. Their attention to detail and focus on creating a seamless user experience truly transformed our interfaces. We have seen remarkable improvements in user satisfaction and engagement."'
-            }
-            bot_h4={"David Elson"}
-            bot_p={"Ezhe Source"}
-          />
-          <ReviewCardSmall
-            profile_icon={tes2}
-            text={
-              '"Cahandar exceeded all expectations with their innovative frontend designs and collaborative approach. Their work resonated perfectly with our audience, making a significant impact."'
-            }
-            bot_h4={"Chris Glasser"}
-            bot_p={"Auto Works"}
-          />
-          <ReviewCardSmall
-            profile_icon={tes3}
-            text={
-              '"The frontend designs delivered by Cahandar were intuitive and engaging, significantly improving how users interacted with our platform. A pleasure to work with!"'
-            }
-            bot_h4={"Rodger Struck"}
-            bot_p={"Specialty Restaurant Group"}
-          />
-          <ReviewCardBig
-            profile_icon={tes3}
-            text={
-              '"From wireframes to the final product, Cahandar combined creativity with functionality seamlessly. The final web design not only looks fantastic but also works flawlessly across all devices."'
-            }
-            bot_h4={"Mary Freund"}
-            bot_p={"Rink's"}
-          />
-        </div>
-      </section>
-
-      <section id="our-blog-sec">
-        <IntroHeader
-          h2={"My Blog"}
-          top_h1={"My Latest Blog Posts"}
-          bottom_h1={"Frontend Development"}
-          bottom_h1_high={"Trends & Insights"}
-        />
-        <div className="blog-cards-container">
-          <BlogCard
-            image={blog1}
-            title={"Behind the Pixels: My Favorite Frontend Projects"}
-          />
-          <BlogCard
-            image={blog2}
-            title={
-              "Crafting Seamless Experiences: My Frontend Development Philosophy"
-            }
-          />
-          <BlogCard
-            image={blog3}
-            title={"Staying Ahead: Trends Shaping Frontend Development in 2025"}
-          />
-          <BlogCard
-            image={blog4}
-            title={"From Concept to Reality: My Development Process"}
-          />
+        <div className="portfolio-card">
+          <div>
+            <a href="#">
+              <img src={portfolio2} alt="portfolio2" />
+            </a>
+          </div>
+          <h1>
+            Grogin - E-commerce Template ({" "}
+            <a
+              href="https://github.com/Cahandar7/Grogin_Template"
+              target="_blank"
+            >
+              Github Repo
+            </a>{" "}
+            )
+          </h1>
         </div>
       </section>
 

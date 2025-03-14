@@ -44,8 +44,8 @@ const MainCard = () => {
       <div className="main-card-text">
         <h1>Cahandar Masimov</h1>
         <p>
-          Hi, I'm Cahandar, a dedicated Frontend Developer with 2+ years of
-          experience creating meaningful digital experiences.
+          Hi, I'm Cahandar, a passionate Frontend Developer focused on building
+          great web experiences.
         </p>
       </div>
       <div className="icons">
@@ -79,7 +79,7 @@ const MainCard = () => {
           </a>
         </div>
         <div>
-          <a href="https://www.instagram.com/cahandar_x/">
+          <a href="https://www.instagram.com/cahandar_x/" target="_blank">
             <svg
               width="100%"
               height="100%"
@@ -119,7 +119,10 @@ const MainCard = () => {
           </a>
         </div>
         <div>
-          <a href="https://www.facebook.com/profile.php?id=61550269134539&locale=ru_RU">
+          <a
+            href="https://www.facebook.com/profile.php?id=61550269134539&locale=ru_RU"
+            target="_blank"
+          >
             <svg
               width="100%"
               height="100%"
@@ -143,7 +146,10 @@ const MainCard = () => {
           </a>
         </div>
         <div>
-          <a href="https://www.linkedin.com/in/cahandar-masimov-3698022b6/">
+          <a
+            href="https://www.linkedin.com/in/cahandar-masimov-3698022b6/"
+            target="_blank"
+          >
             <svg
               width="100%"
               height="100%"
@@ -180,14 +186,14 @@ const MainCard = () => {
           </a>
         </div>
         <div>
-          <a href="https://github.com/Cahandar7">
+          <a href="https://github.com/Cahandar7" target="_blank">
             <FaGithub className="social-media-icon" />
           </a>
         </div>
       </div>
       <a
-        href="/Cahandar Masimov CV.pdf"
-        download="Cahandar Masimov CV.pdf"
+        href="/Cahandar_Masimov_CV.pdf"
+        download="Cahandar_Masimov_CV.pdf"
         className="download-cv"
         onClick={() => {
           handleDownloadClick();
