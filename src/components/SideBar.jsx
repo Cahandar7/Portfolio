@@ -1,8 +1,14 @@
 import React from "react";
+import { motion } from "framer-motion";
 
 const SideBar = () => {
   return (
-    <div className="sidebar">
+    <motion.div
+      className="sidebar"
+      initial={{ opacity: 0, x: -50 }}
+      animate={{ opacity: 1, x: 0 }}
+      transition={{ duration: 0.6 }}
+    >
       <ul>
         <li style={{ "--after-content": '"Home"' }}>
           <a href="#home-sec">
@@ -175,7 +181,7 @@ const SideBar = () => {
           </a>
         </li>
       </ul>
-    </div>
+    </motion.div>
   );
 };
 

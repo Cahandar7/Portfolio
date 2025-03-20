@@ -6,6 +6,7 @@
 @import url("./about-us-sec.css");
 @import url("./portfolio-card.css");
 @import url("./contact-form.css");
+@import url("./cursor.css");
 
 * {
   margin: 0;

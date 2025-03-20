@@ -1,17 +1,9 @@
-import React, { useEffect, useState } from "react";
+import React from "react";
 import IntroHeader from "./IntroHeader";
 import TextCardContent from "./TextCardContent";
-import IconCardContent from "./IconCardContent";
 import SkillCard from "./SkillCard";
 import arrow_img from "../assets/images/arrow1.svg";
-import { FaGithub, FaEnvelope, FaArrowRight } from "react-icons/fa";
-import skill1 from "../assets/images/skill1.svg";
-import skill2 from "../assets/images/skill2.svg";
-import skill3 from "../assets/images/skill3.svg";
-import skill4 from "../assets/images/skill4.svg";
-import skill5 from "../assets/images/skill5.svg";
-import skill6 from "../assets/images/skill6.svg";
-import sublogo from "../assets/images/sublogo1.svg";
+import { FaGithub, FaArrowRight } from "react-icons/fa";
 import portfolio1 from "../assets/images/portfolio_img1.png";
 import portfolio2 from "../assets/images/portfolio_img2.png";
 import portfolio3 from "../assets/images/portfolio_img3.png";
@@ -19,8 +11,14 @@ import portfolio4 from "../assets/images/portfolio_img4.png";
 import rotated_circle from "../assets/images/rotated_circle.png";
 import ContactForm from "./ContactForm";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
+import { motion } from "framer-motion";
 
 const MainContent = () => {
+  const variants = {
+    initial: { opacity: 0, x: 50 },
+    animate: { opacity: 1, x: 0 },
+  };
+
   const [text] = useTypewriter({
     words: [
       "Frontend Developer💻",
@@ -38,24 +36,48 @@ const MainContent = () => {
     <div className="main-content">
       <section id="home-sec">
         <div className="intro-header">
-          <div className="logo">
-            <span>
-              <img src={sublogo} alt="logo" />
-            </span>
-            <h2>
-              Hi, I'm Cahandar, {text}
-              <Cursor />
-            </h2>
-          </div>
+          <motion.h2
+            variants={variants}
+            initial="initial"
+            whileInView="animate"
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
+            Hi, I'm Cahandar, {text}
+            <Cursor />
+          </motion.h2>
           <div className="text">
-            <h1 className="top-h1">Developing Intuitive</h1>
-            <h1 className="bottom-h1">
+            <motion.h1
+              className="top-h1"
+              variants={variants}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.1 }}
+            >
+              Developing Intuitive
+            </motion.h1>
+            <motion.h1
+              className="bottom-h1"
+              variants={variants}
+              initial="initial"
+              whileInView="animate"
+              viewport={{ once: true }}
+              transition={{ duration: 0.6, delay: 0.2 }}
+            >
               Experiences <span>Inspire</span>
-            </h1>
+            </motion.h1>
           </div>
         </div>
 
-        <div className="rotate-circle">
+        <motion.div
+          className="rotate-circle"
+          variants={variants}
+          initial="initial"
+          whileInView="animate"
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.3 }}
+        >
           <div className="circle-wrapper">
             <div className="circle">
               <img src={rotated_circle} alt="image" width="130" height="130" />
@@ -67,10 +89,17 @@ const MainContent = () => {
             experiences, and impactful solutions. Turning complex ideas into
             intuitive, user-friendly interfaces.
           </p>
-        </div>
-        <a href="#home-sec">
+        </motion.div>
+
+        <motion.a
+          href="#home-sec"
+          initial={{ opacity: 0, y: 50 }}
+          whileInView={{ opacity: 1, y: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6, delay: 0.1 }}
+        >
           <span>Let's Work Together</span> <FaArrowRight id="arrow-icon" />
-        </a>
+        </motion.a>
       </section>
 
       <section id="about-us-sec">
@@ -89,7 +118,19 @@ const MainContent = () => {
 
         <div className="date-cards-container">
           <div>
-            <div className="date-card-wrapper">
+            <motion.div
+              className="date-card-wrapper"
+              initial={{ opacity: 0, y: 50, scale: 0 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{
+                duration: 0.6,
+                type: "spring",
+                stiffness: 1000,
+                damping: 100,
+                delay: 0,
+              }}
+              viewport={{ once: true }}
+            >
               <h1 className="title">Work Experience</h1>
               <div className="date-card">
                 <div className="part">
@@ -103,8 +144,20 @@ const MainContent = () => {
                   <p className="bottom">Self-employeed</p>
                 </div>
               </div>
-            </div>
-            <div className="icons-wrapper">
+            </motion.div>
+            <motion.div
+              className="icons-wrapper"
+              initial={{ opacity: 0, y: 50, scale: 0 }}
+              whileInView={{ opacity: 1, y: 0, scale: 1 }}
+              transition={{
+                duration: 0.6,
+                type: "spring",
+                stiffness: 1000,
+                damping: 100,
+                delay: 0.1,
+              }}
+              viewport={{ once: true }}
+            >
               <h1>Stay With Me</h1>
               <div className="icons">
                 <div>
@@ -256,9 +309,21 @@ const MainContent = () => {
                   </a>
                 </div>
               </div>
-            </div>
+            </motion.div>
           </div>
-          <div className="date-card-wrapper">
+          <motion.div
+            className="date-card-wrapper"
+            initial={{ opacity: 0, y: 50, scale: 0 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{
+              duration: 0.6,
+              type: "spring",
+              stiffness: 1000,
+              damping: 100,
+              delay: 0.2,
+            }}
+            viewport={{ once: true }}
+          >
             <div className="title">Education</div>
             <div className="date-card">
               <div className="part">
@@ -275,7 +340,7 @@ const MainContent = () => {
                 <p className="bottom">Matrix Academy</p>
               </div>
             </div>
-          </div>
+          </motion.div>
         </div>
       </section>
 
@@ -287,8 +352,14 @@ const MainContent = () => {
           bottom_h1_high={"My Experience"}
         />
 
-        <TextCardContent title={"Intern Intelligence"} />
-        <TextCardContent title={"Matrix Academy"} />
+        <TextCardContent
+          title={"Intern Intelligence"}
+          desc={"Frontend Developer Intern March 2025 - April 2025"}
+        />
+        <TextCardContent
+          title={"Matrix Academy"}
+          desc={"Frontend Development October 2024 - February 2025"}
+        />
       </section>
 
       <section id="my-skill-sec">
@@ -341,7 +412,13 @@ const MainContent = () => {
           bottom_h1_high={"Results"}
         />
 
-        <div className="portfolio-card">
+        <motion.div
+          className="portfolio-card"
+          initial={{ opacity: 0, x: 80 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
           <a href="#">
             <img src={portfolio1} alt="portfolio1" />
           </a>
@@ -352,10 +429,17 @@ const MainContent = () => {
             </a>{" "}
             )
           </h1>
-        </div>
+        </motion.div>
 
         <div className="portcardbox">
-          <div className="portfolio-card" style={{ width: "49%" }}>
+          <motion.div
+            className="portfolio-card"
+            style={{ width: "49%" }}
+            initial={{ opacity: 0, x: 80 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
             <a
               href="https://login-register-by-cahandar.vercel.app/"
               target="_blank"
@@ -372,9 +456,16 @@ const MainContent = () => {
               </a>{" "}
               )
             </h1>
-          </div>
+          </motion.div>
 
-          <div className="portfolio-card" style={{ width: "49%" }}>
+          <motion.div
+            className="portfolio-card"
+            style={{ width: "49%" }}
+            initial={{ opacity: 0, x: 80 }}
+            whileInView={{ opacity: 1, x: 0 }}
+            viewport={{ once: true }}
+            transition={{ duration: 0.6 }}
+          >
             <a href="#">
               <img src={portfolio3} alt="portfolio3" />
             </a>
@@ -388,10 +479,16 @@ const MainContent = () => {
               </a>{" "}
               )
             </h1>
-          </div>
+          </motion.div>
         </div>
 
-        <div className="portfolio-card">
+        <motion.div
+          className="portfolio-card"
+          initial={{ opacity: 0, x: 80 }}
+          whileInView={{ opacity: 1, x: 0 }}
+          viewport={{ once: true }}
+          transition={{ duration: 0.6 }}
+        >
           <div>
             <a href="#">
               <img src={portfolio2} alt="portfolio2" />
@@ -407,7 +504,7 @@ const MainContent = () => {
             </a>{" "}
             )
           </h1>
-        </div>
+        </motion.div>
       </section>
 
       <section id="contact-us-sec">
@@ -420,12 +517,17 @@ const MainContent = () => {
         <ContactForm />
       </section>
 
-      <footer>
+      <motion.footer
+        initial={{ opacity: 0 }}
+        whileInView={{ opacity: 1 }}
+        viewport={{ once: true }}
+        transition={{ duration: 2 }}
+      >
         <h1>Thank you</h1>
         <p>
           <b>© 2025 Cahandar M. | All Rights Reserved.</b>
         </p>
-      </footer>
+      </motion.footer>
     </div>
   );
 };

@@ -3,10 +3,16 @@ import { FaEnvelope } from "react-icons/fa";
 import SideBar from "./SideBar";
 import { GiHamburgerMenu } from "react-icons/gi";
 import toggle_btn_sound from "../assets/audios/toggle_btn.mp3";
+import { motion } from "framer-motion";
 
 const Header = () => {
   return (
-    <header>
+    <motion.header
+      initial={{ opacity: 0 }}
+      whileInView={{ opacity: 1 }}
+      viewport={{ once: true }}
+      transition={{ duration: 2 }}
+    >
       <div className="header-wrapper">
         <h1>Welcome to My Portfolio</h1>
         <div className="right">
@@ -42,7 +48,7 @@ const Header = () => {
           </div>
         </div>
       </div>
-    </header>
+    </motion.header>
   );
 };
 

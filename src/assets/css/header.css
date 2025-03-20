@@ -81,7 +81,7 @@ header .header-wrapper h1:hover {
 }
 
 @media (max-width: 1024px) {
-  header .header-wrapper .left h1 {
+  header .header-wrapper h1 {
     font-size: 30px;
   }
   header .header-wrapper .right {
@@ -97,15 +97,14 @@ header .header-wrapper h1:hover {
 }
 
 @media (max-width: 768px) {
-  header .header-wrapper .left h1 {
+  header .header-wrapper h1 {
     font-size: 20px;
   }
   header .header-wrapper .right {
-    padding: 10px 20px 10px 0;
+    padding: 0;
   }
 
   header .header-wrapper .right .hire-btn {
-    padding: 8px 10px;
     border-radius: 8px;
     span {
       display: none;

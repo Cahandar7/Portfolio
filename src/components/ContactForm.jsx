@@ -1,8 +1,9 @@
-import { send } from '@emailjs/browser'; // import EmailJS library
+import { send } from "@emailjs/browser"; // import EmailJS library
 import React, { useState } from "react";
 import { FaEnvelope } from "react-icons/fa";
 import Swal from "sweetalert2";
 import send_message_sound from "../assets/audios/send_message.mp3";
+import { motion } from "framer-motion";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
@@ -58,7 +59,18 @@ const ContactForm = () => {
   };
 
   return (
-    <div className="form-wrapper">
+    <motion.div
+      className="form-wrapper"
+      initial={{ opacity: 0, y: 50, scale: 0 }}
+      whileInView={{ opacity: 1, y: 0, scale: 1 }}
+      transition={{
+        duration: 0.6,
+        type: "spring",
+        stiffness: 1000,
+        damping: 100,
+      }}
+      viewport={{ once: true }}
+    >
       <h1>Let's Work Together!</h1>
       <form onSubmit={handleSubmit}>
         <div className="top-inputs">
@@ -115,7 +127,7 @@ const ContactForm = () => {
           <span>SEND</span> <FaEnvelope id="send-icon" />
         </button>
       </form>
-    </div>
+    </motion.div>
   );
 };
 

@@ -1,5 +1,5 @@
 .main-card {
-  height: clamp(82vh, 1vw, 60vh);
+  height: 82vh;
   width: auto;
   display: flex;
   flex-direction: column;
@@ -123,7 +123,11 @@
 /* mobile */
 @media (max-width: 768px) {
   .main-card {
+    height: 60vh;
     margin-bottom: 50px;
+    .main-card-picture {
+      height: 50%;
+    }
   }
   .main-card .main-card-text {
     p {
@@ -139,6 +143,13 @@
 }
 /* tablets */
 @media (max-width: 1380px) {
+  .main-card {
+    height: 60vh;
+    margin-bottom: 50px;
+    .main-card-picture {
+      height: 50%;
+    }
+  }
   .main-card .main-card-text {
     p {
       line-height: 1.4em;
@@ -152,6 +163,13 @@
   }
 }
 @media (max-width: 1176px) {
+  .main-card {
+    height: 60vh;
+    margin-bottom: 50px;
+    .main-card-picture {
+      height: 50%;
+    }
+  }
   .main-card .main-card-text {
     p {
       line-height: 1.5em;

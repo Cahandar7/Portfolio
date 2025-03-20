@@ -5,10 +5,12 @@ import MainCard from "./components/MainCard";
 import MainContent from "./components/MainContent";
 import bg_video from "./assets/videos/bg_video.mp4";
 import { Col, Container, Row } from "react-bootstrap";
+import CustomCursor from "./components/CustomCursor";
 
 const App = () => {
   return (
     <>
+      <CustomCursor />
       <div className="video-container">
         <video src={bg_video} autoPlay loop muted className="bg-video"></video>
       </div>

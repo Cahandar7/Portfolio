@@ -1,4 +1,5 @@
 import React, { useState, useEffect } from "react";
+import { motion } from "framer-motion";
 
 const SkillCard = ({ icon, h1_text, p_text }) => {
   const [count, setCount] = useState(0);
@@ -44,13 +45,22 @@ const SkillCard = ({ icon, h1_text, p_text }) => {
   }, [h1_text, p_text, hasAnimated]);
 
   return (
-    <div className="skill-card" id={p_text}>
+    <motion.div
+      className="skill-card"
+      id={p_text}
+      initial={{ opacity: 0, scale: 1.3 }}
+      whileInView={{ opacity: 1, scale: 1 }}
+      transition={{
+        duration: 1,
+      }}
+      viewport={{ once: true }}
+    >
       <div className="skill-icon">
         <img src={icon} alt="logo" style={{ width: "68px" }} />
       </div>
       <h1>{count}%</h1>
       <p>{p_text}</p>
-    </div>
+    </motion.div>
   );
 };
 
