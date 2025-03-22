@@ -48,7 +48,7 @@ const SkillCard = ({ icon, h1_text, p_text }) => {
     <motion.div
       className="skill-card"
       id={p_text}
-      initial={{ opacity: 0, scale: 1.3 }}
+      initial={{ opacity: 0, scale: 1.1 }}
       whileInView={{ opacity: 1, scale: 1 }}
       transition={{
         duration: 1,

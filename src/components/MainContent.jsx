@@ -12,8 +12,42 @@ import rotated_circle from "../assets/images/rotated_circle.png";
 import ContactForm from "./ContactForm";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
+import { Col, Container, Row } from "react-bootstrap";
 
 const MainContent = () => {
+  const skills = [
+    {
+      icon: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
+      level: 90,
+      name: "React",
+    },
+    {
+      icon: "https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg",
+      level: 85,
+      name: "Next.js",
+    },
+    {
+      icon: "https://upload.wikimedia.org/wikipedia/commons/4/49/Redux.png",
+      level: 80,
+      name: "Redux",
+    },
+    {
+      icon: "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg",
+      level: 75,
+      name: "TypeScript",
+    },
+    {
+      icon: "https://upload.wikimedia.org/wikipedia/commons/3/37/Firebase_Logo.svg",
+      level: 78,
+      name: "Firebase",
+    },
+    {
+      icon: "https://upload.wikimedia.org/wikipedia/commons/9/96/Sass_Logo_Color.svg",
+      level: 70,
+      name: "SASS",
+    },
+  ];
+
   const variants = {
     initial: { opacity: 0, x: 50 },
     animate: { opacity: 1, x: 0 },
@@ -369,39 +403,25 @@ const MainContent = () => {
           bottom_h1={"Used In"}
           bottom_h1_high={"Development"}
         />
-
-        <div className="skill-cards-container">
-          <SkillCard
-            icon="https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg"
-            h1_text={"90"}
-            p_text={"React"}
-          />
-          <SkillCard
-            icon="https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg"
-            h1_text={"85"}
-            p_text={"Next.js"}
-          />
-          <SkillCard
-            icon="https://upload.wikimedia.org/wikipedia/commons/4/49/Redux.png"
-            h1_text={"80"}
-            p_text={"Redux"}
-          />
-          <SkillCard
-            icon="https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg"
-            h1_text={"75"}
-            p_text={"TypeScript"}
-          />
-          <SkillCard
-            icon="https://upload.wikimedia.org/wikipedia/commons/3/37/Firebase_Logo.svg"
-            h1_text={"78"}
-            p_text={"Firebase"}
-          />
-          <SkillCard
-            icon="https://upload.wikimedia.org/wikipedia/commons/9/96/Sass_Logo_Color.svg"
-            h1_text={"70"}
-            p_text={"SASS"}
-          />
-        </div>
+        <Container>
+          <Row>
+            {skills.map((skill, index) => (
+              <Col
+                key={index}
+                sm={12}
+                md={6}
+                lg={4}
+                className="skill-cards-container"
+              >
+                <SkillCard
+                  icon={skill.icon}
+                  h1_text={skill.level.toString()}
+                  p_text={skill.name}
+                />
+              </Col>
+            ))}
+          </Row>
+        </Container>
       </section>
 
       <section id="portfolio-sec">
