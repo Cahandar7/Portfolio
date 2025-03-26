@@ -7,11 +7,11 @@ import { motion } from "framer-motion";
 
 const ContactForm = () => {
   const [formData, setFormData] = useState({
-    fullName: "",
+    firstName: "",
+    lastName: "",
     email: "",
     phone: "",
     subject: "",
-    budget: "",
     message: "",
   });
 
@@ -44,11 +44,11 @@ const ContactForm = () => {
         send_message_audio.volume = 0.3;
         send_message_audio.play();
         setFormData({
-          fullName: "",
+          firstName: "",
+          lastName: "",
           email: "",
           phone: "",
           subject: "",
-          budget: "",
           message: "",
         });
       })
@@ -75,15 +75,23 @@ const ContactForm = () => {
       <form onSubmit={handleSubmit}>
         <div className="top-inputs">
           <input
-            placeholder="Full Name"
+            placeholder="First Name *"
             type="text"
-            name="fullName"
-            value={formData.fullName}
+            name="firstName"
+            value={formData.firstName}
             onChange={handleInputChange}
             required
           />
           <input
-            placeholder="Email Address"
+            placeholder="Last Name *"
+            type="text"
+            name="lastName"
+            value={formData.lastName}
+            onChange={handleInputChange}
+            required
+          />
+          <input
+            placeholder="Email Address *"
             type="email"
             name="email"
             value={formData.email}
@@ -91,31 +99,24 @@ const ContactForm = () => {
             required
           />
           <input
-            placeholder="Phone Number"
+            placeholder="Phone Number *"
             type="tel"
             name="phone"
             value={formData.phone}
             onChange={handleInputChange}
           />
-          <input
-            placeholder="Subject"
-            type="text"
-            name="subject"
-            value={formData.subject}
-            onChange={handleInputChange}
-            required
-          />
         </div>
         <input
-          placeholder="Your Budget (optional)"
+          placeholder="Subject *"
           type="text"
-          className="budget-input"
-          name="budget"
-          value={formData.budget}
+          className="subject-input"
+          name="subject"
+          value={formData.subject}
           onChange={handleInputChange}
+          required
         />
         <input
-          placeholder="Message"
+          placeholder="Message *"
           type="text"
           className="message-input"
           name="message"
