@@ -8,6 +8,9 @@ import portfolio1 from "../assets/images/portfolio_img1.png";
 import portfolio2 from "../assets/images/portfolio_img2.png";
 import portfolio3 from "../assets/images/portfolio_img3.png";
 import portfolio4 from "../assets/images/portfolio_img4.png";
+import intern_itelligence_logo from "../assets/images/intern_itelligence_logo.png";
+import unec_logo from "../assets/images/UNEC_logo.png";
+import matrix_academy_logo from "../assets/images/matrix_academy_logo.png";
 import rotated_circle from "../assets/images/rotated_circle.png";
 import ContactForm from "./ContactForm";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
@@ -170,7 +173,28 @@ const MainContent = () => {
                 <div className="part">
                   <p className="top">March 2025 - April 2025</p>
                   <h1>Frontend Developer Intern</h1>
-                  <p className="bottom">Intern Intelligence</p>
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "5px",
+                      cursor: "pointer",
+                    }}
+                    onClick={() =>
+                      window.open(
+                        "https://www.linkedin.com/company/intern-intelligence/posts/?feedView=all",
+                        "_blank"
+                      )
+                    }
+                  >
+                    <img
+                      src={intern_itelligence_logo}
+                      alt="intern_itelligence_logo"
+                      width={40}
+                      height={40}
+                    />
+                    <span className="bottom">Intern Intelligence</span>
+                  </div>
                 </div>
                 <div className="part">
                   <p className="top">August 2024 - October 2024</p>
@@ -179,6 +203,7 @@ const MainContent = () => {
                 </div>
               </div>
             </motion.div>
+
             <motion.div
               className="icons-wrapper"
               initial={{ opacity: 0, y: 50, scale: 0 }}
@@ -195,7 +220,7 @@ const MainContent = () => {
               <h1>Stay With Me</h1>
               <div className="icons">
                 <div>
-                  <a href="#" target="_blank">
+                  <a href="#">
                     <svg
                       width="100%"
                       height="100%"
@@ -345,6 +370,7 @@ const MainContent = () => {
               </div>
             </motion.div>
           </div>
+
           <motion.div
             className="date-card-wrapper"
             initial={{ opacity: 0, y: 50, scale: 0 }}
@@ -363,15 +389,44 @@ const MainContent = () => {
               <div className="part">
                 <p className="top">July 2023 - July 2027</p>
                 <h1>Bachelor's Degree in Information Technology(IT)</h1>
-                <p className="bottom">
-                  Azerbaijan State University of Economics
-                </p>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "5px",
+                    cursor: "pointer",
+                  }}
+                  onClick={() => window.open("https://unec.edu.az", "_blank")}
+                >
+                  <img src={unec_logo} alt="unec_logo" width={40} height={40} />
+                  <span className="bottom">
+                    Azerbaijan State University of Economics
+                  </span>
+                </div>
                 <p style={{ color: "fff", opacity: "1" }}>GPA: 94.8 / 100</p>
               </div>
               <div className="part">
                 <p className="top">October 2024 - February 2025</p>
                 <h1>Frontend Development</h1>
-                <p className="bottom">Matrix Academy</p>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "5px",
+                    cursor: "pointer",
+                  }}
+                  onClick={() =>
+                    window.open("https://matrixacademy.az/", "_blank")
+                  }
+                >
+                  <img
+                    src={matrix_academy_logo}
+                    alt="matrix_academy_logo"
+                    width={40}
+                    height={40}
+                  />
+                  <span className="bottom">Matrix Academy</span>
+                </div>
               </div>
             </div>
           </motion.div>
