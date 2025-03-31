@@ -9,7 +9,7 @@ import portfolio2 from "../assets/images/portfolio_img2.png";
 import portfolio3 from "../assets/images/portfolio_img3.png";
 import portfolio4 from "../assets/images/portfolio_img4.png";
 import intern_itelligence_logo from "../assets/images/intern_itelligence_logo.png";
-import unec_logo from "../assets/images/UNEC_logo.png";
+import unec_logo from "../assets/images/unec_logo.png";
 import matrix_academy_logo from "../assets/images/matrix_academy_logo.png";
 import rotated_circle from "../assets/images/rotated_circle.png";
 import ContactForm from "./ContactForm";
