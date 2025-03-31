@@ -494,12 +494,18 @@ const MainContent = () => {
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
         >
-          <a href="#">
+          <a
+            href="https://intern-intelligence-ecommerce.vercel.app/"
+            target="_blank"
+          >
             <img src={portfolio1} alt="portfolio1" />
           </a>
           <h1>
             XStore - E-commerce Web Site ({" "}
-            <a href="#" target="_blank">
+            <a
+              href="https://github.com/Cahandar7/InternIntelligence_Ecommerce"
+              target="_blank"
+            >
               Github Repo
             </a>{" "}
             )
