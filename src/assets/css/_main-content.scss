@@ -1,6 +1,6 @@
 .main-content {
   max-width: 100%;
-  height: 82vh;
+  height: 85vh;
   overflow-y: auto;
   overflow-x: hidden;
   display: flex;
@@ -172,8 +172,9 @@ section {
   }
 }
 
-@media (max-width: 768px) {
+@media (992px > width > 768px) {
   .main-content {
+    height: 98vh !important;
     max-width: 700px;
     margin: 20px 0;
     footer {
@@ -284,7 +285,11 @@ section {
     }
   }
 }
-@media (max-width: 1380px) {
+
+@media (min-width: 1200px) {
+  .main-content {
+    height: 85vh !important;
+  }
   .main-content {
     max-width: 700px;
     margin: 20px 0;

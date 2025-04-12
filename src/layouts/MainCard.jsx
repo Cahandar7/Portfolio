@@ -1,7 +1,7 @@
 import React from "react";
-import card_img from "../assets/images/portfolio_img.jpeg";
 import { FaGithub, FaDownload } from "react-icons/fa";
 import Swal from "sweetalert2";
+import card_img from "../assets/images/portfolio_img.jpeg";
 import cv_down_sound from "../assets/audios/cv_download.wav";
 import { motion } from "framer-motion";
 
@@ -45,19 +45,16 @@ const MainCard = () => {
       viewport={{ once: true }}
       transition={{ duration: 0.6 }}
     >
-      <div className="main-card-picture">
-        <motion.img
-          src={card_img}
-          alt="image"
-          initial={{ opacity: 0, width: 0 }}
-          animate={{ opacity: 1, width: "100%" }}
-          transition={{
-            duration: 0.6,
-            ease: "easeInOut",
-          }}
-        />
-      </div>
-
+      <motion.img
+        className="main-card-img"
+        src={card_img}
+        alt="image"
+        initial={{ opacity: 0, height: 0 }}
+        animate={{ opacity: 1, height: "100%" }}
+        transition={{
+          duration: 0.2,
+        }}
+      />
       <div className="main-card-text">
         <h1>Cahandar Masimov</h1>
         <p>
@@ -65,7 +62,6 @@ const MainCard = () => {
           great web experiences.
         </p>
       </div>
-
       <div className="icons">
         <div>
           <a href="#">
@@ -209,7 +205,6 @@ const MainCard = () => {
           </a>
         </div>
       </div>
-
       <a
         href="/Cahandar_Masimov_CV.pdf"
         download="Cahandar_Masimov_CV.pdf"
@@ -220,10 +215,6 @@ const MainCard = () => {
       >
         DOWNLOAD CV <FaDownload />
       </a>
-
-      <p style={{ marginTop: "8px" }}>
-        <b>© 2025 Cahandar. All Rights Reserved.</b>
-      </p>
     </motion.div>
   );
 };

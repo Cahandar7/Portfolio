@@ -1,5 +1,5 @@
-import { send } from "@emailjs/browser"; // import EmailJS library
 import React, { useState } from "react";
+import { send } from "@emailjs/browser";
 import { FaEnvelope } from "react-icons/fa";
 import Swal from "sweetalert2";
 import send_message_sound from "../assets/audios/send_message.mp3";

@@ -1,11 +1,11 @@
-@import url("./header.css");
-@import url("./sidebar.css");
-@import url("./main-card.css");
-@import url("./main-content.css");
-@import url("./home-sec.css");
-@import url("./about-us-sec.css");
-@import url("./portfolio-card.css");
-@import url("./contact-form.css");
+@import "./header";
+@import "./sidebar";
+@import "./main-card";
+@import "./main-content";
+@import "./home-sec";
+@import "./about-us-sec";
+@import "./portfolio-card";
+@import "./contact-form";
 
 * {
   margin: 0;

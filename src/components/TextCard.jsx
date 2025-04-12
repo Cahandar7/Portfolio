@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const TextCardContent = ({ title, desc }) => {
+const TextCard = ({ title, desc }) => {
   return (
     <motion.div
       className="text-card"
@@ -16,4 +16,4 @@ const TextCardContent = ({ title, desc }) => {
   );
 };
 
-export default TextCardContent;
+export default TextCard;

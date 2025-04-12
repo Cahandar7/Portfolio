@@ -1,21 +1,12 @@
 header {
   max-width: 100vw;
-  width: 90vw;
   height: 15vh;
   display: flex;
   align-items: center;
-  justify-content: center;
-}
-
-header .header-wrapper {
-  width: 85%;
-  display: flex;
-  align-items: center;
   justify-content: space-between;
-  padding: 10px 20px;
 }
 
-header .header-wrapper h1 {
+header h1 {
   font-size: 40px;
   font-family: "playfair-display", serif;
   font-style: italic;
@@ -23,7 +14,7 @@ header .header-wrapper h1 {
   cursor: pointer;
 }
 
-header .header-wrapper h1:hover {
+header h1:hover {
   color: #ffae00;
 }
 
@@ -52,6 +43,7 @@ header .header-wrapper h1:hover {
 }
 
 .sidebar-toggle-btn {
+  display: none;
   .btn {
     background-color: #0e161f;
     color: #fff;
@@ -74,43 +66,53 @@ header .header-wrapper h1:hover {
   }
 }
 
-@media (min-width: 1024px) {
-  .sidebar-toggle-btn {
-    display: none;
+@media (992px >width > 767px) {
+  .offcanvas .sidebar {
+    display: block !important;
   }
-}
-
-@media (max-width: 1024px) {
-  header .header-wrapper h1 {
-    font-size: 30px;
+  .sidebar {
+    display: none !important;
   }
-  header .header-wrapper .right {
-    padding: 20px 30px 20px 0;
-  }
-  header .header-wrapper .right .hire-btn {
-    font-size: 14px;
-    padding: 8px 10px;
-  }
-  .sidebar-toggle-btn {
-    display: none;
-  }
-}
-
-@media (max-width: 768px) {
-  header .header-wrapper h1 {
+  header h1 {
     font-size: 20px;
   }
-  header .header-wrapper .right {
+  header .right {
     padding: 0;
   }
 
-  header .header-wrapper .right .hire-btn {
+  header .right .hire-btn {
+    border-radius: 8px;
+    padding: 6px 8px;
+    span {
+      display: none;
+    }
+  }
+  header .sidebar-toggle-btn {
+    display: inline-block !important;
+  }
+}
+
+@media (max-width: 576px) {
+  .offcanvas .sidebar {
+    display: block !important;
+  }
+  .sidebar {
+    display: none !important;
+  }
+  header h1 {
+    font-size: 20px;
+  }
+  header .right {
+    padding: 0;
+  }
+
+  header .right .hire-btn {
     border-radius: 8px;
     span {
       display: none;
     }
   }
-  header .header-wrapper .sidebar-toggle-btn {
+  header .sidebar-toggle-btn {
     display: inline-block;
   }
   .sidebar ul {
@@ -140,5 +142,23 @@ header .header-wrapper h1:hover {
     left: 80px;
     width: 270%;
     opacity: 1;
+  }
+}
+
+@media (992px < width < 1200px) {
+  .offcanvas .sidebar {
+    display: block !important;
+  }
+  .sidebar-toggle-btn {
+    display: block !important;
+  }
+  .sidebar {
+    display: none !important;
+  }
+}
+
+@media (min-width: 1200px) {
+  header {
+    height: 10vh !important;
   }
 }
