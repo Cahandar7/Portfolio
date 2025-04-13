@@ -52,11 +52,15 @@
       display: block !important;
     }
     .offcanvas {
-      width: max(150px, 50vw) !important;
+      width: max(200px, 50vw) !important;
     }
   }
 
   .sidebar {
+    display: none !important;
+  }
+
+  .sidebar ul li::after {
     display: none !important;
   }
 
@@ -206,13 +210,14 @@
       display: block !important;
     }
     .offcanvas {
-      width: 200px !important;
+      width: 280px !important;
     }
   }
 
   .sidebar {
     display: none !important;
   }
+
   .main-content {
     margin: 0;
     footer {
@@ -485,7 +490,7 @@
       display: block !important;
     }
     .offcanvas {
-      width: 200px !important;
+      width: 280px !important;
     }
   }
 
