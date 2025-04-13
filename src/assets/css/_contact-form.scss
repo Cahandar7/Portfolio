@@ -87,6 +87,9 @@
   text-transform: uppercase;
   font-weight: 600;
   transition: 0.4s;
+  #send-icon {
+    font-size: 1em !important;
+  }
 }
 
 .form-wrapper form button:hover {

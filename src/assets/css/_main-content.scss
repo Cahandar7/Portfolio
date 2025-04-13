@@ -58,7 +58,7 @@ section {
   flex-direction: column;
   align-items: flex-start;
   justify-content: space-evenly;
-  padding: 30px;
+  padding: 20px;
   margin-bottom: 30px;
   background-color: rgba(81, 76, 76, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.1);
@@ -151,8 +151,12 @@ section {
   border: 1px solid yellowgreen;
 }
 
-.skill-cards-container {
-  margin: 20px 0;
+.skill-cards-box {
+  display: flex;
+  justify-content: space-between;
+  .skill-cards-container {
+    margin: 20px 0;
+  }
 }
 
 .main-content footer {
@@ -169,235 +173,5 @@ section {
   }
   h1:hover {
     color: #ffae00;
-  }
-}
-
-@media (992px > width > 768px) {
-  .main-content {
-    height: 98vh !important;
-    max-width: 700px;
-    margin: 20px 0;
-    footer {
-      h1 {
-        font-size: 30px;
-      }
-      p {
-        font-size: 11px;
-      }
-    }
-  }
-
-  #home-sec {
-    max-width: 100%;
-    .text {
-      margin-top: 10px;
-      .top-h1,
-      .bottom-h1 {
-        font-size: 40px;
-      }
-    }
-    .intro-header .logo {
-      img {
-        width: 30px;
-        height: 30px;
-      }
-      h2 {
-        height: 50px;
-      }
-    }
-    p {
-      display: none;
-    }
-    a {
-      span {
-        font-size: 33px;
-      }
-      #arrow-icon {
-        width: auto;
-        height: 70px !important;
-      }
-    }
-  }
-
-  #about-us-sec {
-    .text-card {
-      h1 {
-        font-size: 1.5em;
-        line-height: 1em;
-      }
-      p {
-        line-height: 1.4em;
-      }
-    }
-    .icon-card {
-      display: none;
-    }
-    .date-cards-container {
-      flex-direction: column;
-      .icons-wrapper {
-        display: none;
-      }
-    }
-  }
-
-  #certificates-sec {
-    .text-card {
-      h1 {
-        font-size: 1.5em;
-        line-height: 1em;
-      }
-      p {
-        line-height: 1.4em;
-      }
-    }
-  }
-
-  #contact-us-sec {
-    .form-wrapper {
-      padding: 15px;
-      margin-bottom: 10px;
-    }
-
-    .form-wrapper form {
-      input {
-        width: 100%;
-      }
-    }
-
-    .form-wrapper form button {
-      width: 100%;
-      margin-top: 10px;
-    }
-  }
-
-  #about-us-sec,
-  #certificates-sec,
-  #my-skill-sec,
-  #portfolio-sec,
-  #contact-us-sec {
-    max-width: 100%;
-    .intro-header .text {
-      .top-h1,
-      .bottom-h1 {
-        font-size: 40px;
-        margin-top: 10px;
-      }
-    }
-  }
-}
-
-@media (min-width: 1200px) {
-  .main-content {
-    height: 85vh !important;
-  }
-  .main-content {
-    max-width: 700px;
-    margin: 20px 0;
-    footer {
-      h1 {
-        font-size: 30px;
-      }
-      p {
-        font-size: 11px;
-      }
-    }
-  }
-
-  #home-sec {
-    max-width: 100%;
-    .text {
-      margin-top: 10px;
-      .top-h1,
-      .bottom-h1 {
-        font-size: 40px;
-      }
-    }
-    .intro-header .logo {
-      img {
-        width: 30px;
-        height: 30px;
-      }
-      h2 {
-        height: 50px;
-      }
-    }
-    p {
-      display: none;
-    }
-    a {
-      span {
-        font-size: 33px;
-      }
-      #arrow-icon {
-        width: auto;
-        height: 70px !important;
-      }
-    }
-  }
-
-  #about-us-sec {
-    .text-card {
-      h1 {
-        font-size: 1.5em;
-        line-height: 1em;
-      }
-      p {
-        line-height: 1.4em;
-      }
-    }
-    .icon-card {
-      display: none;
-    }
-    .date-cards-container {
-      flex-direction: column;
-      .icons-wrapper {
-        display: none;
-      }
-    }
-  }
-
-  #certificates-sec {
-    .text-card {
-      h1 {
-        font-size: 1.5em;
-        line-height: 1em;
-      }
-      p {
-        line-height: 1.4em;
-      }
-    }
-  }
-
-  #contact-us-sec {
-    .form-wrapper {
-      padding: 15px;
-      margin-bottom: 10px;
-    }
-
-    .form-wrapper form {
-      input {
-        width: 100%;
-      }
-    }
-
-    .form-wrapper form button {
-      width: 100%;
-      margin-top: 10px;
-    }
-  }
-
-  #about-us-sec,
-  #certificates-sec,
-  #my-skill-sec,
-  #portfolio-sec,
-  #contact-us-sec {
-    max-width: 100%;
-    .intro-header .text {
-      .top-h1,
-      .bottom-h1 {
-        font-size: 40px;
-        margin-top: 10px;
-      }
-    }
   }
 }

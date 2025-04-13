@@ -1,5 +1,4 @@
 .main-card {
-  // height: 82vh;
   width: auto;
   display: flex;
   flex-direction: column;
@@ -9,6 +8,7 @@
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
   padding: 10px 20px;
+  margin-bottom: 30px;
   a {
     color: inherit;
     text-decoration: none;
@@ -34,7 +34,7 @@
 }
 
 .main-card .main-card-text h1 {
-  font-size: clamp(1.1rem, 5vw, 2.1rem);
+  font-size: clamp(1.1rem, 5vw, 1.7rem);
   transition: 0.4s;
 }
 
@@ -114,64 +114,4 @@
   border: 1px solid white;
   color: white;
   cursor: pointer;
-}
-
-@media (max-width: 576px) {
-  .main-card {
-    height: 100vh !important;
-    margin-bottom: 50px;
-  }
-  .main-card .main-card-text {
-    p {
-      display: none;
-    }
-  }
-  .main-card .icons {
-    div {
-      width: 35px;
-      height: 35px;
-    }
-  }
-}
-
-@media (max-width: 768px) {
-  .main-card {
-    height: 100vh;
-    margin-bottom: 50px;
-  }
-  .main-card .main-card-text {
-    p {
-      line-height: 1.5em;
-    }
-  }
-  .main-card .icons {
-    div {
-      width: 45px;
-      height: 45px;
-    }
-  }
-}
-
-@media (1200px >width > 768px) {
-  .main-card {
-    height: 100vh !important;
-    margin-bottom: 50px;
-  }
-  .main-card .main-card-text {
-    p {
-      line-height: 1.5em;
-    }
-  }
-  .main-card .icons {
-    div {
-      width: 45px;
-      height: 45px;
-    }
-  }
-}
-
-@media (min-width: 1200px) {
-  .main-card {
-    height: 85vh !important;
-  }
 }

@@ -63,7 +63,7 @@ const MainCard = () => {
         </p>
       </div>
       <div className="icons">
-        <div>
+        <div className="twitter-icon-box">
           <a href="#">
             <svg
               width="100%"
@@ -213,7 +213,7 @@ const MainCard = () => {
           handleDownloadClick();
         }}
       >
-        DOWNLOAD CV <FaDownload />
+        <span>DOWNLOAD</span> CV <FaDownload />
       </a>
     </motion.div>
   );

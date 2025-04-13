@@ -55,7 +55,6 @@ header h1:hover {
   }
 
   .offcanvas {
-    width: 300px;
     background-color: #0e161f;
     overflow-y: auto;
   }
@@ -63,102 +62,5 @@ header h1:hover {
   .offcanvas::-webkit-scrollbar,
   .offcanvas-body::-webkit-scrollbar {
     display: none;
-  }
-}
-
-@media (992px >width > 767px) {
-  .offcanvas .sidebar {
-    display: block !important;
-  }
-  .sidebar {
-    display: none !important;
-  }
-  header h1 {
-    font-size: 20px;
-  }
-  header .right {
-    padding: 0;
-  }
-
-  header .right .hire-btn {
-    border-radius: 8px;
-    padding: 6px 8px;
-    span {
-      display: none;
-    }
-  }
-  header .sidebar-toggle-btn {
-    display: inline-block !important;
-  }
-}
-
-@media (max-width: 576px) {
-  .offcanvas .sidebar {
-    display: block !important;
-  }
-  .sidebar {
-    display: none !important;
-  }
-  header h1 {
-    font-size: 20px;
-  }
-  header .right {
-    padding: 0;
-  }
-
-  header .right .hire-btn {
-    border-radius: 8px;
-    span {
-      display: none;
-    }
-  }
-  header .sidebar-toggle-btn {
-    display: inline-block;
-  }
-  .sidebar ul {
-    gap: 10px;
-  }
-  .sidebar ul li::after {
-    content: var(--after-content);
-    width: 100%;
-    height: 100%;
-    position: absolute;
-    top: 0;
-    left: 0;
-    background-color: #ffae00;
-    color: #000;
-    font-size: 10px;
-    font-weight: 500;
-    display: flex;
-    align-items: center;
-    justify-content: center;
-    border: none;
-    border-radius: 4px;
-    transition: 0.5s ease;
-    z-index: 4;
-    opacity: 0;
-  }
-  .sidebar ul li:hover::after {
-    left: 80px;
-    width: 270%;
-    opacity: 1;
-  }
-}
-
-@media (992px < width < 1200px) {
-  .offcanvas .sidebar {
-    display: block !important;
-  }
-  .sidebar-toggle-btn {
-    display: block !important;
-  }
-  .sidebar {
-    display: none !important;
-  }
-}
-
-@media (min-width: 1200px) {
-  header {
-    height: 10vh !important;
   }
 }

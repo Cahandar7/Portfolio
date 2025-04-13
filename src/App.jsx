@@ -21,7 +21,7 @@ const App = () => {
         <Header />
       </Row>
       <Row>
-        <Col xs={0} sm={3} md={12} lg={12} xl={1}>
+        <Col xs={12} sm={3} md={12} lg={12} xl={1}>
           <SideBar />
         </Col>
 
@@ -29,7 +29,7 @@ const App = () => {
           <MainCard />
         </Col>
 
-        <Col xs={12} sm={12} md={7} lg={7} xl={6}>
+        <Col xs={12} sm={12} md={7} lg={7} xl={7}>
           <MainContent />
         </Col>
       </Row>

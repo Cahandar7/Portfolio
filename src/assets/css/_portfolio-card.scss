@@ -16,20 +16,13 @@
     }
   }
   h1 {
-    font-size: 2em;
+    font-size: 1.3em;
     transition: 0.4s;
     a {
       text-decoration: none;
       transition: 0.4s;
     }
   }
-}
-
-.portcardbox {
-  width: 100%;
-  display: flex;
-  align-items: center;
-  justify-content: space-between;
 }
 
 .portfolio-card h1:hover {
@@ -41,13 +34,4 @@
 
 .portfolio-card img:hover {
   transform: scale(1.03);
-}
-
-@media (max-width: 768px) {
-  .portcardbox {
-    flex-direction: column;
-    .portfolio-card {
-      width: 100% !important;
-    }
-  }
 }

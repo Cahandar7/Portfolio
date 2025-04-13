@@ -1,0 +1,945 @@
+@media (width < 360px) {
+  .main-card {
+    height: 50vh !important;
+    padding: 5px 10px;
+    .main-card-img {
+      width: 100%;
+      height: 50% !important;
+    }
+    .main-card-text {
+      p {
+        display: none;
+      }
+    }
+
+    .icons {
+      .twitter-icon-box {
+        display: none !important;
+      }
+      div {
+        width: 40px !important;
+        height: 40px !important;
+      }
+    }
+    .download-cv {
+      padding: 4px 6px;
+      span {
+        display: none !important;
+      }
+    }
+  }
+
+  header {
+    h1 {
+      font-size: 20px;
+    }
+
+    .right {
+      padding: 0;
+    }
+
+    .right .hire-btn {
+      border-radius: 8px;
+      padding: 4px 8px;
+      span {
+        display: none;
+      }
+    }
+    .sidebar-toggle-btn {
+      display: inline-block;
+    }
+    .offcanvas .sidebar {
+      display: block !important;
+    }
+    .offcanvas {
+      width: max(150px, 50vw) !important;
+    }
+  }
+
+  .sidebar {
+    display: none !important;
+  }
+
+  .main-content {
+    margin: 0;
+    footer {
+      h1 {
+        font-size: 20px;
+      }
+      p {
+        font-size: 8px;
+      }
+    }
+
+    #home-sec {
+      display: none;
+    }
+
+    #about-us-sec {
+      .text-card {
+        h1 {
+          font-size: 1.5em;
+          line-height: 1em;
+        }
+        p {
+          line-height: 1.4em;
+        }
+      }
+      .date-cards-container {
+        flex-direction: column;
+        gap: 15px;
+        .part {
+          p {
+            margin-bottom: 10px;
+          }
+          h1 {
+            margin: 10px 0;
+            font-size: 20px;
+          }
+          div {
+            margin: 10px 0;
+          }
+        }
+      }
+    }
+
+    // #certificates-sec {
+    //   .text-card {
+    //     h1 {
+    //       font-size: 1.5em;
+    //       line-height: 1em;
+    //     }
+    //     p {
+    //       line-height: 1.4em;
+    //     }
+    //   }
+    // }
+
+    #contact-us-sec {
+      .form-wrapper {
+        padding: 15px;
+        margin-bottom: 10px;
+      }
+
+      .form-wrapper form {
+        input {
+          width: 100%;
+        }
+      }
+
+      .form-wrapper form button {
+        width: 100%;
+        margin-top: 10px;
+      }
+    }
+
+    #about-us-sec,
+    #certificates-sec,
+    #my-skill-sec,
+    #portfolio-sec,
+    #contact-us-sec {
+      max-width: 100%;
+      .intro-header .text {
+        .top-h1,
+        .bottom-h1 {
+          font-size: 35px;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (360px <= width < 576px) {
+  .main-card {
+    height: 65vh !important;
+    padding: 15px;
+    .main-card-img {
+      width: 100%;
+      height: 60% !important;
+      object-position: top;
+    }
+    .main-card-text {
+      p {
+        display: none;
+      }
+    }
+    .icons {
+      .twitter-icon-box {
+        display: block;
+      }
+      div {
+        width: 45px !important;
+        height: 45px !important;
+      }
+    }
+    .download-cv {
+      padding: 8px 16px;
+      margin-bottom: 0;
+      span {
+        display: inline !important;
+      }
+    }
+  }
+
+  header {
+    h1 {
+      font-size: 30px;
+    }
+    .right {
+      padding: 0;
+    }
+    .right .hire-btn {
+      border-radius: 40px;
+      padding: 6px 10px;
+      span {
+        display: inline;
+      }
+    }
+    .sidebar-toggle-btn {
+      display: inline-block;
+      .btn {
+        padding: 8px 10px !important;
+      }
+    }
+    .offcanvas .sidebar {
+      display: block !important;
+    }
+    .offcanvas {
+      width: 200px !important;
+    }
+  }
+
+  .sidebar {
+    display: none !important;
+  }
+  .main-content {
+    margin: 0;
+    footer {
+      h1 {
+        font-size: 25px;
+      }
+      p {
+        font-size: 12px;
+      }
+    }
+
+    #home-sec {
+      display: none;
+    }
+
+    #about-us-sec {
+      .text-card {
+        h1 {
+          font-size: 1.5em;
+          line-height: 1em;
+        }
+        p {
+          line-height: 1.4em;
+        }
+      }
+      .date-cards-container {
+        flex-direction: column;
+        gap: 15px;
+        .part {
+          p {
+            margin-bottom: 10px;
+          }
+          h1 {
+            margin: 10px 0;
+          }
+          div {
+            margin: 10px 0;
+          }
+        }
+      }
+    }
+
+    // #certificates-sec {
+    //   .text-card {
+    //     h1 {
+    //       font-size: 1.5em;
+    //       line-height: 1em;
+    //     }
+    //     p {
+    //       line-height: 1.4em;
+    //     }
+    //   }
+    // }
+
+    #contact-us-sec {
+      .form-wrapper {
+        padding: 15px;
+        margin-bottom: 10px;
+      }
+
+      .form-wrapper form {
+        input {
+          width: 100%;
+        }
+      }
+
+      .form-wrapper form button {
+        width: 100%;
+        margin-top: 10px;
+      }
+    }
+
+    #about-us-sec,
+    #certificates-sec,
+    #my-skill-sec,
+    #portfolio-sec,
+    #contact-us-sec {
+      max-width: 100%;
+      .intro-header .text {
+        .top-h1,
+        .bottom-h1 {
+          font-size: 35px;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (576px <= width < 768px) {
+  .main-card {
+    height: 88vh !important;
+    margin-bottom: 30px;
+
+    .main-card-img {
+      width: 100%;
+      height: 50% !important;
+      object-position: top;
+    }
+
+    .main-card-text {
+      p {
+        line-height: 1.5em;
+      }
+    }
+    .icons {
+      div {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+
+  header {
+    h1 {
+      font-size: 35px;
+    }
+    .right {
+      padding: 0;
+    }
+    .right .hire-btn {
+      border-radius: 40px;
+      padding: 16px 20px;
+      span {
+        display: inline;
+      }
+    }
+    .sidebar-toggle-btn {
+      display: none;
+    }
+    .offcanvas .sidebar {
+      display: none !important;
+    }
+  }
+
+  .sidebar {
+    display: block !important;
+    height: 88vh !important;
+  }
+
+  .main-content {
+    margin: 0;
+    footer {
+      h1 {
+        font-size: 25px;
+      }
+      p {
+        font-size: 12px;
+      }
+    }
+
+    #home-sec {
+      display: none;
+    }
+
+    #about-us-sec {
+      .text-card {
+        h1 {
+          font-size: 1.5em;
+          line-height: 1em;
+        }
+        p {
+          line-height: 1.4em;
+        }
+      }
+      .date-cards-container {
+        flex-direction: column;
+        gap: 15px;
+        .part {
+          p {
+            margin-bottom: 10px;
+          }
+          h1 {
+            margin: 10px 0;
+          }
+          div {
+            margin: 10px 0;
+          }
+        }
+      }
+    }
+
+    // #certificates-sec {
+    //   .text-card {
+    //     h1 {
+    //       font-size: 1.5em;
+    //       line-height: 1em;
+    //     }
+    //     p {
+    //       line-height: 1.4em;
+    //     }
+    //   }
+    // }
+
+    #contact-us-sec {
+      .form-wrapper {
+        padding: 15px;
+        margin-bottom: 10px;
+      }
+
+      .form-wrapper form {
+        input {
+          width: 100%;
+        }
+      }
+
+      .form-wrapper form button {
+        width: 100%;
+        margin-top: 10px;
+      }
+    }
+
+    #about-us-sec,
+    #certificates-sec,
+    #my-skill-sec,
+    #portfolio-sec,
+    #contact-us-sec {
+      max-width: 100%;
+      .intro-header .text {
+        .top-h1,
+        .bottom-h1 {
+          font-size: 35px;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (768px <= width < 1200px) {
+  .main-card {
+    height: 82vh !important;
+    margin-bottom: 0 !important;
+    .main-card-img {
+      width: 100%;
+      height: 40% !important;
+      object-position: top;
+    }
+    .main-card-text {
+      p {
+        line-height: 1.5em;
+      }
+    }
+    .icons {
+      div {
+        width: 45px;
+        height: 45px;
+      }
+    }
+  }
+
+  header {
+    h1 {
+      font-size: 40px;
+    }
+    .right .hire-btn {
+      border-radius: 40px;
+      padding: 16px 20px;
+      span {
+        display: inline;
+      }
+    }
+    .sidebar-toggle-btn {
+      display: inline-block;
+      .btn {
+        padding: 16px 20px;
+      }
+    }
+    .offcanvas .sidebar {
+      display: block !important;
+    }
+    .offcanvas {
+      width: 200px !important;
+    }
+  }
+
+  .sidebar {
+    display: none !important;
+  }
+
+  .main-content {
+    height: 82vh !important;
+    margin: 0;
+    footer {
+      h1 {
+        font-size: 25px;
+      }
+      p {
+        font-size: 12px;
+      }
+    }
+
+    #home-sec {
+      margin-bottom: 80px;
+      .rotate-circle {
+        .circle-wrapper {
+          transform: scale(0.8);
+        }
+        p {
+          font-size: 14px;
+        }
+      }
+      a {
+        font-size: 2em;
+        #arrow-icon {
+          height: 55%;
+        }
+      }
+    }
+
+    #about-us-sec {
+      .text-card {
+        h1 {
+          font-size: 1.5em;
+          line-height: 1em;
+        }
+        p {
+          line-height: 1.4em;
+        }
+      }
+      .date-cards-container {
+        flex-direction: column;
+        gap: 15px;
+        .part {
+          p {
+            margin-bottom: 10px;
+          }
+          h1 {
+            margin: 10px 0;
+          }
+          div {
+            margin: 10px 0;
+          }
+        }
+      }
+    }
+
+    // #certificates-sec {
+    //   .text-card {
+    //     h1 {
+    //       font-size: 1.5em;
+    //       line-height: 1em;
+    //     }
+    //     p {
+    //       line-height: 1.4em;
+    //     }
+    //   }
+    // }
+
+    #contact-us-sec {
+      .form-wrapper {
+        padding: 15px;
+        margin-bottom: 10px;
+      }
+
+      .form-wrapper form {
+        input {
+          width: 100%;
+        }
+      }
+
+      .form-wrapper form button {
+        width: 150px;
+        margin-top: 10px;
+      }
+    }
+    #home-sec,
+    #about-us-sec,
+    #certificates-sec,
+    #my-skill-sec,
+    #portfolio-sec,
+    #contact-us-sec {
+      max-width: 100%;
+      .intro-header .text {
+        .top-h1,
+        .bottom-h1 {
+          font-size: 35px;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (992px <= width < 1200px) {
+  .main-card {
+    height: 82vh !important;
+    margin-bottom: 0 !important;
+    .main-card-img {
+      width: 100%;
+      height: 45% !important;
+      object-position: top;
+    }
+  }
+  .main-content {
+    #home-sec {
+      margin-bottom: 80px;
+      a {
+        width: 100%;
+        height: 30%;
+        font-size: 2.5em;
+        margin: 20px 0;
+        #arrow-icon {
+          width: auto;
+          height: 60%;
+        }
+      }
+    }
+    #contact-us-sec {
+      .form-wrapper .top-inputs {
+        flex-direction: row;
+        justify-content: space-between;
+        input {
+          width: 48%;
+        }
+      }
+      .form-wrapper form button {
+        width: 150px;
+        margin-top: 10px;
+      }
+    }
+  }
+}
+
+@media (1200px <= width < 1400px) {
+  .main-card {
+    height: 82vh !important;
+    margin-bottom: 0 !important;
+    margin-left: 20px !important;
+    .main-card-img {
+      width: 100%;
+      height: 45% !important;
+      object-position: top;
+    }
+    .main-card-text {
+      p {
+        line-height: 1.5em;
+      }
+    }
+    .icons {
+      div {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+
+  header {
+    h1 {
+      font-size: 40px;
+    }
+    .right .hire-btn {
+      border-radius: 40px;
+      padding: 16px 20px;
+      span {
+        display: inline;
+      }
+    }
+    .sidebar-toggle-btn {
+      display: none;
+    }
+    .offcanvas .sidebar {
+      display: none !important;
+    }
+  }
+
+  .sidebar {
+    display: block !important;
+    height: 82vh !important;
+  }
+
+  .main-content {
+    height: 82vh !important;
+    margin: 0;
+    footer {
+      h1 {
+        font-size: 25px;
+      }
+      p {
+        font-size: 12px;
+      }
+    }
+
+    #home-sec {
+      margin-bottom: 100px;
+      a {
+        width: 100%;
+        height: 35%;
+        font-size: 2.8em;
+        margin: 20px 0;
+        #arrow-icon {
+          width: auto;
+          height: 50%;
+        }
+      }
+    }
+
+    #about-us-sec {
+      .text-card {
+        h1 {
+          font-size: 1.5em;
+          line-height: 1em;
+        }
+        p {
+          line-height: 1.4em;
+        }
+      }
+      .date-cards-container {
+        flex-direction: column;
+        gap: 15px;
+        .part {
+          p {
+            margin-bottom: 10px;
+          }
+          h1 {
+            margin: 10px 0;
+          }
+          div {
+            margin: 10px 0;
+          }
+        }
+      }
+    }
+
+    // #certificates-sec {
+    //   .text-card {
+    //     h1 {
+    //       font-size: 1.5em;
+    //       line-height: 1em;
+    //     }
+    //     p {
+    //       line-height: 1.4em;
+    //     }
+    //   }
+    // }
+
+    #contact-us-sec {
+      .form-wrapper {
+        padding: 15px;
+        margin-bottom: 10px;
+      }
+
+      .form-wrapper form {
+        input {
+          width: 100%;
+        }
+      }
+
+      .form-wrapper .top-inputs {
+        flex-direction: row;
+        justify-content: space-between;
+        input {
+          width: 48%;
+        }
+      }
+      .form-wrapper form button {
+        width: 150px;
+        margin-top: 10px;
+      }
+    }
+    #home-sec,
+    #about-us-sec,
+    #certificates-sec,
+    #my-skill-sec,
+    #portfolio-sec,
+    #contact-us-sec {
+      max-width: 100%;
+      .intro-header .text {
+        .top-h1,
+        .bottom-h1 {
+          font-size: 50px;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}
+
+@media (min-width: 1400px) {
+  .main-card {
+    height: 82vh !important;
+    margin-bottom: 0 !important;
+    .main-card-img {
+      width: 100%;
+      height: 50% !important;
+      object-position: top;
+    }
+    .main-card-text {
+      p {
+        line-height: 1.4em;
+      }
+    }
+    .icons {
+      div {
+        width: 50px;
+        height: 50px;
+      }
+    }
+  }
+
+  header {
+    h1 {
+      font-size: 40px;
+    }
+    .right .hire-btn {
+      border-radius: 40px;
+      padding: 16px 20px;
+      span {
+        display: inline;
+      }
+    }
+    .sidebar-toggle-btn {
+      display: none;
+    }
+    .offcanvas .sidebar {
+      display: none !important;
+    }
+  }
+
+  .sidebar {
+    display: block !important;
+    height: 82vh !important;
+  }
+
+  .main-content {
+    height: 82vh !important;
+    margin: 0;
+    footer {
+      h1 {
+        font-size: 25px;
+      }
+      p {
+        font-size: 12px;
+      }
+    }
+
+    #home-sec {
+      margin-bottom: 100px;
+      a {
+        width: 100%;
+        height: 35%;
+        font-size: 3.5em;
+        margin: 20px 0;
+        #arrow-icon {
+          width: auto;
+          height: 50%;
+        }
+      }
+    }
+
+    #about-us-sec {
+      .text-card {
+        h1 {
+          font-size: 1.5em;
+          line-height: 1em;
+        }
+        p {
+          line-height: 1.4em;
+        }
+      }
+      .date-cards-container {
+        flex-direction: column;
+        gap: 15px;
+        .part {
+          p {
+            margin-bottom: 10px;
+          }
+          h1 {
+            margin: 10px 0;
+          }
+          div {
+            margin: 10px 0;
+          }
+        }
+      }
+    }
+
+    // #certificates-sec {
+    //   .text-card {
+    //     h1 {
+    //       font-size: 1.5em;
+    //       line-height: 1em;
+    //     }
+    //     p {
+    //       line-height: 1.4em;
+    //     }
+    //   }
+    // }
+
+    #contact-us-sec {
+      .form-wrapper {
+        padding: 15px;
+        margin-bottom: 10px;
+      }
+
+      .form-wrapper form {
+        input {
+          width: 100%;
+        }
+      }
+
+      .form-wrapper .top-inputs {
+        flex-direction: row;
+        justify-content: space-between;
+        input {
+          width: 48%;
+        }
+      }
+      .form-wrapper form button {
+        width: 150px;
+        margin-top: 10px;
+      }
+    }
+    #home-sec,
+    #about-us-sec,
+    #certificates-sec,
+    #my-skill-sec,
+    #portfolio-sec,
+    #contact-us-sec {
+      max-width: 100%;
+      .intro-header .text {
+        .top-h1,
+        .bottom-h1 {
+          font-size: 50px;
+          margin-top: 10px;
+        }
+      }
+    }
+  }
+}

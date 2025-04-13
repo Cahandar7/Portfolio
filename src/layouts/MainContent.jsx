@@ -75,6 +75,7 @@ const MainContent = () => {
       <section id="home-sec">
         <div className="intro-header">
           <motion.h2
+            className="type-text"
             variants={variants}
             initial="initial"
             whileInView="animate"
@@ -130,6 +131,7 @@ const MainContent = () => {
         </motion.div>
 
         <motion.a
+          className="home-a"
           href="#home-sec"
           initial={{ opacity: 0, y: 50 }}
           whileInView={{ opacity: 1, y: 0 }}
@@ -155,79 +157,75 @@ const MainContent = () => {
         />
 
         <div className="date-cards-container">
-          <div>
-            <motion.div
-              className="date-card-wrapper"
-              initial={{ opacity: 0, y: 50, scale: 0 }}
-              whileInView={{ opacity: 1, y: 0, scale: 1 }}
-              transition={{
-                duration: 0.6,
-                type: "spring",
-                stiffness: 1000,
-                damping: 100,
-                delay: 0,
-              }}
-              viewport={{ once: true }}
-            >
-              <h1 className="title">Work Experience</h1>
-              <div className="date-card">
-                <div className="part">
-                  <p className="top">April 2025 - Present</p>
-                  <h1>Frontend Developer</h1>
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "5px",
-                      cursor: "pointer",
-                    }}
-                    onClick={() =>
-                      window.open("https://webluna.org/", "_blank")
-                    }
-                  >
-                    <img
-                      src={webluna_software_logo}
-                      alt="webluna_software_logo"
-                      width={40}
-                      height={40}
-                    />
-                    <span className="bottom">Webluna Software</span>
-                  </div>
-                </div>
-                <div className="part">
-                  <p className="top">March 2025 - April 2025</p>
-                  <h1>Frontend Developer Intern</h1>
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "5px",
-                      cursor: "pointer",
-                    }}
-                    onClick={() =>
-                      window.open(
-                        "https://www.linkedin.com/company/intern-intelligence/posts/?feedView=all",
-                        "_blank"
-                      )
-                    }
-                  >
-                    <img
-                      src={intern_itelligence_logo}
-                      alt="intern_itelligence_logo"
-                      width={40}
-                      height={40}
-                    />
-                    <span className="bottom">Intern Intelligence</span>
-                  </div>
-                </div>
-                <div className="part">
-                  <p className="top">August 2024 - October 2024</p>
-                  <h1 style={{ width: "400px" }}>Frontend Developer</h1>
-                  <p className="bottom">Self-employeed</p>
+          <motion.div
+            className="date-card-wrapper"
+            initial={{ opacity: 0, y: 50, scale: 0 }}
+            whileInView={{ opacity: 1, y: 0, scale: 1 }}
+            transition={{
+              duration: 0.6,
+              type: "spring",
+              stiffness: 1000,
+              damping: 100,
+              delay: 0,
+            }}
+            viewport={{ once: true }}
+          >
+            <h1 className="title">Work Experience</h1>
+            <div className="date-card">
+              <div className="part">
+                <p className="top">April 2025 - Present</p>
+                <h1>Frontend Developer</h1>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "10px",
+                    cursor: "pointer",
+                  }}
+                  onClick={() => window.open("https://webluna.org/", "_blank")}
+                >
+                  <img
+                    src={webluna_software_logo}
+                    alt="webluna_software_logo"
+                    width={40}
+                    height={40}
+                  />
+                  <span className="bottom">Webluna Software</span>
                 </div>
               </div>
-            </motion.div>
-          </div>
+              <div className="part">
+                <p className="top">March 2025 - April 2025</p>
+                <h1>Frontend Developer Intern</h1>
+                <div
+                  style={{
+                    display: "flex",
+                    alignItems: "center",
+                    gap: "10px",
+                    cursor: "pointer",
+                  }}
+                  onClick={() =>
+                    window.open(
+                      "https://www.linkedin.com/company/intern-intelligence/posts/?feedView=all",
+                      "_blank"
+                    )
+                  }
+                >
+                  <img
+                    src={intern_itelligence_logo}
+                    alt="intern_itelligence_logo"
+                    width={40}
+                    height={40}
+                  />
+                  <span className="bottom">Intern Intelligence</span>
+                </div>
+              </div>
+              <div className="part">
+                <p className="top">August 2024 - October 2024</p>
+                <h1 style={{ width: "400px" }}>Frontend Developer</h1>
+                <p className="bottom">Self-employeed</p>
+              </div>
+            </div>
+          </motion.div>
 
           <motion.div
             className="date-card-wrapper"
@@ -251,7 +249,7 @@ const MainContent = () => {
                   style={{
                     display: "flex",
                     alignItems: "center",
-                    gap: "5px",
+                    gap: "10px",
                     cursor: "pointer",
                   }}
                   onClick={() =>
@@ -274,7 +272,7 @@ const MainContent = () => {
                   style={{
                     display: "flex",
                     alignItems: "center",
-                    gap: "5px",
+                    gap: "10px",
                     cursor: "pointer",
                   }}
                   onClick={() => window.open("https://unec.edu.az", "_blank")}
@@ -316,12 +314,13 @@ const MainContent = () => {
           bottom_h1={"Used In"}
           bottom_h1_high={"Development"}
         />
-        <Container>
+        <Container className="skill-cards-box">
           <Row>
             {skills.map((skill, index) => (
               <Col
                 key={index}
-                sm={12}
+                xs={12}
+                sm={6}
                 md={6}
                 lg={4}
                 className="skill-cards-container"
@@ -344,106 +343,113 @@ const MainContent = () => {
           bottom_h1={"Real"}
           bottom_h1_high={"Results"}
         />
-
-        <motion.div
-          className="portfolio-card"
-          initial={{ opacity: 0, x: 80 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <a
-            href="https://intern-intelligence-ecommerce.vercel.app/"
-            target="_blank"
-          >
-            <img src={portfolio1} alt="portfolio1" />
-          </a>
-          <h1>
-            XStore - E-commerce Web Site ({" "}
-            <a
-              href="https://github.com/Cahandar7/InternIntelligence_Ecommerce"
-              target="_blank"
-            >
-              Github Repo
-            </a>{" "}
-            )
-          </h1>
-        </motion.div>
-
-        <div className="portcardbox">
-          <motion.div
-            className="portfolio-card"
-            style={{ width: "49%" }}
-            initial={{ opacity: 0, x: 80 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <a
-              href="https://login-register-by-cahandar.vercel.app/"
-              target="_blank"
-            >
-              <img src={portfolio4} alt="portfolio4" />
-            </a>
-            <h1 style={{ fontSize: "1.5em" }}>
-              Login&Register app({" "}
-              <a
-                href="https://github.com/Cahandar7/-InternIntelligence_LoginRegister"
-                target="_blank"
+        <Container>
+          <Row>
+            <Col xs={12} sm={12} md={12} lg={12}>
+              <motion.div
+                className="portfolio-card"
+                initial={{ opacity: 0, x: 80 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
               >
-                Github Repo
-              </a>{" "}
-              )
-            </h1>
-          </motion.div>
+                <a
+                  href="https://intern-intelligence-ecommerce.vercel.app/"
+                  target="_blank"
+                >
+                  <img src={portfolio1} alt="portfolio1" />
+                </a>
+                <h1>
+                  XStore - E-commerce Web Site ({" "}
+                  <a
+                    href="https://github.com/Cahandar7/InternIntelligence_Ecommerce"
+                    target="_blank"
+                  >
+                    Github Repo
+                  </a>{" "}
+                  )
+                </h1>
+              </motion.div>
+            </Col>
 
-          <motion.div
-            className="portfolio-card"
-            style={{ width: "49%" }}
-            initial={{ opacity: 0, x: 80 }}
-            whileInView={{ opacity: 1, x: 0 }}
-            viewport={{ once: true }}
-            transition={{ duration: 0.6 }}
-          >
-            <a href="#">
-              <img src={portfolio3} alt="portfolio3" />
-            </a>
-            <h1 style={{ fontSize: "1.5em" }}>
-              Fresh Vila - E-commerce ({" "}
-              <a
-                href="https://github.com/Cahandar7/FRESH_VILA_WATER"
-                target="_blank"
+            <Col xs={12} sm={12} md={6} lg={6}>
+              <motion.div
+                className="portfolio-card"
+                initial={{ opacity: 0, x: 80 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
               >
-                Github Repo
-              </a>{" "}
-              )
-            </h1>
-          </motion.div>
-        </div>
+                <a
+                  href="https://login-register-by-cahandar.vercel.app/"
+                  target="_blank"
+                >
+                  <img src={portfolio4} alt="portfolio4" />
+                </a>
+                <h1 style={{ fontSize: "1.5em" }}>
+                  Login&Register app({" "}
+                  <a
+                    href="https://github.com/Cahandar7/-InternIntelligence_LoginRegister"
+                    target="_blank"
+                  >
+                    Github Repo
+                  </a>{" "}
+                  )
+                </h1>
+              </motion.div>
+            </Col>
 
-        <motion.div
-          className="portfolio-card"
-          initial={{ opacity: 0, x: 80 }}
-          whileInView={{ opacity: 1, x: 0 }}
-          viewport={{ once: true }}
-          transition={{ duration: 0.6 }}
-        >
-          <div>
-            <a href="#">
-              <img src={portfolio2} alt="portfolio2" />
-            </a>
-          </div>
-          <h1>
-            Grogin - E-commerce Template ({" "}
-            <a
-              href="https://github.com/Cahandar7/Grogin_Template"
-              target="_blank"
-            >
-              Github Repo
-            </a>{" "}
-            )
-          </h1>
-        </motion.div>
+            <Col xs={12} sm={12} md={6} lg={6}>
+              <motion.div
+                className="portfolio-card"
+                initial={{ opacity: 0, x: 80 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
+                <a href="#">
+                  <img src={portfolio3} alt="portfolio3" />
+                </a>
+                <h1 style={{ fontSize: "1.5em" }}>
+                  Fresh Vila - E-commerce ({" "}
+                  <a
+                    href="https://github.com/Cahandar7/FRESH_VILA_WATER"
+                    target="_blank"
+                  >
+                    Github Repo
+                  </a>{" "}
+                  )
+                </h1>
+              </motion.div>
+            </Col>
+
+            <Col xs={12} sm={12} md={12} lg={12}>
+              <motion.div
+                className="portfolio-card"
+                initial={{ opacity: 0, x: 80 }}
+                whileInView={{ opacity: 1, x: 0 }}
+                viewport={{ once: true }}
+                transition={{ duration: 0.6 }}
+              >
+                <div>
+                  <a href="#">
+                    <img src={portfolio2} alt="portfolio2" />
+                  </a>
+                </div>
+                <h1>
+                  Grogin - E-commerce Template ({" "}
+                  <a
+                    href="https://github.com/Cahandar7/Grogin_Template"
+                    target="_blank"
+                  >
+                    Github Repo
+                  </a>{" "}
+                  )
+                </h1>
+              </motion.div>
+            </Col>
+          </Row>
+        </Container>
       </section>
 
       <section id="contact-us-sec">

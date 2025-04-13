@@ -5,7 +5,7 @@
 }
 
 .date-cards-container .date-card-wrapper {
-  width: 94%;
+  width: 100%;
   display: flex;
   flex-direction: column;
   gap: 20px;
@@ -25,15 +25,17 @@
   border-radius: 8px;
   transition: 0.4s;
   .part {
-    line-height: 3em;
     p {
-      font-size: 1.1em;
+      margin-bottom: 10px;
     }
     h1 {
       font-size: 1.6em;
     }
     img {
       border-radius: 50%;
+    }
+    .bottom {
+      line-height: 1em;
     }
   }
 }
