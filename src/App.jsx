@@ -10,10 +10,10 @@ import CustomCursor from "./components/CustomCursor";
 const App = () => {
   return (
     <Container style={{ padding: "10px 30px", maxWidth: "100vw" }}>
-      <CustomCursor />
       <div className="video-container">
         <video src={bg_video} autoPlay loop muted className="bg-video"></video>
       </div>
+      <CustomCursor />
       <div className="overlay-container">
         <div className="overlay"></div>
       </div>

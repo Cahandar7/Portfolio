@@ -3,6 +3,7 @@ import { send } from "@emailjs/browser";
 import { FaEnvelope } from "react-icons/fa";
 import Swal from "sweetalert2";
 import send_message_sound from "../assets/audios/send_message.mp3";
+import error_sound from "../assets/audios/error_sound.wav";
 import { motion } from "framer-motion";
 
 const ContactForm = () => {
@@ -26,7 +27,7 @@ const ContactForm = () => {
   const handleSubmit = (e) => {
     e.preventDefault();
 
-    send("service_1rf0dxo", "template_dzyhmgr", formData, "YnozC7859R6X7IA55")
+    send("service_1rf0dxo", "template_dzyhmgr", formData, "wKQTqX50U3qAKlDOo")
       .then((response) => {
         Swal.fire({
           title: "Message Sent Successfully!",
@@ -53,8 +54,21 @@ const ContactForm = () => {
         });
       })
       .catch((err) => {
-        console.error("Error sending message:", err);
-        alert("There was an issue with sending your message.");
+        Swal.fire({
+          title: "Oops! Something Went Wrong!",
+          text: "We couldn't send your message. Please try again later.",
+          icon: "error",
+          customClass: {
+            popup: "my-popup",
+            title: "swal2-title",
+            content: "swal2-content",
+            icon: "swal2-icon",
+            confirmButton: "swal-button",
+          },
+        });
+        const error_send_message_audio = new Audio(error_sound);
+        error_send_message_audio.volume = 0.3;
+        error_send_message_audio.play();
       });
   };
 
@@ -81,6 +95,7 @@ const ContactForm = () => {
             value={formData.firstName}
             onChange={handleInputChange}
             required
+            autocomplete="off"
           />
           <input
             placeholder="Last Name *"
@@ -89,6 +104,7 @@ const ContactForm = () => {
             value={formData.lastName}
             onChange={handleInputChange}
             required
+            autocomplete="off"
           />
           <input
             placeholder="Email Address *"
@@ -104,6 +120,7 @@ const ContactForm = () => {
             name="phone"
             value={formData.phone}
             onChange={handleInputChange}
+            autocomplete="off"
           />
         </div>
         <input
@@ -114,6 +131,7 @@ const ContactForm = () => {
           value={formData.subject}
           onChange={handleInputChange}
           required
+          autocomplete="off"
         />
         <input
           placeholder="Message *"
@@ -123,6 +141,7 @@ const ContactForm = () => {
           value={formData.message}
           onChange={handleInputChange}
           required
+          autocomplete="off"
         />
         <button type="submit">
           <span>SEND</span> <FaEnvelope id="send-icon" />
