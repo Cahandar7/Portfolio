@@ -204,7 +204,7 @@ const MainContent = () => {
                     cursor: "pointer",
                   }}
                   onClick={() =>
-                    window.open("https://www.internintelligence.org/")
+                    window.open("https://www.internintelligence.org/", "_blank")
                   }
                 >
                   <img
