@@ -204,10 +204,7 @@ const MainContent = () => {
                     cursor: "pointer",
                   }}
                   onClick={() =>
-                    window.open(
-                      "https://www.linkedin.com/company/intern-intelligence/posts/?feedView=all",
-                      "_blank"
-                    )
+                    window.open("https://www.internintelligence.org/")
                   }
                 >
                   <img
