@@ -25,6 +25,13 @@
   border-radius: 8px;
   transition: 0.4s;
   .part {
+    display: flex;
+    align-items: center;
+    justify-content: space-between;
+    .location-date {
+      margin: 0;
+      text-align: right;
+    }
     p {
       margin-bottom: 10px;
     }

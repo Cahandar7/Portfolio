@@ -52,6 +52,37 @@ section {
   }
 }
 
+.certificates-box {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+}
+
+.text-image-card {
+  width: 49%;
+  display: flex;
+  flex-direction: column;
+  align-items: flex-start;
+  justify-content: space-evenly;
+  padding: 20px;
+  margin-bottom: 30px;
+  background-color: rgba(81, 76, 76, 0.5);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  transition: 0.4s;
+  h1 {
+    font-size: 2em;
+    line-height: 2em;
+  }
+  p {
+    line-height: 1.5em;
+  }
+  img {
+    width: 100%;
+    height: 100%;
+  }
+}
+
 .text-card {
   width: 100%;
   display: flex;

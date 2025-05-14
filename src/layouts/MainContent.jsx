@@ -13,10 +13,15 @@ import intern_itelligence_logo from "../assets/images/intern_itelligence_logo.pn
 import webluna_software_logo from "../assets/images/webluna_software_logo.png";
 import unec_logo from "../assets/images/unec_logo.png";
 import matrix_academy_logo from "../assets/images/matrix_academy_logo.png";
+import idschool_logo from "../assets/images/idschool_logo.png";
+import freelance_logo from "../assets/images/freelance_logo.png";
+import Intern_Intelligence_Certificate from "../assets/images/Intern_Intelligence_Certificate.png";
+import matrix_certificate from "../assets/images/matrix_certificate.jpg";
 import rotated_circle from "../assets/images/rotated_circle.png";
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
 import { Col, Container, Row } from "react-bootstrap";
+import TextImageCard from "../components/TextImageCard";
 
 const MainContent = () => {
   const skills = [
@@ -173,53 +178,119 @@ const MainContent = () => {
             <h1 className="title">Work Experience</h1>
             <div className="date-card">
               <div className="part">
-                <p className="top">April 2025 - Present</p>
-                <h1>Frontend Developer</h1>
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "10px",
-                    cursor: "pointer",
-                  }}
-                  onClick={() => window.open("https://webluna.org/", "_blank")}
-                >
-                  <img
-                    src={webluna_software_logo}
-                    alt="webluna_software_logo"
-                    width={40}
-                    height={40}
-                  />
-                  <span className="bottom">Webluna Software</span>
+                <div>
+                  <h1>Web Development Instructor</h1>
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "10px",
+                      cursor: "pointer",
+                    }}
+                    onClick={() =>
+                      window.open("https://idtech.edu.az/", "_blank")
+                    }
+                  >
+                    <img
+                      src={idschool_logo}
+                      alt="idschool_logo"
+                      width={40}
+                      height={40}
+                    />
+                    <span className="bottom">IDSchool</span>
+                  </div>
+                </div>
+                <div className="location-date">
+                  <p className="top">Baku, Azerbaijan (On-site)</p>
+                  <p className="top">May 2025 - Present</p>
                 </div>
               </div>
               <div className="part">
-                <p className="top">March 2025 - April 2025</p>
-                <h1>Frontend Developer Intern</h1>
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "10px",
-                    cursor: "pointer",
-                  }}
-                  onClick={() =>
-                    window.open("https://www.internintelligence.org/", "_blank")
-                  }
-                >
-                  <img
-                    src={intern_itelligence_logo}
-                    alt="intern_itelligence_logo"
-                    width={40}
-                    height={40}
-                  />
-                  <span className="bottom">Intern Intelligence</span>
+                <div>
+                  <h1>Frontend Developer</h1>
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "10px",
+                      cursor: "pointer",
+                    }}
+                    onClick={() =>
+                      window.open("https://webluna.org/", "_blank")
+                    }
+                  >
+                    <img
+                      src={webluna_software_logo}
+                      alt="webluna_software_logo"
+                      width={40}
+                      height={40}
+                    />
+                    <span className="bottom">Webluna Software</span>
+                  </div>
+                </div>
+                <div className="location-date">
+                  <p className="top">Baku, Azerbaijan (On-site)</p>
+                  <p className="top">April 2025 - Present</p>
                 </div>
               </div>
               <div className="part">
-                <p className="top">August 2024 - October 2024</p>
-                <h1 style={{ width: "400px" }}>Frontend Developer</h1>
-                <p className="bottom">Self-employeed</p>
+                <div>
+                  <h1>Frontend Developer Intern</h1>
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "10px",
+                      cursor: "pointer",
+                    }}
+                    onClick={() =>
+                      window.open(
+                        "https://www.internintelligence.org/",
+                        "_blank"
+                      )
+                    }
+                  >
+                    <img
+                      src={intern_itelligence_logo}
+                      alt="intern_itelligence_logo"
+                      width={40}
+                      height={40}
+                    />
+                    <span className="bottom">Intern Intelligence</span>
+                  </div>
+                </div>
+                <div className="location-date">
+                  <p className="top">India (Remote)</p>
+                  <p className="top">March 2025 - April 2025</p>
+                </div>
+              </div>
+              <div className="part">
+                <div>
+                  <h1 style={{ width: "400px" }}>Frontend Developer</h1>
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "10px",
+                      cursor: "pointer",
+                    }}
+                    onClick={() =>
+                      window.open("https://www.freelancer.com/", "_blank")
+                    }
+                  >
+                    <img
+                      src={freelance_logo}
+                      alt="freelance_logo"
+                      width={40}
+                      height={40}
+                    />
+                    <span className="bottom">Freelance</span>
+                  </div>
+                </div>
+                <div className="location-date">
+                  <p className="top">Baku, Azerbaijan (Remote)</p>
+                  <p className="top">August 2024 - October 2024</p>
+                </div>
               </div>
             </div>
           </motion.div>
@@ -240,69 +311,90 @@ const MainContent = () => {
             <div className="title">Education</div>
             <div className="date-card">
               <div className="part">
-                <p className="top">October 2024 - February 2025</p>
-                <h1>Frontend Development</h1>
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "10px",
-                    cursor: "pointer",
-                  }}
-                  onClick={() =>
-                    window.open("https://matrixacademy.az/", "_blank")
-                  }
-                >
-                  <img
-                    src={matrix_academy_logo}
-                    alt="matrix_academy_logo"
-                    width={40}
-                    height={40}
-                  />
-                  <span className="bottom">Matrix Academy</span>
+                <div>
+                  <h1>Bachelor Degree of Information Technology</h1>
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "10px",
+                      cursor: "pointer",
+                    }}
+                    onClick={() => window.open("https://unec.edu.az", "_blank")}
+                  >
+                    <img
+                      src={unec_logo}
+                      alt="unec_logo"
+                      width={40}
+                      height={40}
+                    />
+                    <span className="bottom">
+                      Azerbaijan State University of Economics
+                    </span>
+                  </div>
+                  <p style={{ color: "fff", opacity: "1" }}>GPA: 94.8 / 100</p>
+                </div>
+                <div className="location-date">
+                  <p className="top">Baku, Azerbaijan</p>
+                  <p className="top">July 2023 - July 2027</p>
                 </div>
               </div>
               <div className="part">
-                <p className="top">July 2023 - July 2027</p>
-                <h1>Bachelor Degree of Information Technology</h1>
-                <div
-                  style={{
-                    display: "flex",
-                    alignItems: "center",
-                    gap: "10px",
-                    cursor: "pointer",
-                  }}
-                  onClick={() => window.open("https://unec.edu.az", "_blank")}
-                >
-                  <img src={unec_logo} alt="unec_logo" width={40} height={40} />
-                  <span className="bottom">
-                    Azerbaijan State University of Economics
-                  </span>
+                <div>
+                  <h1>Frontend Development</h1>
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "10px",
+                      cursor: "pointer",
+                    }}
+                    onClick={() =>
+                      window.open("https://matrixacademy.az/", "_blank")
+                    }
+                  >
+                    <img
+                      src={matrix_academy_logo}
+                      alt="matrix_academy_logo"
+                      width={40}
+                      height={40}
+                    />
+                    <span className="bottom">Matrix Academy</span>
+                  </div>
                 </div>
-                <p style={{ color: "fff", opacity: "1" }}>GPA: 94.8 / 100</p>
+                <div className="location-date">
+                  <p className="top">Baku, Azerbaijan</p>
+                  <p className="top">October 2024 - February 2025</p>
+                </div>
               </div>
             </div>
           </motion.div>
         </div>
       </section>
 
-      {/* <section id="certificates-sec">
+      <section id="certificates-sec">
         <IntroHeader
           h2={"My Certificates"}
           top_h1={"Certificates I Gain"}
           bottom_h1={"During"}
-          bottom_h1_high={"My Experience"}
+          bottom_h1_high={"My Journey"}
         />
 
-        <TextCard
-          title={"Intern Intelligence"}
-          desc={"Frontend Developer Intern March 2025 - April 2025"}
-        />
-        <TextCard
-          title={"Matrix Academy"}
-          desc={"Frontend Development October 2024 - February 2025"}
-        />
-      </section> */}
+        <div className="certificates-box">
+          <TextImageCard
+            title={"Intern Intelligence"}
+            desc={"Frontend Developer Intern"}
+            date={"March 2025 - April 2025"}
+            image={Intern_Intelligence_Certificate}
+          />
+          <TextImageCard
+            title={"Matrix Academy"}
+            desc={"Frontend Development"}
+            date={"October 2024 - February 2025"}
+            image={matrix_certificate}
+          />
+        </div>
+      </section>
 
       <section id="my-skill-sec">
         <IntroHeader
