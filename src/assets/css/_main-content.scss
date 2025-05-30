@@ -110,7 +110,7 @@ section {
 }
 
 .text-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px) !important;
   border: 1px solid yellowgreen;
 }
 
@@ -138,7 +138,7 @@ section {
 }
 
 .icon-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px) !important;
   border: 1px solid yellowgreen;
 }
 
@@ -183,7 +183,7 @@ section {
 }
 
 .skill-card:hover {
-  transform: translateY(-5px);
+  transform: translateY(-5px) !important;
   border: 1px solid yellowgreen;
 }
 
