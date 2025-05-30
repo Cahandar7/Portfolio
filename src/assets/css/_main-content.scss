@@ -83,6 +83,11 @@ section {
   }
 }
 
+.text-image-card:hover {
+  transform: translateY(-5px) !important;
+  border: 1px solid yellowgreen;
+}
+
 .text-card {
   width: 100%;
   display: flex;
