@@ -1,39 +1,57 @@
-import React from "react";
+import React, { Suspense, lazy } from "react";
 import Header from "./layouts/Header";
 import SideBar from "./layouts/SideBar";
-import MainCard from "./layouts/MainCard";
-import MainContent from "./layouts/MainContent";
 import bg_video from "./assets/videos/bg_video.mp4";
-import { Col, Container, Row } from "react-bootstrap";
 import CustomCursor from "./components/CustomCursor";
+import { Col, Container, Row } from "react-bootstrap";
+
+// Lazy-loaded components
+const MainCard = lazy(() => import("./layouts/MainCard"));
+const MainContent = lazy(() => import("./layouts/MainContent"));
 
 const App = () => {
   return (
-    <Container style={{ padding: "10px 30px", maxWidth: "100vw" }}>
+    <>
       <div className="video-container">
-        <video src={bg_video} autoPlay loop muted className="bg-video"></video>
+        <video
+          src={bg_video}
+          autoPlay
+          loop
+          muted
+          className="bg-video"
+          preload="auto"
+          poster="/preview.jpg" // Optional: if you have a preview image
+        />
       </div>
+
       <CustomCursor />
       <div className="overlay-container">
         <div className="overlay"></div>
       </div>
-      <Row>
-        <Header />
-      </Row>
-      <Row>
-        <Col xs={12} sm={3} md={12} lg={12} xl={1}>
-          <SideBar />
-        </Col>
 
-        <Col xs={12} sm={9} md={5} lg={5} xl={4}>
-          <MainCard />
-        </Col>
+      <Container style={{ padding: "10px 30px", maxWidth: "100vw" }}>
+        <Row>
+          <Header />
+        </Row>
+        <Row>
+          <Col xs={12} sm={3} md={12} lg={12} xl={1}>
+            <SideBar />
+          </Col>
 
-        <Col xs={12} sm={12} md={7} lg={7} xl={7}>
-          <MainContent />
-        </Col>
-      </Row>
-    </Container>
+          <Suspense fallback={<div>Loading MainCard...</div>}>
+            <Col xs={12} sm={9} md={5} lg={5} xl={4}>
+              <MainCard />
+            </Col>
+          </Suspense>
+
+          <Suspense fallback={<div>Loading MainContent...</div>}>
+            <Col xs={12} sm={12} md={7} lg={7} xl={7}>
+              <MainContent />
+            </Col>
+          </Suspense>
+        </Row>
+      </Container>
+    </>
   );
 };
 
