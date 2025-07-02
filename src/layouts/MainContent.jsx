@@ -13,8 +13,10 @@ import intern_itelligence_logo from "../assets/images/intern_itelligence_logo.pn
 import webluna_software_logo from "../assets/images/webluna_software_logo.png";
 import unec_logo from "../assets/images/unec_logo.png";
 import matrix_academy_logo from "../assets/images/matrix_academy_logo.png";
+import div_academy_logo from "../assets/images/div_academy_logo.png";
 import idschool_logo from "../assets/images/idschool_logo.png";
 import freelance_logo from "../assets/images/freelance_logo.png";
+import cubics_tech_logo from "../assets/images/cubics_tech_logo.png";
 import Intern_Intelligence_Certificate from "../assets/images/Intern_Intelligence_Certificate.png";
 import matrix_certificate from "../assets/images/matrix_certificate.jpg";
 import rotated_circle from "../assets/images/rotated_circle.png";
@@ -27,33 +29,33 @@ const MainContent = () => {
   const skills = [
     {
       icon: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
-      level: 90,
+      level: 95,
       name: "React",
     },
     {
-      icon: "https://upload.wikimedia.org/wikipedia/commons/8/8e/Nextjs-logo.svg",
-      level: 85,
-      name: "Next.js",
-    },
-    {
       icon: "https://upload.wikimedia.org/wikipedia/commons/4/49/Redux.png",
-      level: 80,
+      level: 75,
       name: "Redux",
     },
     {
-      icon: "https://upload.wikimedia.org/wikipedia/commons/4/4c/Typescript_logo_2020.svg",
-      level: 75,
-      name: "TypeScript",
-    },
-    {
-      icon: "https://upload.wikimedia.org/wikipedia/commons/3/37/Firebase_Logo.svg",
-      level: 78,
-      name: "Firebase",
-    },
-    {
       icon: "https://upload.wikimedia.org/wikipedia/commons/9/96/Sass_Logo_Color.svg",
-      level: 70,
+      level: 90,
       name: "SASS",
+    },
+    {
+      icon: "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg",
+      level: 95,
+      name: "Node.js",
+    },
+    {
+      icon: "https://cdn.iconscout.com/icon/free/png-256/free-mongodb-icon-download-in-svg-png-gif-file-formats--wordmark-programming-langugae-logo-freebies-pack-logos-icons-1175138.png",
+      level: 90,
+      name: "MongoDB",
+    },
+    {
+      icon: "https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg",
+      level: 85,
+      name: "PostgreSQL",
     },
   ];
 
@@ -65,11 +67,12 @@ const MainContent = () => {
   const [text] = useTypewriter({
     words: [
       "Frontend Developer💻",
-      "Frontend Engineer🛠️",
-      "Frontend Designer🎨",
-      "Just a Chill Guy😎",
+      "Backend Developer🛠️",
+      "Full Stack Developer🌐",
       "Game Developer🎮",
+      "Just a Chill Guy😎",
     ],
+
     loop: {},
     typeSpeed: 60,
     deleteSpeed: 15,
@@ -157,7 +160,7 @@ const MainContent = () => {
         <TextCard
           title={"Cahandar Masimov"}
           desc={
-            "Hi, I'm Cahandar Masimov, a passionate Frontend Developer building intuitive web applications. I specialize in creating responsive, user-friendly web sites that perform seamlessly across devices. By combining my knowledge of modern web technologies with a keen eye for detail, I deliver solutions that not only look great but also provide excellent user experiences."
+            "Hi, I'm Cahandar Masimov, a passionate Full Stack Developer building powerful and scalable web applications. I specialize in developing both responsive frontends and robust backends that work seamlessly together. By combining modern technologies like React, Node.js, MongoDB, and PostgreSQL, I create efficient solutions that offer smooth user experiences and reliable performance across all platforms."
           }
         />
 
@@ -179,7 +182,34 @@ const MainContent = () => {
             <div className="date-card">
               <div className="part">
                 <div>
-                  <h1>Web Development Instructor</h1>
+                  <h1>MERN Full Stack Developer</h1>
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "10px",
+                      cursor: "pointer",
+                    }}
+                    onClick={() =>
+                      window.open("https://cubics.technology/", "_blank")
+                    }
+                  >
+                    <img
+                      src={cubics_tech_logo}
+                      alt="cubics_tech_logo"
+                      width={105}
+                      height={40}
+                    />
+                  </div>
+                </div>
+                <div className="location-date">
+                  <p className="top">July 2025 - Present</p>
+                  <p className="top">Baku, Azerbaijan (On-site)</p>
+                </div>
+              </div>
+              <div className="part">
+                <div>
+                  <h1>IT and Web Development Instructor</h1>
                   <div
                     style={{
                       display: "flex",
@@ -201,13 +231,13 @@ const MainContent = () => {
                   </div>
                 </div>
                 <div className="location-date">
-                  <p className="top">Baku, Azerbaijan (On-site)</p>
                   <p className="top">May 2025 - Present</p>
+                  <p className="top">Baku, Azerbaijan (On-site)</p>
                 </div>
               </div>
               <div className="part">
                 <div>
-                  <h1>Frontend Developer</h1>
+                  <h1>Frontend Developer Intern</h1>
                   <div
                     style={{
                       display: "flex",
@@ -229,8 +259,8 @@ const MainContent = () => {
                   </div>
                 </div>
                 <div className="location-date">
+                  <p className="top">April 2025 - July 2025</p>
                   <p className="top">Baku, Azerbaijan (On-site)</p>
-                  <p className="top">April 2025 - Present</p>
                 </div>
               </div>
               <div className="part">
@@ -260,13 +290,13 @@ const MainContent = () => {
                   </div>
                 </div>
                 <div className="location-date">
-                  <p className="top">India (Remote)</p>
                   <p className="top">March 2025 - April 2025</p>
+                  <p className="top">India (Remote)</p>
                 </div>
               </div>
               <div className="part">
                 <div>
-                  <h1 style={{ width: "400px" }}>Frontend Developer</h1>
+                  <h1 style={{ width: "400px" }}>Game Developer</h1>
                   <div
                     style={{
                       display: "flex",
@@ -288,8 +318,8 @@ const MainContent = () => {
                   </div>
                 </div>
                 <div className="location-date">
-                  <p className="top">Baku, Azerbaijan (Remote)</p>
-                  <p className="top">August 2024 - October 2024</p>
+                  <p className="top">May 2022 - August 2024</p>
+                  <p className="top">Baku, Azerbaijan</p>
                 </div>
               </div>
             </div>
@@ -332,11 +362,30 @@ const MainContent = () => {
                       Azerbaijan State University of Economics
                     </span>
                   </div>
-                  <p style={{ color: "fff", opacity: "1" }}>GPA: 94.8 / 100</p>
+                  <p
+                    style={{
+                      color: "fff",
+                      opacity: "1",
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "10px",
+                    }}
+                  >
+                    <span>GPA: 92.3 / 100</span>
+                    <span
+                      style={{
+                        height: "25px",
+                        width: "2px",
+                        backgroundColor: "#ccc",
+                        opacity: "0.5",
+                      }}
+                    ></span>
+                    <span>University Entrance Score: 624 / 700</span>
+                  </p>
                 </div>
                 <div className="location-date">
-                  <p className="top">Baku, Azerbaijan</p>
                   <p className="top">July 2023 - July 2027</p>
+                  <p className="top">Baku, Azerbaijan</p>
                 </div>
               </div>
               <div className="part">
@@ -363,8 +412,34 @@ const MainContent = () => {
                   </div>
                 </div>
                 <div className="location-date">
-                  <p className="top">Baku, Azerbaijan</p>
                   <p className="top">October 2024 - February 2025</p>
+                  <p className="top">Baku, Azerbaijan</p>
+                </div>
+              </div>
+              <div className="part">
+                <div>
+                  <h1>Backend Development</h1>
+                  <div
+                    style={{
+                      display: "flex",
+                      alignItems: "center",
+                      gap: "10px",
+                      cursor: "pointer",
+                    }}
+                    onClick={() => window.open("https://div.edu.az/", "_blank")}
+                  >
+                    <img
+                      src={div_academy_logo}
+                      alt="div_academy_logo"
+                      width={40}
+                      height={40}
+                    />
+                    <span className="bottom">Div Academy</span>
+                  </div>
+                </div>
+                <div className="location-date">
+                  <p className="top">October 2024 - November 2024</p>
+                  <p className="top">Baku, Azerbaijan</p>
                 </div>
               </div>
             </div>

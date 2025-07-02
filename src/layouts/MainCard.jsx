@@ -58,7 +58,7 @@ const MainCard = () => {
       <div className="main-card-text">
         <h1>Cahandar Masimov</h1>
         <p>
-          Hi, I'm Cahandar, a passionate Frontend Developer focused on building
+          Hi, I'm Cahandar, a passionate Full Stack Web Developer focused on building
           great web experiences.
         </p>
       </div>
