@@ -26,11 +26,126 @@ import { Col, Container, Row } from "react-bootstrap";
 import TextImageCard from "../components/TextImageCard";
 
 const MainContent = () => {
+  const experiences = [
+    {
+      title: "Full Stack Developer",
+      imgSrc: cubics_tech_logo,
+      imgAlt: "cubics_tech_logo",
+      imgWidth: 105,
+      imgHeight: 40,
+      isText: null,
+      link: "https://cubics.technology/",
+      date: "July 2025 - Present",
+      location: "Baku, Azerbaijan (On-site)",
+    },
+    {
+      title: "IT and Web Development Instructor",
+      imgSrc: idschool_logo,
+      imgAlt: "idschool_logo",
+      imgWidth: 40,
+      imgHeight: 40,
+      isText: "IDSchool",
+      link: "https://idtech.edu.az/",
+      date: "May 2025 - Present",
+      location: "Baku, Azerbaijan (On-site)",
+    },
+    {
+      title: "Frontend Developer Intern",
+      imgSrc: webluna_software_logo,
+      imgAlt: "webluna_software_logo",
+      imgWidth: 40,
+      imgHeight: 40,
+      isText: "Webluna Software",
+      link: "https://webluna.org/",
+      date: "April 2025 - July 2025",
+      location: "Baku, Azerbaijan (On-site)",
+    },
+    {
+      title: "Frontend Developer Intern",
+      imgSrc: intern_itelligence_logo,
+      imgAlt: "intern_itelligence_logo",
+      imgWidth: 40,
+      imgHeight: 40,
+      isText: "Intern Intelligence",
+      link: "https://www.internintelligence.org/",
+      date: "March 2025 - April 2025",
+      location: "India (Remote)",
+    },
+    {
+      title: "Game Developer",
+      imgSrc: freelance_logo,
+      imgAlt: "freelance_logo",
+      imgWidth: 40,
+      imgHeight: 40,
+      isText: "Freelance",
+      link: "https://www.freelancer.com/",
+      date: "May 2022 - August 2024",
+      location: "Baku, Azerbaijan (Freelance)",
+    },
+  ];
+
+  const educations = [
+    {
+      title: "Bachelor Degree of Information Technology",
+      imgSrc: unec_logo,
+      imgAlt: "unec_logo",
+      imgWidth: 40,
+      imgHeight: 40,
+      isText: "Azerbaijan State University of Economics",
+      gpa: "GPA: 92.3 / 100",
+      score: "University Entrance Score: 624 / 700",
+      link: "https://unec.edu.az",
+      date: "July 2023 - July 2027",
+      location: "Baku, Azerbaijan",
+    },
+    {
+      title: "Frontend Development",
+      imgSrc: matrix_academy_logo,
+      imgAlt: "matrix_academy_logo",
+      imgWidth: 40,
+      imgHeight: 40,
+      isText: "Matrix Academy",
+      gpa: null,
+      score: null,
+      link: "https://matrixacademy.az/",
+      date: "October 2024 - February 2025",
+      location: "Baku, Azerbaijan",
+    },
+    {
+      title: "Backend Development",
+      imgSrc: div_academy_logo,
+      imgAlt: "div_academy_logo",
+      imgWidth: 40,
+      imgHeight: 40,
+      isText: "Div Academy",
+      gpa: null,
+      score: null,
+      link: "https://div.edu.az/",
+      date: "October 2024 - November 2024",
+      location: "Baku, Azerbaijan",
+    },
+  ];
+
+  const certificates = [
+    {
+      title: "Intern Intelligence",
+      desc: "Frontend Developer Intern",
+      date: "March 2025 - April 2025",
+      image: Intern_Intelligence_Certificate,
+    },
+    {
+      title: "Matrix Academy",
+      desc: "Frontend Development",
+      date: "October 2024 - February 2025",
+      image: matrix_certificate,
+    },
+  ];
+
   const skills = [
     {
       icon: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
       level: 95,
-      name: "React",
+      name: "React.js",
     },
     {
       icon: "https://upload.wikimedia.org/wikipedia/commons/4/49/Redux.png",
@@ -57,6 +172,21 @@ const MainContent = () => {
       level: 85,
       name: "PostgreSQL",
     },
+    {
+      icon: "https://dmtgy0px4zdqn.cloudfront.net/images/meteor-logo.webp",
+      level: 90,
+      name: "Meteor.js",
+    },
+    {
+      icon: "https://www.blazejs.org/logo/logo.png",
+      level: 70,
+      name: "Blaze",
+    },
+    {
+      icon: "https://nestjs.com/logo-small-gradient.d792062c.svg",
+      level: 80,
+      name: "Nest.js",
+    },
   ];
 
   const variants = {
@@ -69,10 +199,10 @@ const MainContent = () => {
       "Frontend Developer💻",
       "Backend Developer🛠️",
       "Full Stack Developer🌐",
+      "JavaScript Developer✨",
       "Game Developer🎮",
       "Just a Chill Guy😎",
     ],
-
     loop: {},
     typeSpeed: 60,
     deleteSpeed: 15,
@@ -180,148 +310,36 @@ const MainContent = () => {
           >
             <h1 className="title">Work Experience</h1>
             <div className="date-card">
-              <div className="part">
-                <div>
-                  <h1>MERN Full Stack Developer</h1>
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "10px",
-                      cursor: "pointer",
-                    }}
-                    onClick={() =>
-                      window.open("https://cubics.technology/", "_blank")
-                    }
-                  >
-                    <img
-                      src={cubics_tech_logo}
-                      alt="cubics_tech_logo"
-                      width={105}
-                      height={40}
-                    />
+              {experiences.map((experience) => (
+                <div className="part">
+                  <div>
+                    <h1>{experience.title}</h1>
+                    <div
+                      style={{
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "10px",
+                        cursor: "pointer",
+                      }}
+                      onClick={() => window.open(experience.link, "_blank")}
+                    >
+                      <img
+                        src={experience.imgSrc}
+                        alt={experience.imgAlt}
+                        width={experience.imgWidth}
+                        height={experience.imgHeight}
+                      />
+                      {experience.isText ? (
+                        <span className="bottom">{experience.isText}</span>
+                      ) : null}
+                    </div>
+                  </div>
+                  <div className="location-date">
+                    <p className="top">{experience.date}</p>
+                    <p className="top">{experience.location}</p>
                   </div>
                 </div>
-                <div className="location-date">
-                  <p className="top">July 2025 - Present</p>
-                  <p className="top">Baku, Azerbaijan (On-site)</p>
-                </div>
-              </div>
-              <div className="part">
-                <div>
-                  <h1>IT and Web Development Instructor</h1>
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "10px",
-                      cursor: "pointer",
-                    }}
-                    onClick={() =>
-                      window.open("https://idtech.edu.az/", "_blank")
-                    }
-                  >
-                    <img
-                      src={idschool_logo}
-                      alt="idschool_logo"
-                      width={40}
-                      height={40}
-                    />
-                    <span className="bottom">IDSchool</span>
-                  </div>
-                </div>
-                <div className="location-date">
-                  <p className="top">May 2025 - Present</p>
-                  <p className="top">Baku, Azerbaijan (On-site)</p>
-                </div>
-              </div>
-              <div className="part">
-                <div>
-                  <h1>Frontend Developer Intern</h1>
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "10px",
-                      cursor: "pointer",
-                    }}
-                    onClick={() =>
-                      window.open("https://webluna.org/", "_blank")
-                    }
-                  >
-                    <img
-                      src={webluna_software_logo}
-                      alt="webluna_software_logo"
-                      width={40}
-                      height={40}
-                    />
-                    <span className="bottom">Webluna Software</span>
-                  </div>
-                </div>
-                <div className="location-date">
-                  <p className="top">April 2025 - July 2025</p>
-                  <p className="top">Baku, Azerbaijan (On-site)</p>
-                </div>
-              </div>
-              <div className="part">
-                <div>
-                  <h1>Frontend Developer Intern</h1>
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "10px",
-                      cursor: "pointer",
-                    }}
-                    onClick={() =>
-                      window.open(
-                        "https://www.internintelligence.org/",
-                        "_blank"
-                      )
-                    }
-                  >
-                    <img
-                      src={intern_itelligence_logo}
-                      alt="intern_itelligence_logo"
-                      width={40}
-                      height={40}
-                    />
-                    <span className="bottom">Intern Intelligence</span>
-                  </div>
-                </div>
-                <div className="location-date">
-                  <p className="top">March 2025 - April 2025</p>
-                  <p className="top">India (Remote)</p>
-                </div>
-              </div>
-              <div className="part">
-                <div>
-                  <h1 style={{ width: "400px" }}>Game Developer</h1>
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "10px",
-                      cursor: "pointer",
-                    }}
-                    onClick={() =>
-                      window.open("https://www.freelancer.com/", "_blank")
-                    }
-                  >
-                    <img
-                      src={freelance_logo}
-                      alt="freelance_logo"
-                      width={40}
-                      height={40}
-                    />
-                    <span className="bottom">Freelance</span>
-                  </div>
-                </div>
-                <div className="location-date">
-                  <p className="top">May 2022 - August 2024</p>
-                  <p className="top">Baku, Azerbaijan</p>
-                </div>
-              </div>
+              ))}
             </div>
           </motion.div>
 
@@ -340,108 +358,59 @@ const MainContent = () => {
           >
             <div className="title">Education</div>
             <div className="date-card">
-              <div className="part">
-                <div>
-                  <h1>Bachelor Degree of Information Technology</h1>
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "10px",
-                      cursor: "pointer",
-                    }}
-                    onClick={() => window.open("https://unec.edu.az", "_blank")}
-                  >
-                    <img
-                      src={unec_logo}
-                      alt="unec_logo"
-                      width={40}
-                      height={40}
-                    />
-                    <span className="bottom">
-                      Azerbaijan State University of Economics
-                    </span>
-                  </div>
-                  <p
-                    style={{
-                      color: "fff",
-                      opacity: "1",
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "10px",
-                    }}
-                  >
-                    <span>GPA: 92.3 / 100</span>
-                    <span
+              {educations.map((education) => (
+                <div className="part">
+                  <div>
+                    <h1>{education.title}</h1>
+                    <div
                       style={{
-                        height: "25px",
-                        width: "2px",
-                        backgroundColor: "#ccc",
-                        opacity: "0.5",
+                        display: "flex",
+                        alignItems: "center",
+                        gap: "10px",
+                        cursor: "pointer",
                       }}
-                    ></span>
-                    <span>University Entrance Score: 624 / 700</span>
-                  </p>
-                </div>
-                <div className="location-date">
-                  <p className="top">July 2023 - July 2027</p>
-                  <p className="top">Baku, Azerbaijan</p>
-                </div>
-              </div>
-              <div className="part">
-                <div>
-                  <h1>Frontend Development</h1>
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "10px",
-                      cursor: "pointer",
-                    }}
-                    onClick={() =>
-                      window.open("https://matrixacademy.az/", "_blank")
-                    }
-                  >
-                    <img
-                      src={matrix_academy_logo}
-                      alt="matrix_academy_logo"
-                      width={40}
-                      height={40}
-                    />
-                    <span className="bottom">Matrix Academy</span>
+                      onClick={() => window.open(education.link, "_blank")}
+                    >
+                      <img
+                        src={education.imgSrc}
+                        alt={education.imgAlt}
+                        width={education.imgWidth}
+                        height={education.imgHeight}
+                      />
+
+                      {education.isText ? (
+                        <span className="bottom">{education.isText}</span>
+                      ) : null}
+                    </div>
+                    {education.gpa && education.score ? (
+                      <p
+                        style={{
+                          color: "fff",
+                          opacity: "1",
+                          display: "flex",
+                          alignItems: "center",
+                          gap: "10px",
+                        }}
+                      >
+                        <span>{education.gpa}</span>
+                        <span
+                          style={{
+                            height: "25px",
+                            width: "2px",
+                            backgroundColor: "#ccc",
+                            opacity: "0.5",
+                          }}
+                        ></span>
+                        <span>{education.score}</span>
+                      </p>
+                    ) : null}
+                  </div>
+                  <div className="location-date">
+                    <p className="top">{education.date}</p>
+                    <p className="top">{education.location}</p>
                   </div>
                 </div>
-                <div className="location-date">
-                  <p className="top">October 2024 - February 2025</p>
-                  <p className="top">Baku, Azerbaijan</p>
-                </div>
-              </div>
-              <div className="part">
-                <div>
-                  <h1>Backend Development</h1>
-                  <div
-                    style={{
-                      display: "flex",
-                      alignItems: "center",
-                      gap: "10px",
-                      cursor: "pointer",
-                    }}
-                    onClick={() => window.open("https://div.edu.az/", "_blank")}
-                  >
-                    <img
-                      src={div_academy_logo}
-                      alt="div_academy_logo"
-                      width={40}
-                      height={40}
-                    />
-                    <span className="bottom">Div Academy</span>
-                  </div>
-                </div>
-                <div className="location-date">
-                  <p className="top">October 2024 - November 2024</p>
-                  <p className="top">Baku, Azerbaijan</p>
-                </div>
-              </div>
+              ))}
             </div>
           </motion.div>
         </div>
@@ -456,18 +425,14 @@ const MainContent = () => {
         />
 
         <div className="certificates-box">
-          <TextImageCard
-            title={"Intern Intelligence"}
-            desc={"Frontend Developer Intern"}
-            date={"March 2025 - April 2025"}
-            image={Intern_Intelligence_Certificate}
-          />
-          <TextImageCard
-            title={"Matrix Academy"}
-            desc={"Frontend Development"}
-            date={"October 2024 - February 2025"}
-            image={matrix_certificate}
-          />
+          {certificates.map((certificate) => (
+            <TextImageCard
+              title={certificate.title}
+              desc={certificate.desc}
+              date={certificate.date}
+              image={certificate.image}
+            />
+          ))}
         </div>
       </section>
 
