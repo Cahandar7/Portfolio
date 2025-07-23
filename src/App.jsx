@@ -1,4 +1,4 @@
-import React, { Suspense, lazy } from "react";
+import React, { useEffect, useState, Suspense, lazy } from "react";
 import Header from "./layouts/Header";
 import SideBar from "./layouts/SideBar";
 import bg_video from "./assets/videos/bg_video.mp4";
@@ -10,21 +10,51 @@ const MainCard = lazy(() => import("./layouts/MainCard"));
 const MainContent = lazy(() => import("./layouts/MainContent"));
 
 const App = () => {
+  const [isLoaded, setIsLoaded] = useState(false);
+
+  useEffect(() => {
+    const handlePageLoad = () => {
+      setTimeout(() => {
+        setIsLoaded(true);
+      }, 300); // Optional delay for transition
+    };
+
+    if (document.readyState === "complete") {
+      handlePageLoad();
+    } else {
+      window.addEventListener("load", handlePageLoad);
+    }
+
+    return () => {
+      window.removeEventListener("load", handlePageLoad);
+    };
+  }, []);
+
+  if (!isLoaded) {
+    return (
+      <div className="loading-screen">
+        <div className="spinner"></div>
+      </div>
+    );
+  }
+
   return (
     <>
       <div className="video-container">
         <video
+          id="bg-video"
           src={bg_video}
           autoPlay
           loop
           muted
           className="bg-video"
           preload="auto"
-          poster="/preview.jpg" // Optional: if you have a preview image
+          poster="/preview.jpg"
         />
       </div>
 
       <CustomCursor />
+
       <div className="overlay-container">
         <div className="overlay"></div>
       </div>
