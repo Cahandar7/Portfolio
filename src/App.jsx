@@ -5,35 +5,65 @@ import bg_video from "./assets/videos/bg_video.mp4";
 import CustomCursor from "./components/CustomCursor";
 import { Col, Container, Row } from "react-bootstrap";
 
+// Lazy-loaded components
 const MainCard = lazy(() => import("./layouts/MainCard"));
 const MainContent = lazy(() => import("./layouts/MainContent"));
 
 const App = () => {
-  const [isReady, setIsReady] = useState(false);
+  const [isAppLoaded, setIsAppLoaded] = useState(false);
 
   useEffect(() => {
-    const onPageLoad = () => {
-      // Optional: slight delay for smoother transition
-      setTimeout(() => setIsReady(true), 300);
+    const preloadVideo = (src) => {
+      return new Promise((resolve) => {
+        const video = document.createElement("video");
+        video.src = src;
+        video.preload = "auto";
+        video.oncanplaythrough = () => resolve();
+        video.onerror = () => resolve(); // don't block on error
+      });
     };
 
-    if (document.readyState === "complete") {
-      onPageLoad();
-    } else {
-      window.addEventListener("load", onPageLoad);
-      return () => window.removeEventListener("load", onPageLoad);
-    }
+    const preloadImages = () => {
+      const images = Array.from(document.images);
+      const promises = images.map((img) => {
+        if (img.complete) return Promise.resolve();
+        return new Promise((resolve) => {
+          img.onload = resolve;
+          img.onerror = resolve;
+        });
+      });
+      return Promise.all(promises);
+    };
+
+    const waitForLazyComponents = () => {
+      return Promise.all([
+        import("./layouts/MainCard"),
+        import("./layouts/MainContent"),
+      ]);
+    };
+
+    const init = async () => {
+      await Promise.all([
+        preloadVideo(bg_video),
+        preloadImages(),
+        waitForLazyComponents(),
+      ]);
+      // Smooth transition
+      setTimeout(() => setIsAppLoaded(true), 300);
+    };
+
+    init();
   }, []);
 
   return (
     <>
-      {!isReady && (
+      {!isAppLoaded && (
         <div className="loading-screen">
           <div className="spinner" />
         </div>
       )}
 
-      {isReady && (
+      {isAppLoaded && (
         <>
           <div className="video-container">
             <video
