@@ -41,10 +41,6 @@ body {
   flex-direction: column;
   user-select: none;
   font-family: "Segoe UI", Tahoma, Geneva, Verdana, sans-serif;
-  backdrop-filter: blur(8px);
-  /* subtle vignette */
-  box-shadow: inset 0 0 150px 40px rgba(0, 0, 0, 0.8);
-  animation: fadeInZoom 1.2s ease forwards;
   #particles-canvas {
     position: absolute;
     inset: 0;
@@ -53,109 +49,55 @@ body {
     display: block;
     z-index: 1;
     pointer-events: none;
-    filter: drop-shadow(0 0 8px #ffb300aa);
   }
 
-  /* Spinner Container */
+  /* Спиннер */
   .spinner-container {
     position: relative;
     z-index: 10;
     text-align: center;
-    filter: drop-shadow(0 0 12px #ffb300);
   }
 
-  /* Multi-layered spinner rings with different speeds and sizes */
-  .spinner-ring.layered-ring {
-    position: absolute;
+  /* Кольцо */
+  .spinner-ring {
+    width: 90px;
+    height: 90px;
+    border: 8px solid rgba(255, 165, 0, 0.2);
+    border-top-color: #ffb300; /* яркий желтый */
     border-radius: 50%;
-    border-style: solid;
-    border-color: rgba(255, 179, 0, 0.15);
-    border-top-color: #ffb300;
-    box-shadow: 0 0 10px #ffb300aa;
-    animation-timing-function: cubic-bezier(0.68, -0.55, 0.27, 1.55);
-    animation-iteration-count: infinite;
-    animation-name: spin;
+    animation: spin 1.4s linear infinite;
+    box-shadow: 0 0 12px #ffb300;
+    margin: 0 auto;
   }
 
-  .ring1 {
-    width: 100px;
-    height: 100px;
-    border-width: 7px;
-    animation-duration: 1.6s;
-    top: 50%;
-    left: 50%;
-    transform-origin: center;
-    transform: translate(-50%, -50%);
-  }
-
-  .ring2 {
-    width: 80px;
-    height: 80px;
-    border-width: 5px;
-    animation-duration: 2.2s;
-    border-top-color: #ffc107;
-    top: 50%;
-    left: 50%;
-    transform-origin: center;
-    transform: translate(-50%, -50%);
-    animation-direction: reverse;
-  }
-
-  .ring3 {
-    width: 60px;
-    height: 60px;
-    border-width: 3px;
-    animation-duration: 1.1s;
-    border-top-color: #ffd54f;
-    top: 50%;
-    left: 50%;
-    transform-origin: center;
-    transform: translate(-50%, -50%);
-  }
-
-  /* Center pulse */
+  /* Центр пульсирует */
   .spinner-center {
     position: absolute;
-    top: 50%;
+    top: 25%;
     left: 50%;
-    width: 28px;
-    height: 28px;
-    background: radial-gradient(circle at center, #ffb300, #b37500);
+    width: 22px;
+    height: 22px;
+    background: #ffb300;
     border-radius: 50%;
-    box-shadow: 0 0 18px #ffb300cc, 0 0 38px #ffb30099, 0 0 56px #ffb300aa;
+    box-shadow: 0 0 15px #ffb300, 0 0 30px #ffb300cc, 0 0 45px #ffb30099;
     transform: translate(-50%, -50%);
-    animation: pulse 1.8s ease-in-out infinite;
+    animation: pulse 1.6s ease-in-out infinite;
   }
 
-  /* Loading text with shimmering gold gradient */
+  /* Текст */
   .loading-text {
     color: #ffb300cc;
-    margin-top: 50px;
-    font-size: 1.5rem;
-    font-weight: 700;
-    letter-spacing: 1.5px;
-    position: relative;
-    animation: fadeInOut 2s ease-in-out infinite alternate;
-    user-select: none;
-    text-shadow: 0 0 6px #ffb300, 0 0 15px #ffb300aa;
+    margin-top: 40px;
+    font-size: 1.3rem;
+    font-weight: 600;
+    letter-spacing: 1.3px;
+    animation: fadeInOut 1.8s ease-in-out infinite alternate;
   }
 
-  .loading-text .shimmer {
-    background: linear-gradient(90deg, #fffb00, #ffe135, #fffb00);
-    background-size: 200% auto;
-    background-clip: text;
-    -webkit-background-clip: text;
-    color: transparent;
-    animation: shimmer 2.5s linear infinite;
-  }
-
-  /* Animations */
+  /* Анимации */
   @keyframes spin {
-    0% {
-      transform: translate(-50%, -50%) rotate(0deg);
-    }
     100% {
-      transform: translate(-50%, -50%) rotate(360deg);
+      transform: rotate(360deg);
     }
   }
 
@@ -166,37 +108,17 @@ body {
       opacity: 1;
     }
     50% {
-      transform: translate(-50%, -50%) scale(1.35);
-      opacity: 0.65;
+      transform: translate(-50%, -50%) scale(1.25);
+      opacity: 0.7;
     }
   }
 
   @keyframes fadeInOut {
     0% {
-      opacity: 0.5;
+      opacity: 0.4;
     }
     100% {
       opacity: 1;
-    }
-  }
-
-  @keyframes shimmer {
-    0% {
-      background-position: 200% center;
-    }
-    100% {
-      background-position: -200% center;
-    }
-  }
-
-  @keyframes fadeInZoom {
-    0% {
-      opacity: 0;
-      transform: scale(0.95);
-    }
-    100% {
-      opacity: 1;
-      transform: scale(1);
     }
   }
 }
