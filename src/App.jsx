@@ -11,6 +11,11 @@ const MainContent = lazy(() => import("./layouts/MainContent"));
 
 const App = () => {
   const [isAppLoaded, setIsAppLoaded] = useState(false);
+  
+  const preloader = document.getElementById("preloader");
+  if (preloader) {
+    preloader.classList.add("hide");
+  }
 
   useEffect(() => {
     const preloadVideo = (src) => {
