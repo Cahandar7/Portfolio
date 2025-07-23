@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useState } from "react";
 import Header from "./layouts/Header";
 import SideBar from "./layouts/SideBar";
 import MainCard from "./layouts/MainCard";
@@ -8,8 +8,21 @@ import CustomCursor from "./components/CustomCursor";
 import { Col, Container, Row } from "react-bootstrap";
 
 const App = () => {
+  const [loading, setLoading] = useState(true);
+
+  const handleVideoPlaying = () => {
+    setLoading(false);
+    console.log(new Date());
+  };
+
   return (
     <>
+      {loading && (
+        <div className="loading-screen">
+          <div className="spinner" />
+        </div>
+      )}
+
       <div className="video-container">
         <video
           src={bg_video}
@@ -19,11 +32,12 @@ const App = () => {
           className="bg-video"
           preload="auto"
           poster="/preview.jpg"
+          onPlaying={handleVideoPlaying}
         />
       </div>
 
       <CustomCursor />
-      
+
       <div className="overlay-container">
         <div className="overlay"></div>
       </div>
