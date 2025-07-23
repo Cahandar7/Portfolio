@@ -10,35 +10,8 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Cahandar Masimov</title>
     <link rel="stylesheet" href="https://use.typekit.net/znm2kze.css" />
-    <style>
-      #preloader {
-        position: fixed;
-        inset: 0;
-        background: #000;
-        z-index: 99999;
-        display: flex;
-        justify-content: center;
-        align-items: center;
-      }
-      .spinner {
-        width: 60px;
-        height: 60px;
-        border: 6px solid #ffae00;
-        border-top-color: #000;
-        border-radius: 50%;
-        animation: spin 1s linear infinite;
-      }
-      @keyframes spin {
-        to {
-          transform: rotate(360deg);
-        }
-      }
-    </style>
   </head>
   <body>
-    <div id="preloader">
-      <div class="spinner"></div>
-    </div>
     <div id="root"></div>
     <script type="module" src="/src/main.jsx"></script>
   </body>

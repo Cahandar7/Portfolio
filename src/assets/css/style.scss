@@ -29,31 +29,6 @@ body {
   }
 }
 
-.loading-screen {
-  position: fixed;
-  inset: 0;
-  background-color: #000;
-  display: flex;
-  justify-content: center;
-  align-items: center;
-  z-index: 99999;
-  transition: opacity 0.3s ease;
-  .spinner {
-    width: 60px;
-    height: 60px;
-    border: 6px solid #ffae00;
-    border-top-color: #000;
-    border-radius: 50%;
-    animation: spin 1s linear infinite;
-  }
-
-  @keyframes spin {
-    to {
-      transform: rotate(360deg);
-    }
-  }
-}
-
 .cursor {
   width: 35px;
   height: 35px;
