@@ -1,4 +1,4 @@
-import React, { Suspense, useState } from "react";
+import React, { Suspense } from "react";
 import Header from "./layouts/Header";
 import SideBar from "./layouts/SideBar";
 import MainCard from "./layouts/MainCard";
@@ -8,26 +8,8 @@ import CustomCursor from "./components/CustomCursor";
 import { Col, Container, Row } from "react-bootstrap";
 
 const App = () => {
-  const [loading, setLoading] = useState(true);
-
-  const handleVideoPlaying = () => {
-    setLoading(false);
-  };
-
   return (
     <>
-      {loading && (
-        <div className="godlevel-loading-screen">
-          <canvas id="particles-canvas"></canvas>
-
-          <div className="spinner-container">
-            <div className="spinner-ring"></div>
-            <div className="spinner-center"></div>
-            <p className="loading-text">One more second...</p>
-          </div>
-        </div>
-      )}
-
       <div className="video-container">
         <video
           src={bg_video}
@@ -37,7 +19,6 @@ const App = () => {
           className="bg-video"
           preload="auto"
           poster="/preview.jpg"
-          onPlaying={handleVideoPlaying}
         />
       </div>
 
