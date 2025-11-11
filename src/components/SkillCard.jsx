@@ -1,7 +1,7 @@
 import React from "react";
 import { motion } from "framer-motion";
 
-const SkillCard = ({ icon, h1_text, p_text }) => {
+const SkillCard = ({ icon, p_text }) => {
   return (
     <motion.div
       className="skill-card"

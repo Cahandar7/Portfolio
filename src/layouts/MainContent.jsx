@@ -1,29 +1,50 @@
-import React from "react";
 import IntroHeader from "../components/IntroHeader";
 import TextCard from "../components/TextCard";
+import TextImageCard from "../components/TextImageCard";
 import SkillCard from "../components/SkillCard";
 import ContactForm from "../components/ContactForm";
+
+// ui imgs
+import rotated_circle from "../assets/images/rotated_circle.png";
 import arrow_img from "../assets/images/arrow1.svg";
 import { FaArrowRight } from "react-icons/fa";
+
+// portfolio imgs
 import portfolio1 from "../assets/images/portfolio_img1.png";
 import portfolio2 from "../assets/images/portfolio_img2.png";
 import portfolio3 from "../assets/images/portfolio_img3.png";
 import portfolio4 from "../assets/images/portfolio_img4.png";
-import intern_itelligence_logo from "../assets/images/intern_itelligence_logo.png";
-import webluna_software_logo from "../assets/images/webluna_software_logo.png";
+
+// education imgs
 import unec_logo from "../assets/images/unec_logo.png";
 import matrix_academy_logo from "../assets/images/matrix_academy_logo.png";
 import div_academy_logo from "../assets/images/div_academy_logo.png";
-import idschool_logo from "../assets/images/idschool_logo.png";
-import freelance_logo from "../assets/images/freelance_logo.png";
+
+// experience imgs
 import cubics_tech_logo from "../assets/images/cubics_tech_logo.png";
+import idschool_logo from "../assets/images/idschool_logo.png";
+import webluna_software_logo from "../assets/images/webluna_software_logo.png";
+import intern_itelligence_logo from "../assets/images/intern_itelligence_logo.png";
+import freelance_logo from "../assets/images/freelance_logo.png";
+
+// certificate imgs
 import Intern_Intelligence_Certificate from "../assets/images/Intern_Intelligence_Certificate.png";
 import matrix_certificate from "../assets/images/matrix_certificate.jpg";
-import rotated_circle from "../assets/images/rotated_circle.png";
+
+// techs imgs
+import react_icon from "../assets/images/react_icon.svg";
+import redux_icon from "../assets/images/redux_icon.svg";
+import sass_icon from "../assets/images/sass_icon.svg";
+import nodejs_icon from "../assets/images/nodejs_icon.svg";
+import nestjs_icon from "../assets/images/nestjs_icon.svg";
+import meteor_icon from "../assets/images/meteor_icon.webp";
+import mongo_icon from "../assets/images/mongo_icon.svg";
+import postgre_icon from "../assets/images/postgre_icon.svg";
+import ts_icon from "../assets/images/ts_icon.svg";
+
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
 import { Col, Container, Row } from "react-bootstrap";
-import TextImageCard from "../components/TextImageCard";
 
 const MainContent = () => {
   const experiences = [
@@ -44,7 +65,7 @@ const MainContent = () => {
       imgAlt: "idschool_logo",
       imgWidth: 40,
       imgHeight: 40,
-      isText: "IDSchool",
+      isText: "IDSchool Academy",
       link: "https://idtech.edu.az/",
       date: "May 2025 - Present",
       location: "Baku, Azerbaijan (On-site)",
@@ -92,7 +113,7 @@ const MainContent = () => {
       imgWidth: 40,
       imgHeight: 40,
       isText: "Azerbaijan State University of Economics",
-      gpa: "GPA: 92.3 / 100",
+      gpa: "GPA: 92 / 100",
       score: "University Entrance Score: 624 / 700",
       link: "https://unec.edu.az",
       date: "July 2023 - July 2027",
@@ -135,7 +156,7 @@ const MainContent = () => {
     },
     {
       title: "Matrix Academy",
-      desc: "Frontend Development",
+      desc: "Frontend Developer Intern",
       date: "October 2024 - February 2025",
       image: matrix_certificate,
     },
@@ -143,49 +164,40 @@ const MainContent = () => {
 
   const skills = [
     {
-      icon: "https://upload.wikimedia.org/wikipedia/commons/a/a7/React-icon.svg",
-      level: 95,
+      icon: react_icon,
       name: "React.js",
     },
     {
-      icon: "https://upload.wikimedia.org/wikipedia/commons/4/49/Redux.png",
-      level: 75,
-      name: "Redux",
+      icon: redux_icon,
+      name: "Redux and RTK Query",
     },
     {
-      icon: "https://upload.wikimedia.org/wikipedia/commons/9/96/Sass_Logo_Color.svg",
-      level: 90,
+      icon: sass_icon,
       name: "SASS",
     },
     {
-      icon: "https://upload.wikimedia.org/wikipedia/commons/d/d9/Node.js_logo.svg",
-      level: 95,
+      icon: nodejs_icon,
       name: "Node.js",
     },
     {
-      icon: "https://cdn.iconscout.com/icon/free/png-256/free-mongodb-icon-download-in-svg-png-gif-file-formats--wordmark-programming-langugae-logo-freebies-pack-logos-icons-1175138.png",
-      level: 90,
-      name: "MongoDB",
+      icon: nestjs_icon,
+      name: "Nest.js",
     },
     {
-      icon: "https://upload.wikimedia.org/wikipedia/commons/2/29/Postgresql_elephant.svg",
-      level: 85,
-      name: "PostgreSQL",
-    },
-    {
-      icon: "https://dmtgy0px4zdqn.cloudfront.net/images/meteor-logo.webp",
-      level: 90,
+      icon: meteor_icon,
       name: "Meteor.js",
     },
     {
-      icon: "https://www.blazejs.org/logo/logo.png",
-      level: 70,
-      name: "Blaze",
+      icon: mongo_icon,
+      name: "MongoDB",
     },
     {
-      icon: "https://nestjs.com/logo-small-gradient.d792062c.svg",
-      level: 80,
-      name: "Nest.js",
+      icon: postgre_icon,
+      name: "PostgreSQL",
+    },
+    {
+      icon: ts_icon,
+      name: "TypeScript",
     },
   ];
 
@@ -290,7 +302,7 @@ const MainContent = () => {
         <TextCard
           title={"Cahandar Masimov"}
           desc={
-            "Hi, I'm Cahandar Masimov, a passionate Full Stack Developer building powerful and scalable web applications. I specialize in developing both responsive frontends and robust backends that work seamlessly together. By combining modern technologies like React, Node.js, MongoDB, and PostgreSQL, I create efficient solutions that offer smooth user experiences and reliable performance across all platforms."
+            "Hi, I'm Cahandar Masimov, a passionate Full Stack Developer building powerful and scalable web applications. I specialize in developing both responsive frontends and robust backends that work seamlessly together. By combining modern technologies like TypeScript, React.js, Node.js, Nest.js, MongoDB, and PostgreSQL, I create efficient solutions that offer smooth user experiences and reliable performance across all platforms."
           }
         />
 
@@ -454,11 +466,7 @@ const MainContent = () => {
                 lg={4}
                 className="skill-cards-container"
               >
-                <SkillCard
-                  icon={skill.icon}
-                  h1_text={skill.level.toString()}
-                  p_text={skill.name}
-                />
+                <SkillCard icon={skill.icon} p_text={skill.name} />
               </Col>
             ))}
           </Row>
@@ -488,15 +496,17 @@ const MainContent = () => {
                 >
                   <img src={portfolio1} alt="portfolio1" />
                 </a>
-                <h1>
-                  XStore - E-commerce Web Site ({" "}
+                <h1 className="project-title">
+                  XStore{" "}
+                  <span className="project-type">(Personal Project)</span>{" "}
+                  <FaArrowRight size={17} />
                   <a
                     href="https://github.com/Cahandar7/InternIntelligence_Ecommerce"
                     target="_blank"
+                    className="project-link"
                   >
-                    Github Repo
-                  </a>{" "}
-                  )
+                    GitHub Repo
+                  </a>
                 </h1>
               </motion.div>
             </Col>
@@ -513,17 +523,19 @@ const MainContent = () => {
                   href="https://login-register-by-cahandar.vercel.app/"
                   target="_blank"
                 >
-                  <img src={portfolio4} alt="portfolio4" />
+                  <img src={portfolio2} alt="portfolio2" />
                 </a>
-                <h1 style={{ fontSize: "1.5em" }}>
-                  Login&Register app({" "}
+                <h1 className="project-title">
+                  3D Forest{" "}
+                  <span className="project-type">(Personal Project)</span>{" "}
+                  <FaArrowRight size={17} />
                   <a
                     href="https://github.com/Cahandar7/-InternIntelligence_LoginRegister"
                     target="_blank"
+                    className="project-link"
                   >
-                    Github Repo
-                  </a>{" "}
-                  )
+                    GitHub Repo
+                  </a>
                 </h1>
               </motion.div>
             </Col>
@@ -539,15 +551,18 @@ const MainContent = () => {
                 <a href="#">
                   <img src={portfolio3} alt="portfolio3" />
                 </a>
-                <h1 style={{ fontSize: "1.5em" }}>
-                  Fresh Vila - E-commerce ({" "}
+                <h1 className="project-title">
+                  Fresh Vial{" "}
+                  <span className="project-type">(Personal Project)</span>{" "}
+                  <FaArrowRight size={17} />
                   <a
                     href="https://github.com/Cahandar7/FRESH_VILA_WATER"
                     target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-link"
                   >
-                    Github Repo
-                  </a>{" "}
-                  )
+                    GitHub Repo
+                  </a>
                 </h1>
               </motion.div>
             </Col>
@@ -560,20 +575,21 @@ const MainContent = () => {
                 viewport={{ once: true }}
                 transition={{ duration: 0.6 }}
               >
-                <div>
-                  <a href="#">
-                    <img src={portfolio2} alt="portfolio2" />
-                  </a>
-                </div>
-                <h1>
-                  Grogin - E-commerce Template ({" "}
+                <a href="https://girlscode.az/" target="_blank">
+                  <img src={portfolio4} alt="portfolio4" />
+                </a>
+                <h1 className="project-title">
+                  GirlsCode - Women Scholarship Program{" "}
+                  <span className="project-type">(Real Project)</span>{" "}
+                  <FaArrowRight size={17} />
                   <a
-                    href="https://github.com/Cahandar7/Grogin_Template"
+                    href="https://github.com/Cahandar7"
                     target="_blank"
+                    rel="noopener noreferrer"
+                    className="project-link"
                   >
-                    Github Repo
-                  </a>{" "}
-                  )
+                    GitHub Repo
+                  </a>
                 </h1>
               </motion.div>
             </Col>

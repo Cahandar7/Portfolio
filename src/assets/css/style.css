@@ -1,12 +1,12 @@
-@import "./header";
-@import "./sidebar";
-@import "./main-card";
-@import "./main-content";
-@import "./home-sec";
-@import "./about-us-sec";
-@import "./portfolio-card";
-@import "./contact-form";
-@import "./responsiveness";
+@import url("./header.css");
+@import url("./sidebar.css");
+@import url("./main-card.css");
+@import url("./main-content.css");
+@import url("./home-sec.css");
+@import url("./about-us-sec.css");
+@import url("./portfolio-card.css");
+@import url("./contact-form.css");
+@import url("./responsiveness.css");
 
 * {
   margin: 0;
@@ -89,22 +89,17 @@ body {
   font-weight: 600 !important;
 }
 
-.swal2-content {
+.swal2-html-container {
   font-family: "Poppins", sans-serif !important;
-  color: #fff !important;
-  font-size: 160px !important;
+  color: #ac9c9c !important;
+  font-size: 16px !important;
   line-height: 1.5 !important;
-  text-align: center !important;
-}
-
-.swal2-icon {
-  color: #fff !important;
 }
 
 .swal-button {
   background-color: #ffae00;
   color: #0e161f;
-  padding: 16px 20px;
+  padding: 8px 32px;
   border: 1px solid #ffae00;
   border-radius: 40px;
   font-size: 1.3rem;
