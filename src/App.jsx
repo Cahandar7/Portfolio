@@ -1,4 +1,4 @@
-import React, { Suspense } from "react";
+import React, { Suspense, useState, useRef, useEffect } from "react";
 import Header from "./layouts/Header";
 import SideBar from "./layouts/SideBar";
 import MainCard from "./layouts/MainCard";
@@ -8,14 +8,47 @@ import CustomCursor from "./components/CustomCursor";
 import { Col, Container, Row } from "react-bootstrap";
 
 const App = () => {
+  const [videoReady, setVideoReady] = useState(false);
+  const videoRef = useRef(null);
+
+  useEffect(() => {
+    const video = videoRef.current;
+    if (!video) return;
+
+    if (video.readyState >= 3) {
+      setVideoReady(true);
+      return;
+    }
+
+    const handleCanPlay = () => setVideoReady(true);
+    video.addEventListener("canplaythrough", handleCanPlay);
+
+    const fallback = setTimeout(() => setVideoReady(true), 4000);
+
+    return () => {
+      video.removeEventListener("canplaythrough", handleCanPlay);
+      clearTimeout(fallback);
+    };
+  }, []);
+
   return (
     <>
+      {!videoReady && (
+        <div className="loader-overlay">
+          <div className="spinner-wrapper">
+            <div className="spinner" />
+          </div>
+        </div>
+      )}
+
       <div className="video-container">
         <video
+          ref={videoRef}
           src={bg_video}
           autoPlay
           loop
           muted
+          playsInline
           className="bg-video"
           preload="auto"
           poster="/preview.jpg"
@@ -36,14 +69,12 @@ const App = () => {
           <Col xs={12} sm={3} md={12} lg={12} xl={1}>
             <SideBar />
           </Col>
-
-          <Suspense fallback={<div>Loading MainCard...</div>}>
+          <Suspense fallback={<div>Loading...</div>}>
             <Col xs={12} sm={9} md={5} lg={5} xl={4}>
               <MainCard />
             </Col>
           </Suspense>
-
-          <Suspense fallback={<div>Loading MainContent...</div>}>
+          <Suspense fallback={<div>Loading...</div>}>
             <Col xs={12} sm={12} md={7} lg={7} xl={7}>
               <MainContent />
             </Col>
