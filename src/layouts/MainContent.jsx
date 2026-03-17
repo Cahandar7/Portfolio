@@ -7,10 +7,10 @@ import ContactForm from "../components/ContactForm";
 // ui imgs
 import rotated_circle from "../assets/images/rotated_circle.png";
 import arrow_img from "../assets/images/arrow1.svg";
-import { FaArrowRight } from "react-icons/fa";
+import { FaArrowRight, FaGithub, FaGlobe } from "react-icons/fa";
 
 // portfolio imgs
-import portfolio1 from "../assets/images/portfolio_img1.png";
+// import portfolio1 from "../assets/images/portfolio_img1.png";
 import portfolio2 from "../assets/images/portfolio_img2.png";
 import portfolio3 from "../assets/images/portfolio_img3.png";
 import portfolio4 from "../assets/images/portfolio_img4.png";
@@ -274,9 +274,9 @@ const MainContent = () => {
             <img src={arrow_img} alt="logo" className="rot-arr-logo" />
           </div>
           <p className="top-p">
-            Your gateway to innovative frontend design, seamless web
-            experiences, and impactful solutions. Turning complex ideas into
-            intuitive, user-friendly interfaces.
+            Your gateway to modern full-stack development, combining powerful
+            backend systems with intuitive frontend experiences. Turning complex
+            ideas into scalable, secure, and user-friendly solutions.
           </p>
         </motion.div>
 
@@ -302,7 +302,7 @@ const MainContent = () => {
         <TextCard
           title={"Cahandar Masimov"}
           desc={
-            "Hi, I'm Cahandar Masimov, a passionate Full Stack Developer building powerful and scalable web applications. I specialize in developing both responsive frontends and robust backends that work seamlessly together. By combining modern technologies like TypeScript, React.js, Node.js, Nest.js, MongoDB, and PostgreSQL, I create efficient solutions that offer smooth user experiences and reliable performance across all platforms."
+            "Hi, I'm Cahandar Masimov, a passionate Full Stack Developer building powerful and scalable web applications. I specialize in developing both responsive frontends and robust backends that work seamlessly together. By leveraging modern technologies like TypeScript, React.js, Node.js, Nest.js, MongoDB, and PostgreSQL — along with tools such as Docker for containerization and Kafka and RabbitMQ for efficient message-driven architectures — I create high-performance, scalable solutions that deliver smooth user experiences and reliable system performance across all platforms."
           }
         />
 
@@ -485,112 +485,192 @@ const MainContent = () => {
             <Col xs={12} sm={12} md={12} lg={12}>
               <motion.div
                 className="portfolio-card"
-                initial={{ opacity: 0, x: 80 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
               >
-                <a
-                  href="https://intern-intelligence-ecommerce.vercel.app/"
-                  target="_blank"
-                >
-                  <img src={portfolio1} alt="portfolio1" />
-                </a>
-                <h1 className="project-title">
-                  XStore{" "}
-                  <span className="project-type">(Personal Project)</span>{" "}
-                  <FaArrowRight size={17} />
-                  <a
-                    href="https://github.com/Cahandar7/InternIntelligence_Ecommerce"
-                    target="_blank"
-                    className="project-link"
-                  >
-                    GitHub Repo
+                <div className="card-image-wrap">
+                  <a href="https://sabat.az/" target="_blank">
+                    <img src={null} alt="Sabat E-Commerce Book Shop" />
+                    <div className="card-overlay" />
                   </a>
-                </h1>
+                  <span className="card-badge">Real Project</span>
+                </div>
+
+                <div className="card-body">
+                  <div className="card-header">
+                    <h3 className="project-title">
+                      Sabat — E-Commerce Book Shop
+                    </h3>
+                    <a
+                      href="https://sabat.az/"
+                      target="_blank"
+                      className="card-arrow"
+                    >
+                      <FaArrowRight size={13} />
+                    </a>
+                  </div>
+
+                  <div className="card-meta">
+                    <a
+                      href="https://sabat.az/"
+                      target="_blank"
+                      className="meta-link"
+                    >
+                      <FaGlobe size={13} /> sabat.az
+                    </a>
+                  </div>
+                </div>
               </motion.div>
             </Col>
 
             <Col xs={12} sm={12} md={6} lg={6}>
               <motion.div
                 className="portfolio-card"
-                initial={{ opacity: 0, x: 80 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
               >
-                <a
-                  href="https://login-register-by-cahandar.vercel.app/"
-                  target="_blank"
-                >
-                  <img src={portfolio2} alt="portfolio2" />
-                </a>
-                <h1 className="project-title">
-                  3D Forest{" "}
-                  <span className="project-type">(Personal Project)</span>{" "}
-                  <FaArrowRight size={17} />
+                <div className="card-image-wrap">
                   <a
-                    href="https://github.com/Cahandar7/-InternIntelligence_LoginRegister"
+                    href="https://login-register-by-cahandar.vercel.app/"
                     target="_blank"
-                    className="project-link"
                   >
-                    GitHub Repo
+                    <img src={portfolio2} alt="3D Forest" />
+                    <div className="card-overlay" />
                   </a>
-                </h1>
+                  <span className="card-badge">Personal Project</span>
+                </div>
+
+                <div className="card-body">
+                  <div className="card-header">
+                    <h3 className="project-title">3D Forest</h3>
+                    <a
+                      href="https://login-register-by-cahandar.vercel.app/"
+                      target="_blank"
+                      className="card-arrow"
+                    >
+                      <FaArrowRight size={13} />
+                    </a>
+                  </div>
+
+                  <div className="card-meta">
+                    <a
+                      href="https://github.com/Cahandar7/-InternIntelligence_LoginRegister"
+                      target="_blank"
+                      className="meta-link"
+                    >
+                      <FaGithub size={13} /> GitHub repo
+                    </a>
+                    <span className="meta-divider" />
+                    <a
+                      href="https://login-register-by-cahandar.vercel.app/"
+                      target="_blank"
+                      className="meta-link"
+                    >
+                      <FaGlobe size={13} /> Live Demo
+                    </a>
+                  </div>
+                </div>
               </motion.div>
             </Col>
 
             <Col xs={12} sm={12} md={6} lg={6}>
               <motion.div
                 className="portfolio-card"
-                initial={{ opacity: 0, x: 80 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
               >
-                <a href="#">
-                  <img src={portfolio3} alt="portfolio3" />
-                </a>
-                <h1 className="project-title">
-                  Fresh Vial{" "}
-                  <span className="project-type">(Personal Project)</span>{" "}
-                  <FaArrowRight size={17} />
+                <div className="card-image-wrap">
                   <a
-                    href="https://github.com/Cahandar7/FRESH_VILA_WATER"
+                    href="https://intern-intelligence-ecommerce.vercel.app/"
                     target="_blank"
-                    rel="noopener noreferrer"
-                    className="project-link"
                   >
-                    GitHub Repo
+                    <img src={portfolio3} alt="XStore" />
+                    <div className="card-overlay" />
                   </a>
-                </h1>
+                  <span className="card-badge">Personal Project</span>
+                </div>
+
+                <div className="card-body">
+                  <div className="card-header">
+                    <h3 className="project-title">
+                      XStore — E-Commerce Clothes Shop
+                    </h3>
+                    <a
+                      href="https://intern-intelligence-ecommerce.vercel.app/"
+                      target="_blank"
+                      className="card-arrow"
+                    >
+                      <FaArrowRight size={13} />
+                    </a>
+                  </div>
+
+                  <div className="card-meta">
+                    <a
+                      href="https://github.com/Cahandar7/InternIntelligence_Ecommerce"
+                      target="_blank"
+                      className="meta-link"
+                    >
+                      <FaGithub size={13} /> GitHub repo
+                    </a>
+                    <span className="meta-divider" />
+                    <a
+                      href="https://intern-intelligence-ecommerce.vercel.app/"
+                      target="_blank"
+                      className="meta-link"
+                    >
+                      <FaGlobe size={13} /> Live Demo
+                    </a>
+                  </div>
+                </div>
               </motion.div>
             </Col>
 
             <Col xs={12} sm={12} md={12} lg={12}>
               <motion.div
                 className="portfolio-card"
-                initial={{ opacity: 0, x: 80 }}
-                whileInView={{ opacity: 1, x: 0 }}
+                initial={{ opacity: 0, y: 40 }}
+                whileInView={{ opacity: 1, y: 0 }}
                 viewport={{ once: true }}
-                transition={{ duration: 0.6 }}
+                transition={{ duration: 0.5, ease: "easeOut" }}
               >
-                <a href="https://girlscode.az/" target="_blank">
-                  <img src={portfolio4} alt="portfolio4" />
-                </a>
-                <h1 className="project-title">
-                  GirlsCode - Women Scholarship Program{" "}
-                  <span className="project-type">(Real Project)</span>{" "}
-                  <FaArrowRight size={17} />
-                  <a
-                    href="https://github.com/Cahandar7"
-                    target="_blank"
-                    rel="noopener noreferrer"
-                    className="project-link"
-                  >
-                    GitHub Repo
+                <div className="card-image-wrap">
+                  <a href="https://girlscode.az/" target="_blank">
+                    <img src={portfolio4} alt="GirlsCode" />
+                    <div className="card-overlay" />
                   </a>
-                </h1>
+                  <span className="card-badge">Real Project</span>
+                </div>
+
+                <div className="card-body">
+                  <div className="card-header">
+                    <h3 className="project-title">
+                      GirlsCode — Women Scholarship Program
+                    </h3>
+                    <a
+                      href="https://girlscode.az/"
+                      target="_blank"
+                      className="card-arrow"
+                    >
+                      <FaArrowRight size={13} />
+                    </a>
+                  </div>
+
+                  <div className="card-meta">
+                    <a
+                      href="https://girlscode.az/"
+                      target="_blank"
+                      className="meta-link"
+                    >
+                      <FaGlobe size={13} /> Live Demo
+                    </a>
+                  </div>
+                </div>
               </motion.div>
             </Col>
           </Row>

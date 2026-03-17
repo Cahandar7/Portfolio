@@ -95,7 +95,7 @@ const ContactForm = () => {
             value={formData.firstName}
             onChange={handleInputChange}
             required
-            autocomplete="off"
+            autoComplete="off"
           />
           <input
             placeholder="Last Name *"
@@ -104,7 +104,7 @@ const ContactForm = () => {
             value={formData.lastName}
             onChange={handleInputChange}
             required
-            autocomplete="off"
+            autoComplete="off"
           />
           <input
             placeholder="Email Address *"
@@ -120,7 +120,7 @@ const ContactForm = () => {
             name="phone"
             value={formData.phone}
             onChange={handleInputChange}
-            autocomplete="off"
+            autoComplete="off"
           />
         </div>
         <input
@@ -131,7 +131,7 @@ const ContactForm = () => {
           value={formData.subject}
           onChange={handleInputChange}
           required
-          autocomplete="off"
+          autoComplete="off"
         />
         <input
           placeholder="Message *"
@@ -141,7 +141,7 @@ const ContactForm = () => {
           value={formData.message}
           onChange={handleInputChange}
           required
-          autocomplete="off"
+          autoComplete="off"
         />
         <button type="submit">
           <span>SEND</span> <FaEnvelope id="send-icon" />
