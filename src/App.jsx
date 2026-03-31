@@ -15,18 +15,18 @@ const App = () => {
     const video = videoRef.current;
     if (!video) return;
 
-    if (video.readyState >= 3) {
+    if (video.readyState >= 2) {
       setVideoReady(true);
       return;
     }
 
-    const handleCanPlay = () => setVideoReady(true);
-    video.addEventListener("canplaythrough", handleCanPlay);
+    const handleLoaded = () => setVideoReady(true);
+    video.addEventListener("loadeddata", handleLoaded);
 
-    const fallback = setTimeout(() => setVideoReady(true), 4000);
+    const fallback = setTimeout(() => setVideoReady(true), 1500);
 
     return () => {
-      video.removeEventListener("canplaythrough", handleCanPlay);
+      video.removeEventListener("loadeddata", handleLoaded);
       clearTimeout(fallback);
     };
   }, []);
@@ -58,7 +58,7 @@ const App = () => {
       <CustomCursor />
 
       <div className="overlay-container">
-        <div className="overlay"></div>
+        <div className="overlay" />
       </div>
 
       <Container style={{ padding: "10px 30px", maxWidth: "100vw" }}>
