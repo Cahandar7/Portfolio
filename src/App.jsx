@@ -1,4 +1,4 @@
-import React, { Suspense, useState, useRef, useEffect } from "react";
+import React, { useState, useRef, useEffect } from "react";
 import Header from "./layouts/Header";
 import SideBar from "./layouts/SideBar";
 import MainCard from "./layouts/MainCard";
@@ -15,18 +15,18 @@ const App = () => {
     const video = videoRef.current;
     if (!video) return;
 
-    if (video.readyState >= 2) {
+    if (video.readyState >= 3) {
       setVideoReady(true);
       return;
     }
 
-    const handleLoaded = () => setVideoReady(true);
-    video.addEventListener("loadeddata", handleLoaded);
+    const handleCanPlay = () => setVideoReady(true);
+    video.addEventListener("canplay", handleCanPlay);
 
-    const fallback = setTimeout(() => setVideoReady(true), 1500);
+    const fallback = setTimeout(() => setVideoReady(true), 4000);
 
     return () => {
-      video.removeEventListener("loadeddata", handleLoaded);
+      video.removeEventListener("canplay", handleCanPlay);
       clearTimeout(fallback);
     };
   }, []);
@@ -41,7 +41,10 @@ const App = () => {
         </div>
       )}
 
-      <div className="video-container">
+      <div
+        className="video-container"
+        style={{ visibility: videoReady ? "visible" : "hidden" }}
+      >
         <video
           ref={videoRef}
           src={bg_video}
@@ -51,36 +54,35 @@ const App = () => {
           playsInline
           className="bg-video"
           preload="auto"
-          poster="/preview.jpg"
         />
       </div>
 
-      <CustomCursor />
+      {videoReady && (
+        <>
+          <CustomCursor />
 
-      <div className="overlay-container">
-        <div className="overlay" />
-      </div>
+          <div className="overlay-container">
+            <div className="overlay" />
+          </div>
 
-      <Container style={{ padding: "10px 30px", maxWidth: "100vw" }}>
-        <Row>
-          <Header />
-        </Row>
-        <Row>
-          <Col xs={12} sm={3} md={12} lg={12} xl={1}>
-            <SideBar />
-          </Col>
-          <Suspense fallback={<div>Loading...</div>}>
-            <Col xs={12} sm={9} md={5} lg={5} xl={4}>
-              <MainCard />
-            </Col>
-          </Suspense>
-          <Suspense fallback={<div>Loading...</div>}>
-            <Col xs={12} sm={12} md={7} lg={7} xl={7}>
-              <MainContent />
-            </Col>
-          </Suspense>
-        </Row>
-      </Container>
+          <Container style={{ padding: "10px 30px", maxWidth: "100vw" }}>
+            <Row>
+              <Header />
+            </Row>
+            <Row>
+              <Col xs={12} sm={3} md={12} lg={12} xl={1}>
+                <SideBar />
+              </Col>
+              <Col xs={12} sm={9} md={5} lg={5} xl={4}>
+                <MainCard />
+              </Col>
+              <Col xs={12} sm={12} md={7} lg={7} xl={7}>
+                <MainContent />
+              </Col>
+            </Row>
+          </Container>
+        </>
+      )}
     </>
   );
 };
