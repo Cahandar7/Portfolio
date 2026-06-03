@@ -35,12 +35,15 @@ import matrix_certificate from "../assets/images/matrix_certificate.jpg";
 import react_icon from "../assets/images/react_icon.svg";
 import redux_icon from "../assets/images/redux_icon.svg";
 import sass_icon from "../assets/images/sass_icon.svg";
+import tailwind_icon from "../assets/images/tailwind_icon.png";
 import nodejs_icon from "../assets/images/nodejs_icon.svg";
 import nestjs_icon from "../assets/images/nestjs_icon.svg";
 import meteor_icon from "../assets/images/meteor_icon.webp";
+import ts_icon from "../assets/images/ts_icon.svg";
 import mongo_icon from "../assets/images/mongo_icon.svg";
 import postgre_icon from "../assets/images/postgre_icon.svg";
-import ts_icon from "../assets/images/ts_icon.svg";
+import docker_icon from "../assets/images/docker_icon.png";
+import kafka_icon from "../assets/images/kafka_icon.png";
 
 import { Cursor, useTypewriter } from "react-simple-typewriter";
 import { motion } from "framer-motion";
@@ -176,6 +179,10 @@ const MainContent = () => {
       name: "SASS",
     },
     {
+      icon: tailwind_icon,
+      name: "Tailwind",
+    },
+    {
       icon: nodejs_icon,
       name: "Node.js",
     },
@@ -188,6 +195,10 @@ const MainContent = () => {
       name: "Meteor.js",
     },
     {
+      icon: ts_icon,
+      name: "TypeScript",
+    },
+    {
       icon: mongo_icon,
       name: "MongoDB",
     },
@@ -196,8 +207,12 @@ const MainContent = () => {
       name: "PostgreSQL",
     },
     {
-      icon: ts_icon,
-      name: "TypeScript",
+      icon: docker_icon,
+      name: "Docker",
+    },
+    {
+      icon: kafka_icon,
+      name: "Kafka",
     },
   ];
 
@@ -302,7 +317,7 @@ const MainContent = () => {
         <TextCard
           title={"Cahandar Masimov"}
           desc={
-            "Hi, I'm Cahandar Masimov, a passionate Full Stack Developer building powerful and scalable web applications. I specialize in developing both responsive frontends and robust backends that work seamlessly together. By leveraging modern technologies like TypeScript, React.js, Node.js, Nest.js, MongoDB, and PostgreSQL — along with tools such as Docker for containerization and Kafka and RabbitMQ for efficient message-driven architectures — I create high-performance, scalable solutions that deliver smooth user experiences and reliable system performance across all platforms."
+            "Hi, I'm Cahandar Masimov, a passionate Full Stack Developer building powerful and scalable web applications. I specialize in developing both responsive frontends and robust backends that work seamlessly together. By leveraging modern technologies like TypeScript, React.js, Node.js, Nest.js, MongoDB, and PostgreSQL — along with tools such as Docker for containerization and Kafka for efficient message-driven architectures — I create high-performance, scalable solutions that deliver smooth user experiences and reliable system performance across all platforms."
           }
         />
 
@@ -455,15 +470,16 @@ const MainContent = () => {
           bottom_h1={"Used In"}
           bottom_h1_high={"Development"}
         />
+
         <Container className="skill-cards-box">
           <Row>
             {skills.map((skill, index) => (
               <Col
                 key={index}
-                xs={12}
+                xs={6}
                 sm={6}
-                md={6}
-                lg={4}
+                md={4}
+                lg={3}
                 className="skill-cards-container"
               >
                 <SkillCard icon={skill.icon} p_text={skill.name} />

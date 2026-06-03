@@ -14,7 +14,7 @@ const SkillCard = ({ icon, p_text }) => {
       viewport={{ once: true }}
     >
       <div className="skill-icon">
-        <img src={icon} alt="logo" style={{ width: "85px" }} />
+        <img src={icon} alt="logo" style={{ width: "50px" }} />
       </div>
       <p>{p_text}</p>
     </motion.div>
