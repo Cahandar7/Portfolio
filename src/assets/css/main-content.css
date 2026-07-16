@@ -199,46 +199,46 @@ section {
   margin: 20px 0;
 }
 
-.skill-card {
-  width: 100%;
-  height: 150px;
+.skills-marquee {
   display: flex;
   flex-direction: column;
+  gap: 24px;
+  overflow: hidden;
+  width: 100%;
+}
+
+.skill-row {
+  width: 100%;
+  overflow: hidden;
+}
+
+.skill-track {
+  display: flex;
   align-items: center;
+  gap: 20px;
+  width: max-content;
+}
+
+.skill-card {
+  flex: 0 0 auto;
+  width: 180px;
+  height: 150px;
+
+  display: flex;
+  flex-direction: column;
   justify-content: center;
-  gap: 6px;
-  background-color: rgba(81, 76, 76, 0.5);
+  align-items: center;
+  gap: 8px;
+
+  background: rgba(81, 76, 76, 0.5);
   border: 1px solid rgba(255, 255, 255, 0.1);
   border-radius: 8px;
-  transition: 0.4s;
-  .skill-icon {
-    padding: 20px;
-    margin-top: 20px;
-    background-color: rgba(81, 76, 76, 0.5);
-    border: none;
-    border-radius: 8px;
-    img {
-      width: 100%;
-      height: 100%;
-    }
-  }
-  p {
-    opacity: 1;
-    font-size: 1.1em;
-  }
+  transition: 0.3s;
 }
 
 .skill-card:hover {
-  transform: translateY(-5px) !important;
-  border: 1px solid yellowgreen;
-}
-
-.skill-cards-box {
-  display: flex;
-  justify-content: space-between;
-  .skill-cards-container {
-    margin: 12px 0;
-  }
+  transform: translateY(-5px);
+  border-color: yellowgreen;
 }
 
 .main-content footer {
@@ -256,4 +256,65 @@ section {
   h1:hover {
     color: #ffae00;
   }
+}
+
+.experience-accordion {
+  margin-top: 5px;
+  --bs-accordion-color: #fff;
+  --bs-accordion-bg: transparent;
+  --bs-accordion-border-color: rgba(255, 255, 255, 0.1);
+  --bs-accordion-border-radius: 8px;
+  --bs-accordion-inner-border-radius: 8px;
+  --bs-accordion-btn-padding-y: 6px;
+  --bs-accordion-btn-padding-x: 14px;
+  --bs-accordion-body-padding-y: 10px;
+  --bs-accordion-body-padding-x: 14px;
+}
+
+.experience-accordion .accordion-item {
+  background-color: rgba(81, 76, 76, 0.35);
+  border: 1px solid rgba(255, 255, 255, 0.1);
+  border-radius: 8px;
+  overflow: hidden;
+  transition: 0.4s;
+}
+
+.experience-accordion .accordion-button {
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.7);
+  font-size: 0.5em;
+  font-weight: 400;
+  letter-spacing: 0.02em;
+  text-transform: uppercase;
+  box-shadow: none;
+}
+
+.experience-accordion .accordion-button:not(.collapsed) {
+  background-color: rgba(255, 174, 0, 0.08);
+  box-shadow: none;
+}
+
+.experience-accordion .accordion-button:focus {
+  box-shadow: none;
+  border-color: rgba(255, 255, 255, 0.1);
+}
+
+.experience-accordion .accordion-button::after {
+  width: 0.9rem;
+  height: 0.9rem;
+  background-size: 0.9rem;
+  filter: invert(1) grayscale(1) brightness(1.8);
+  transition: 0.4s;
+}
+
+.experience-accordion .accordion-button:not(.collapsed)::after {
+  filter: invert(66%) sepia(89%) saturate(1000%) hue-rotate(1deg)
+    brightness(103%) contrast(105%);
+}
+
+.experience-accordion .accordion-body {
+  background-color: transparent;
+  color: rgba(255, 255, 255, 0.8);
+  font-size: 1em;
+  line-height: 1.6em;
 }

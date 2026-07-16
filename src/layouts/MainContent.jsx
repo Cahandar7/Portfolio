@@ -1,8 +1,17 @@
 import IntroHeader from "../components/IntroHeader";
 import TextCard from "../components/TextCard";
 import TextImageCard from "../components/TextImageCard";
-import SkillCard from "../components/SkillCard";
 import ContactForm from "../components/ContactForm";
+
+import { Cursor, useTypewriter } from "react-simple-typewriter";
+import { motion } from "framer-motion";
+import { Accordion, Col, Container, Row } from "react-bootstrap";
+
+// datas
+import { experiences } from "../data/experiences";
+import { educations } from "../data/educations";
+import { certificates } from "../data/certificates";
+import { backendSkills, frontendSkills, infraSkills } from "../data/skills";
 
 // ui imgs
 import rotated_circle from "../assets/images/rotated_circle.png";
@@ -10,212 +19,13 @@ import arrow_img from "../assets/images/arrow1.svg";
 import { FaArrowRight, FaGithub, FaGlobe } from "react-icons/fa";
 
 // portfolio imgs
-// import portfolio1 from "../assets/images/portfolio_img1.png";
+import portfolio1 from "../assets/images/portfolio_img1.png";
 import portfolio2 from "../assets/images/portfolio_img2.png";
 import portfolio3 from "../assets/images/portfolio_img3.png";
 import portfolio4 from "../assets/images/portfolio_img4.png";
-
-// education imgs
-import unec_logo from "../assets/images/unec_logo.png";
-import matrix_academy_logo from "../assets/images/matrix_academy_logo.png";
-import div_academy_logo from "../assets/images/div_academy_logo.png";
-
-// experience imgs
-import cubics_tech_logo from "../assets/images/cubics_tech_logo.png";
-import idschool_logo from "../assets/images/idschool_logo.png";
-import webluna_software_logo from "../assets/images/webluna_software_logo.png";
-import intern_itelligence_logo from "../assets/images/intern_itelligence_logo.png";
-import freelance_logo from "../assets/images/freelance_logo.png";
-
-// certificate imgs
-import Intern_Intelligence_Certificate from "../assets/images/Intern_Intelligence_Certificate.png";
-import matrix_certificate from "../assets/images/matrix_certificate.jpg";
-
-// techs imgs
-import react_icon from "../assets/images/react_icon.svg";
-import redux_icon from "../assets/images/redux_icon.svg";
-import sass_icon from "../assets/images/sass_icon.svg";
-import tailwind_icon from "../assets/images/tailwind_icon.png";
-import nodejs_icon from "../assets/images/nodejs_icon.svg";
-import nestjs_icon from "../assets/images/nestjs_icon.svg";
-import meteor_icon from "../assets/images/meteor_icon.webp";
-import ts_icon from "../assets/images/ts_icon.svg";
-import mongo_icon from "../assets/images/mongo_icon.svg";
-import postgre_icon from "../assets/images/postgre_icon.svg";
-import docker_icon from "../assets/images/docker_icon.png";
-import kafka_icon from "../assets/images/kafka_icon.png";
-
-import { Cursor, useTypewriter } from "react-simple-typewriter";
-import { motion } from "framer-motion";
-import { Col, Container, Row } from "react-bootstrap";
+import SkillRow from "../components/SkillRow";
 
 const MainContent = () => {
-  const experiences = [
-    {
-      title: "Full Stack Developer",
-      imgSrc: cubics_tech_logo,
-      imgAlt: "cubics_tech_logo",
-      imgWidth: 105,
-      imgHeight: 40,
-      isText: null,
-      link: "https://cubics.technology/",
-      date: "July 2025 - Present",
-      location: "Baku, Azerbaijan (On-site)",
-    },
-    {
-      title: "IT and Web Development Instructor",
-      imgSrc: idschool_logo,
-      imgAlt: "idschool_logo",
-      imgWidth: 40,
-      imgHeight: 40,
-      isText: "IDSchool Academy",
-      link: "https://idtech.edu.az/",
-      date: "May 2025 - Present",
-      location: "Baku, Azerbaijan (On-site)",
-    },
-    {
-      title: "Frontend Developer Intern",
-      imgSrc: webluna_software_logo,
-      imgAlt: "webluna_software_logo",
-      imgWidth: 40,
-      imgHeight: 40,
-      isText: "Webluna Software",
-      link: "https://webluna.org/",
-      date: "April 2025 - July 2025",
-      location: "Baku, Azerbaijan (On-site)",
-    },
-    {
-      title: "Frontend Developer Intern",
-      imgSrc: intern_itelligence_logo,
-      imgAlt: "intern_itelligence_logo",
-      imgWidth: 40,
-      imgHeight: 40,
-      isText: "Intern Intelligence",
-      link: "https://www.internintelligence.org/",
-      date: "March 2025 - April 2025",
-      location: "India (Remote)",
-    },
-    {
-      title: "Game Developer",
-      imgSrc: freelance_logo,
-      imgAlt: "freelance_logo",
-      imgWidth: 40,
-      imgHeight: 40,
-      isText: "Freelance",
-      link: "https://www.freelancer.com/",
-      date: "May 2022 - August 2024",
-      location: "Baku, Azerbaijan (Freelance)",
-    },
-  ];
-
-  const educations = [
-    {
-      title: "Bachelor Degree of Information Technology",
-      imgSrc: unec_logo,
-      imgAlt: "unec_logo",
-      imgWidth: 40,
-      imgHeight: 40,
-      isText: "Azerbaijan State University of Economics",
-      gpa: "GPA: 92 / 100",
-      score: "University Entrance Score: 624 / 700",
-      link: "https://unec.edu.az",
-      date: "July 2023 - July 2027",
-      location: "Baku, Azerbaijan",
-    },
-    {
-      title: "Frontend Development",
-      imgSrc: matrix_academy_logo,
-      imgAlt: "matrix_academy_logo",
-      imgWidth: 40,
-      imgHeight: 40,
-      isText: "Matrix Academy",
-      gpa: null,
-      score: null,
-      link: "https://matrixacademy.az/",
-      date: "October 2024 - February 2025",
-      location: "Baku, Azerbaijan",
-    },
-    {
-      title: "Backend Development",
-      imgSrc: div_academy_logo,
-      imgAlt: "div_academy_logo",
-      imgWidth: 40,
-      imgHeight: 40,
-      isText: "Div Academy",
-      gpa: null,
-      score: null,
-      link: "https://div.edu.az/",
-      date: "October 2024 - November 2024",
-      location: "Baku, Azerbaijan",
-    },
-  ];
-
-  const certificates = [
-    {
-      title: "Intern Intelligence",
-      desc: "Frontend Developer Intern",
-      date: "March 2025 - April 2025",
-      image: Intern_Intelligence_Certificate,
-    },
-    {
-      title: "Matrix Academy",
-      desc: "Frontend Developer Intern",
-      date: "October 2024 - February 2025",
-      image: matrix_certificate,
-    },
-  ];
-
-  const skills = [
-    {
-      icon: react_icon,
-      name: "React.js",
-    },
-    {
-      icon: redux_icon,
-      name: "Redux and RTK Query",
-    },
-    {
-      icon: sass_icon,
-      name: "SASS",
-    },
-    {
-      icon: tailwind_icon,
-      name: "Tailwind",
-    },
-    {
-      icon: nodejs_icon,
-      name: "Node.js",
-    },
-    {
-      icon: nestjs_icon,
-      name: "Nest.js",
-    },
-    {
-      icon: meteor_icon,
-      name: "Meteor.js",
-    },
-    {
-      icon: ts_icon,
-      name: "TypeScript",
-    },
-    {
-      icon: mongo_icon,
-      name: "MongoDB",
-    },
-    {
-      icon: postgre_icon,
-      name: "PostgreSQL",
-    },
-    {
-      icon: docker_icon,
-      name: "Docker",
-    },
-    {
-      icon: kafka_icon,
-      name: "Kafka",
-    },
-  ];
-
   const variants = {
     initial: { opacity: 0, x: 50 },
     animate: { opacity: 1, x: 0 },
@@ -227,7 +37,7 @@ const MainContent = () => {
       "Backend Developer🛠️",
       "Full Stack Developer🌐",
       "JavaScript Developer✨",
-      "Game Developer🎮",
+      "Java Developer✨",
       "Just a Chill Guy😎",
     ],
     loop: {},
@@ -317,7 +127,7 @@ const MainContent = () => {
         <TextCard
           title={"Cahandar Masimov"}
           desc={
-            "Hi, I'm Cahandar Masimov, a passionate Full Stack Developer building powerful and scalable web applications. I specialize in developing both responsive frontends and robust backends that work seamlessly together. By leveraging modern technologies like TypeScript, React.js, Node.js, Nest.js, MongoDB, and PostgreSQL — along with tools such as Docker for containerization and Kafka for efficient message-driven architectures — I create high-performance, scalable solutions that deliver smooth user experiences and reliable system performance across all platforms."
+            "Hi, I'm Cahandar Masimov, a passionate Full Stack Developer building powerful and scalable web applications. I specialize in developing responsive frontends and robust backend systems using Java, Spring Boot, Node.js, Nest.js, TypeScript, React.js, MongoDB, PostgreSQL, Redis, Docker, Kafka, RabbitMQ, and REST APIs. I also work with modern development practices including CI/CD, Git, and containerized deployments to build secure, scalable, and high-performance applications that deliver seamless user experiences across all platforms."
           }
         />
 
@@ -337,34 +147,47 @@ const MainContent = () => {
           >
             <h1 className="title">Work Experience</h1>
             <div className="date-card">
-              {experiences.map((experience) => (
-                <div className="part">
-                  <div>
-                    <h1>{experience.title}</h1>
-                    <div
-                      style={{
-                        display: "flex",
-                        alignItems: "center",
-                        gap: "10px",
-                        cursor: "pointer",
-                      }}
-                      onClick={() => window.open(experience.link, "_blank")}
-                    >
-                      <img
-                        src={experience.imgSrc}
-                        alt={experience.imgAlt}
-                        width={experience.imgWidth}
-                        height={experience.imgHeight}
-                      />
-                      {experience.isText ? (
-                        <span className="bottom">{experience.isText}</span>
-                      ) : null}
+              {experiences.map((experience, index) => (
+                <div className="part-wrapper" key={experience.title + index}>
+                  <div className="part">
+                    <div>
+                      <h1>{experience.title}</h1>
+                      <div
+                        style={{
+                          display: "flex",
+                          alignItems: "center",
+                          gap: "10px",
+                          cursor: "pointer",
+                        }}
+                        onClick={() => window.open(experience.link, "_blank")}
+                      >
+                        <img
+                          src={experience.imgSrc}
+                          alt={experience.imgAlt}
+                          width={experience.imgWidth}
+                          height={experience.imgHeight}
+                        />
+                        {experience.isText ? (
+                          <span className="bottom">{experience.isText}</span>
+                        ) : null}
+                      </div>
+                    </div>
+                    <div className="location-date">
+                      <p className="top">{experience.date}</p>
+                      <p className="top">{experience.location}</p>
                     </div>
                   </div>
-                  <div className="location-date">
-                    <p className="top">{experience.date}</p>
-                    <p className="top">{experience.location}</p>
-                  </div>
+
+                  {experience.description ? (
+                    <Accordion className="experience-accordion">
+                      <Accordion.Item eventKey="0">
+                        <Accordion.Header>Details</Accordion.Header>
+                        <Accordion.Body>
+                          {experience.description}
+                        </Accordion.Body>
+                      </Accordion.Item>
+                    </Accordion>
+                  ) : null}
                 </div>
               ))}
             </div>
@@ -385,8 +208,8 @@ const MainContent = () => {
           >
             <div className="title">Education</div>
             <div className="date-card">
-              {educations.map((education) => (
-                <div className="part">
+              {educations.map((education, index) => (
+                <div className="part" key={index}>
                   <div>
                     <h1>{education.title}</h1>
                     <div
@@ -452,8 +275,9 @@ const MainContent = () => {
         />
 
         <div className="certificates-box">
-          {certificates.map((certificate) => (
+          {certificates.map((certificate, index) => (
             <TextImageCard
+              key={index}
               title={certificate.title}
               desc={certificate.desc}
               date={certificate.date}
@@ -465,28 +289,17 @@ const MainContent = () => {
 
       <section id="my-skill-sec">
         <IntroHeader
-          h2={"My Skills"}
-          top_h1={"Technologies"}
-          bottom_h1={"Used In"}
-          bottom_h1_high={"Development"}
+          h2="My Skills"
+          top_h1="Technologies"
+          bottom_h1="Used In"
+          bottom_h1_high="Development"
         />
 
-        <Container className="skill-cards-box">
-          <Row>
-            {skills.map((skill, index) => (
-              <Col
-                key={index}
-                xs={6}
-                sm={6}
-                md={4}
-                lg={3}
-                className="skill-cards-container"
-              >
-                <SkillCard icon={skill.icon} p_text={skill.name} />
-              </Col>
-            ))}
-          </Row>
-        </Container>
+        <div className="skills-marquee">
+          <SkillRow skills={frontendSkills} />
+          <SkillRow skills={backendSkills} reverse />
+          <SkillRow skills={infraSkills} />
+        </div>
       </section>
 
       <section id="portfolio-sec">
@@ -508,7 +321,7 @@ const MainContent = () => {
               >
                 <div className="card-image-wrap">
                   <a href="https://sabat.az/" target="_blank">
-                    <img src={null} alt="Sabat E-Commerce Book Shop" />
+                    <img src={portfolio1} alt="Sabat E-Commerce Book Shop" />
                     <div className="card-overlay" />
                   </a>
                   <span className="card-badge">Real Project</span>

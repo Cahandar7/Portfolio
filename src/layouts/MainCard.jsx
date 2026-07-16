@@ -55,6 +55,7 @@ const MainCard = () => {
           duration: 0.2,
         }}
       />
+      
       <div className="main-card-text">
         <h1>Cahandar Masimov</h1>
         <p>
@@ -62,6 +63,7 @@ const MainCard = () => {
           building great web experiences.
         </p>
       </div>
+
       <div className="icons">
         <div className="twitter-icon-box">
           <a href="#">
@@ -165,6 +167,7 @@ const MainCard = () => {
           </a>
         </div>
       </div>
+
       <a
         href="/Cahandar_Masimov_CV.pdf"
         download="Cahandar_Masimov_CV.pdf"
