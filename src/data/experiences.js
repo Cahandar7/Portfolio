@@ -1,4 +1,5 @@
 // experience imgs
+import neurotime_logo from "../assets/images/neurotime_logo.png";
 import cubics_tech_logo from "../assets/images/cubics_tech_logo.png";
 import idschool_logo from "../assets/images/idschool_logo.png";
 import webluna_software_logo from "../assets/images/webluna_software_logo.png";
@@ -7,14 +8,27 @@ import freelance_logo from "../assets/images/freelance_logo.png";
 
 export const experiences = [
   {
-    title: "Full Stack Developer",
+    title: "Middle Full Stack Developer",
+    imgSrc: neurotime_logo,
+    imgAlt: "neurotime_logo",
+    imgWidth: 40,
+    imgHeight: 40,
+    isText: "Neurotime",
+    link: "https://www.neurotime.ai/az",
+    date: "August 2026 - Present",
+    location: "Baku, Azerbaijan (On-site)",
+    description:
+      "Worked on Neurotime’s Omnichannel and AI platforms, integrating social media and communication channels into a unified inbox and developing AI-powered solutions. Developed frontend and backend features using React, Express, PostgreSQL, and RabbitMQ, integrating various AI tools and APIs. Practiced vibe coding with OpenAI Codex and Claude Code Pro to build features, integrate services, fix bugs, and improve system performance.",
+  },
+  {
+    title: "Junior Full Stack Developer",
     imgSrc: cubics_tech_logo,
     imgAlt: "cubics_tech_logo",
     imgWidth: 105,
     imgHeight: 40,
     isText: null,
     link: "https://cubics.technology/",
-    date: "July 2025 - September 2026",
+    date: "July 2025 - August 2026",
     location: "Baku, Azerbaijan (On-site)",
     description:
       "Worked on Cubics BMS (Business Management System), a customizable ERP platform for managing business operations, including CRM, Sales, Finance, HR, Project Management, Analytics, Document Management, and Call Center modules. Developed frontend features with React, Ant Design, and RTK Query, and built backend microservices using NestJS, Java Spring Boot, MongoDB, PostgreSQL, Docker, and Kafka. Collaborated with the development team to implement new features, integrate APIs, fix bugs, and improve system performance.",
