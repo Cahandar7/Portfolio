@@ -126,7 +126,7 @@ const MainContent = () => {
         <TextCard
           title={"Cahandar Masimov"}
           desc={
-            "Hi, I'm Cahandar Masimov, a passionate Full Stack Developer building powerful and scalable web applications. I specialize in developing responsive frontends and robust backend systems using Java, Spring Boot, Node.js, Nest.js, TypeScript, React.js, MongoDB, PostgreSQL, Redis, Docker, Kafka, RabbitMQ, and REST APIs. I also work with modern development practices including CI/CD, Git, and containerized deployments to build secure, scalable, and high-performance applications that deliver seamless user experiences across all platforms."
+            "Hi, I'm Cahandar Masimov, a passionate Full Stack Developer building powerful and scalable web applications. I specialize in developing responsive frontends and robust backend systems using Node.js, Nest.js, TypeScript, React.js, MongoDB, PostgreSQL, Redis, Docker, Kafka, RabbitMQ, and REST APIs. I also work with modern development practices including CI/CD, Git, and containerized deployments to build secure, scalable, and high-performance applications that deliver seamless user experiences across all platforms."
           }
         />
 
